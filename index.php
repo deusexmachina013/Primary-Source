@@ -20,7 +20,7 @@
     <div class="container">
       <img src="assets/img/logo.png" alt="CourseMap Logo">
       <h1>Why Wait?</h1>
-      <p>WRITE DESCRIPTION</p>
+      <p>hello</p>
     </div>
   </body>
 </html>
