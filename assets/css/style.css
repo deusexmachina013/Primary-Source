@@ -1,0 +1,30 @@
+/******************/
+/* NAVIGATION BAR */
+/******************/
+.navbar-custom { 
+    background-color: #ececec;
+}
+
+/********************/
+/* student_home.php */
+/********************/
+.content {
+  margin-top: 100px;
+}
+
+/* MAIN PLAN */
+.content .container .col-sm {
+  background-color: #CEF0F1;
+  margin: 6px;
+  padding: 12px;
+  height: 50px;
+}
+
+.content .container .col-semester {
+  background-color: #E8E8E8;
+  text-align: center;
+  font-weight: bold;
+}
+h1 {
+    text-align: center;
+}
