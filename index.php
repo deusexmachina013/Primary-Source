@@ -14,5 +14,13 @@
   </head>
 
   <body>
+    <a href="#">Login</a>
+    <a href="student_home.php">Student Home</a>
+      
+    <div class="container">
+      <img src="assets/img/logo.png" alt="CourseMap Logo">
+      <h1>Why Wait?</h1>
+      <p>WRITE DESCRIPTION</p>
+    </div>
   </body>
 </html>
