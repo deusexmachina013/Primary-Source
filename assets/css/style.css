@@ -43,7 +43,7 @@ h1 {
     text-align: center;
 }
 
-button {
+.button {
     display: inline-block;
     padding: 1em 3em;
     margin: 0 0.3em 0.3em 0;
@@ -64,4 +64,25 @@ button {
 button:hover {
     background-color: #E8E8E8;
     border-color: #E8E8E8;
+}
+
+/* CREATE PLAN */
+.submit-button{
+    float: right;
+    border: 2px solid;
+    border-radius: 2em;
+    border-color: #CEF0F1;
+    background-color: #CEF0F1;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* CATALOG */
+.content .container .col-conc {
+    text-align: center;
+    font-weight: 500px;
+    text-decoration: none;
+}
+.concentration{
+    color:rgb(49, 45, 45);
 }
