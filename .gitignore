@@ -7,6 +7,8 @@ vendor/
 .AppleDouble
 .LSOverride
 
+._*
+
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100

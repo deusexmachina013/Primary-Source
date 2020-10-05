@@ -42,9 +42,10 @@
 
     <section class="content">
       <!-- MAIN PLAN -->
-      <h1>My Plan</h1>
+      <h1> Create Plan</h1>
       <!-- YEAR 1 -->
       <div class="container">
+      <button class="submit-button" onclick="window.location.href = 'admin_student_plans.php';"> Submit Plan </button>
         <h2>2019-2020</h2>
         <!-- ROW 1 -->
         <div class="row">
@@ -58,37 +59,37 @@
         <!-- ROW 2 -->
         <div class="row">
           <div class="col-sm">
-            Computer Science 1
+            
           </div>
           <div class="col-sm">
-            Data Structures
+            
           </div>
         </div>
         <!-- ROW 3 -->
         <div class="row">
           <div class="col-sm">
-            Calculus I
+            
           </div>
           <div class="col-sm">
-            Calculus II
+            
           </div>
         </div>
         <!-- ROW 4 -->
         <div class="row">
           <div class="col-sm">
-           Physics 1
+           
          </div>
          <div class="col-sm">
-          Introduction to Biology
+          
         </div>
       </div>
       <!-- ROW 5 -->
       <div class="row">
         <div class="col-sm">
-          Introduction to ITWS
+          
         </div>
         <div class="col-sm">
-          Introduction to Biology Lab
+          
         </div>
       </div>
 
@@ -98,7 +99,7 @@
 
         </div>
         <div class="col-sm">
-          IT and Society
+          
         </div>
 
       </div>
@@ -119,44 +120,44 @@
       <!-- ROW 2 -->
       <div class="row">
         <div class="col-sm">
-          Foundations of Computer Science
+         
         </div>
         <div class="col-sm">
-          Introduction to Algorithms
+          
         </div>
       </div>
       <!-- ROW 3 -->
       <div class="row">
         <div class="col-sm">
-         Computer Organization
+         
        </div>
        <div class="col-sm">
-         Introduction to Human Computer Interaction
+         
        </div>
      </div>
      <!-- ROW 4 -->
      <div class="row">
       <div class="col-sm">
-        Web Systems Development
+       
       </div>
       <div class="col-sm">
-       Web Science Systems Development
+      
      </div>
    </div>
    <!-- ROW 5 -->
    <div class="row">
     <div class="col-sm">
-      Introduction to Logic
+      
     </div>
     <div class="col-sm">
-      Statistical Methods
+      
     </div>
   </div>
 
   <!-- ROW 6 -->
   <div class="row">
     <div class="col-sm">
-      Introduction to Cognitive Science
+     
     </div>
     <div class="col-sm">
 
@@ -180,44 +181,44 @@
     <!-- ROW 2 -->
     <div class="row">
       <div class="col-sm">
-        Operating Systems
+        
       </div>
       <div class="col-sm">
-        Programming Languages
+        
       </div>
     </div>
     <!-- ROW 3 -->
     <div class="row">
       <div class="col-sm">
-        Linear Algebra
+        
       </div>
       <div class="col-sm">
-        Managing IT Resources
+        
       </div>
     </div>
     <!-- ROW 4 -->
     <div class="row">
       <div class="col-sm">
-        RCOS
+        
       </div>
       <div class="col-sm">
-        Database Systems
+        
       </div>
     </div>
     <!-- ROW 5 -->
     <div class="row">
       <div class="col-sm">
-        Earth and Sky
+       
       </div>
       <div class="col-sm">
-        Strategic Writing
+        
       </div>
     </div>
 
     <!-- ROW 6 -->
     <div class="row">
       <div class="col-sm">
-        Research Method and Statistics
+        
       </div>
       <div class="col-sm">
 
@@ -240,37 +241,37 @@
     <!-- ROW 2 -->
     <div class="row">
       <div class="col-sm">
-        ITWS Capstone Project
+       
       </div>
       <div class="col-sm">
-        Senior Thesis
+        
       </div>
     </div>
     <!-- ROW 3 -->
     <div class="row">
       <div class="col-sm">
-        Network Programming
+        
       </div>
       <div class="col-sm">
-        Introduction to Linguistics
+        
       </div>
     </div>
     <!-- ROW 4 -->
     <div class="row">
       <div class="col-sm">
-        Sensation and Perception
+        
       </div>
       <div class="col-sm">
-        Minds and Machines
+        
       </div>
     </div>
     <!-- ROW 5 -->
     <div class="row">
       <div class="col-sm">
-        Introduction to Artifical Intelligence
+        
       </div>
       <div class="col-sm">
-        Software Design and Documentation
+        
       </div>
     </div>
 
@@ -280,7 +281,7 @@
 
       </div>
       <div class="col-sm">
-       Networking in the Linux Kernal
+       
      </div>
 
    </div>
