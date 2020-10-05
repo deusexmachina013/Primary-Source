@@ -16,9 +16,14 @@
   <body>
     <button class="button" onclick="window.location.href = 'auth.php';"> Login </button>
     <div>
+<<<<<<< Updated upstream
       <img src="assets/img/logo.png" alt="CourseMap Logo">
       <h1>Why Wait?</h1>
       <p>WRITE DESCRIPTION</p>
+=======
+      <img src="assets/img/logoWhyWait2.png" alt="CourseMap Logo">
+      <button class="button" onclick="window.location.href = 'auth.php';"> Login </button>
+>>>>>>> Stashed changes
     </div>
   </body>
 </html>

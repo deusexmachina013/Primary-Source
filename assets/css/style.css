@@ -59,9 +59,24 @@ button {
     background-color: #CEF0F1;
     text-align: center;
     transition: all 0.2s;
+    display: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button:hover {
     background-color: #E8E8E8;
     border-color: #E8E8E8;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 200px;
+    display: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
