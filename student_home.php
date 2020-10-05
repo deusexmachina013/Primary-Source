@@ -25,13 +25,13 @@
             <a class="nav-link js-scroll-trigger active" href="student_home.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="create_plan.php">Create Plan</a>
+            <a class="nav-link js-scroll-trigger" href="student_create_plan.php">Create Plan</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="all_plans.php">All Plans</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="catalog.php">Catalog</a>
+            <a class="nav-link js-scroll-trigger" href="student_catalog.php">Catalog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="index.php">Logout</a>
