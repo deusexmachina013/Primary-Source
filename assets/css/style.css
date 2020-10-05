@@ -1,9 +1,5 @@
 /******************/
-
-
 /* NAVIGATION BAR */
-
-
 /******************/
 
 .navbar-custom {
@@ -12,11 +8,7 @@
 
 
 /********************/
-
-
 /* student_home.php */
-
-
 /********************/
 
 .content {
@@ -25,7 +17,6 @@
 
 
 /* MAIN PLAN */
-
 .content .container .col-sm {
     background-color: #CEF0F1;
     margin: 6px;
@@ -70,7 +61,6 @@ button:hover {
     border-color: #E8E8E8;
 }
 
-
 .img {
     max-width: 100%;
     height: auto;
@@ -104,12 +94,14 @@ button:hover {
     text-decoration: none;
     font-weight: bold;
 }
+
 /* CATALOG */
 .content .container .col-conc {
     text-align: center;
     font-weight: 500px;
     text-decoration: none;
 }
+
 .concentration {
     color:rgb(49, 45, 45);
 
