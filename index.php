@@ -14,7 +14,6 @@
   </head>
 
   <body>
-    <button class="button" onclick="window.location.href = 'auth.php';"> Login </button>
     <div>
 <<<<<<< Updated upstream
       <img src="assets/img/logo.png" alt="CourseMap Logo">
