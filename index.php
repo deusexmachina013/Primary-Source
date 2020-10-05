@@ -14,11 +14,10 @@
   </head>
 
   <body>
-    <button class="button" onclick="window.location.href = 'auth.php';"> Login </button>
     <div>
-      <img src="assets/img/logo.png" alt="CourseMap Logo">
-      <h1>Why Wait?</h1>
-      <p>hello</p>
+      <img class="img" src="assets/img/logoWhyWait2.png" alt="CourseMap Logo">
+      <button class="button" onclick="window.location.href = 'auth.php';"> Login </button>
+      <img class="img2" src="assets/img/rpi.png" alt="RPI Logo">
     </div>
   </body>
 </html>

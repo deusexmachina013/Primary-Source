@@ -59,12 +59,38 @@ h1 {
     background-color: #CEF0F1;
     text-align: center;
     transition: all 0.2s;
+    display: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button:hover {
     background-color: #E8E8E8;
     border-color: #E8E8E8;
 }
+
+
+.img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 75px;
+    display: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.img2 {
+    max-width: 100%;
+    height: 25%;
+    margin-top: 25px;
+    display: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%; 
 
 /* CREATE PLAN */
 .submit-button{
@@ -85,4 +111,5 @@ button:hover {
 }
 .concentration{
     color:rgb(49, 45, 45);
+
 }
