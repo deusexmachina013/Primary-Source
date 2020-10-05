@@ -70,13 +70,24 @@ button:hover {
     border-color: #E8E8E8;
 }
 
-img {
+.img {
     max-width: 100%;
     height: auto;
-    margin-top: 200px;
+    margin-top: 75px;
     display: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.img2 {
+    max-width: 100%;
+    height: 25%;
+    margin-top: 25px;
+    display: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%; 
 }

@@ -15,14 +15,9 @@
 
   <body>
     <div>
-<<<<<<< Updated upstream
-      <img src="assets/img/logo.png" alt="CourseMap Logo">
-      <h1>Why Wait?</h1>
-      <p>WRITE DESCRIPTION</p>
-=======
-      <img src="assets/img/logoWhyWait2.png" alt="CourseMap Logo">
+      <img class="img" src="assets/img/logoWhyWait2.png" alt="CourseMap Logo">
       <button class="button" onclick="window.location.href = 'auth.php';"> Login </button>
->>>>>>> Stashed changes
+      <img class="img2" src="assets/img/rpi.png" alt="RPI Logo">
     </div>
   </body>
 </html>
