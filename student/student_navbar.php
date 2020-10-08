@@ -1,5 +1,9 @@
 <!--NAVIGATION BAR (implemented with Bootstrap) -->
 <nav class="navbar navbar-custom navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand" href="home.php">
+        <img src="../assets/img/logo.png" alt="CourseMap Logo" width="180px">
+    </a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
