@@ -7,14 +7,13 @@
 }
 
 
-/********************/
-/* student_home.php */
-/********************/
+/************************/
+/* .../student/home.php */
+/************************/
 
 .content {
     margin-top: 100px;
 }
-
 
 /* MAIN PLAN */
 .content .container .col-sm {
@@ -105,4 +104,24 @@ button:hover {
 .concentration {
     color:rgb(49, 45, 45);
 
+}
+
+/**********************/
+/* .../admin/home.php */
+/**********************/
+
+.student-column {
+    width: 30%;
+}
+
+.year-column {
+    width: 20%;
+}
+
+.status-column {
+    width: 25%;
+}
+
+.date-column {
+    width: 25%;
 }
