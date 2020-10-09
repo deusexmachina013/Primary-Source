@@ -16,7 +16,9 @@
   </head>
 
   <body>
-    <main>
+    <?php include("admin_navbar.php"); ?>
+
+    <main class="content">
       <h1>Your Students' Plans</h1>
       <input class="plan-lookup" type="text" placeholder="Search for student plans..." id="admin-lookup" onkeyup="filterStudentPlans()">
 
