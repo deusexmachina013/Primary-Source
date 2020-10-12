@@ -17,8 +17,8 @@
     <div>
       <img class="img" src="assets/img/logoWhyWait.png" alt="CourseMap Logo">
       <div class="button-center">
-        <button class="button" onclick="window.location.href = 'auth.php';"> Student Login </button>
-        <button class="button" onclick="window.location.href = 'auth.php';"> Admin Login </button>
+        <button class="button" onclick="window.location.href = 'auth.php?type=student';"> Student Login </button>
+        <button class="button" onclick="window.location.href = 'auth.php?type=admin';"> Admin Login </button>
       <div>
       <img class="img2" src="assets/img/rpi.png" alt="RPI Logo">
     </div>

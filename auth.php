@@ -1,5 +1,5 @@
 <?php
-include 'auth_internal.php';
+include 'auth/auth_internal.php';
 
 $user_id = Auth::authenticate(); #redirect to login page if fails, should redirect to current page after, returning user id.
 
@@ -15,16 +15,12 @@ if($_REQUEST["logout"] || $_SESSION["user_id"] != $user_id) {
     Auth::logout();
 }
 
-?>
+if($_GET["type"] === "student") {
+  header("Location: student/home.php");
+} else if ($_GET["type"] === "admin") {
+  header("Location: admin/home.php");
+} else {
+  echo "Wrong location";
+}
 
-<html>
-  <head>
-    <title>phpCAS simple client</title>
-  </head>
-  <body>
-    <h1>Successfull Authentication!</h1>
-    <p>the user's login is <b><?php echo phpCAS::getUser(); ?></b>.</p>
-    <p>phpCAS version is <b><?php echo phpCAS::getVersion(); ?></b>.</p>
-    <p><a href="?logout=">Logout</a></p>
-  </body>
-</html>
+?>
