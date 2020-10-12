@@ -22,7 +22,7 @@
         <a class="nav-link js-scroll-trigger" href="/student/catalog.php">Catalog</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="../index.php">Logout</a>
+        <a class="nav-link js-scroll-trigger" href="/auth.php?logout=true">Logout</a>
         </li>
     </ul>
     </div>
