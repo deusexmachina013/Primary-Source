@@ -37,10 +37,10 @@ h1 {
 .button {
     display: inline-block;
     padding: 1em 3em;
-    margin: 0 0.3em 0.3em 0;
+    margin-left: 20px;
     border: 2px solid;
     border-radius: 2em;
-    border-color: #CEF0F1;
+    border-color: black;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
@@ -51,9 +51,22 @@ h1 {
     text-align: center;
     transition: all 0.2s;
     display: center;
+}
+
+.button-center {
+    display: inline-block;
+    padding: 1em 3em;
+    margin: 0 0.3em 0.3em 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    font-weight: 300;
+    text-align: center;
+    transition: all 0.2s;
+    display: center;
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;   
 }
 
 button:hover {
