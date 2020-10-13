@@ -30,7 +30,7 @@
         </div>
         <div class="row">
           <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Test Plan </a>
+            <a class= "concentration" href= "all/test.php"> Test Plan </a>
           </div>
         </div>
         <div class="row">
