@@ -109,19 +109,68 @@ button:hover {
 /**********************/
 /* .../admin/home.php */
 /**********************/
-
 .student-column {
     width: 30%;
+    border: solid;
+    border-color: white;
+    text-align: center;
 }
 
 .year-column {
     width: 20%;
+    border: solid;
+    border-color: white;
+    text-align: center;
 }
 
 .status-column {
     width: 25%;
+    border: solid;
+    border-color: white;
+    text-align: center;
 }
 
 .date-column {
     width: 25%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+th {
+    background-color:#E8E8E8;
+    color: black;
+  }
+
+td {
+    background-color:#CEF0F1;
+    color: black;
+}
+
+  .name {
+    width: 25%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.year {
+    width: 25%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.status {
+    width: 25%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.date {
+    width: 25%;
+    border: solid;
+    border-color: white;
+    text-align: center;
 }

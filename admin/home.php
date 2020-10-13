@@ -24,6 +24,7 @@
 
       <table id="plan-table">
         <!-- Table Heading -->
+        <div class = "col-sm col-semester">
         <thead>
           <tr>
             <th class="student-column">Student</th>
@@ -32,25 +33,26 @@
             <th class="date-column">Submission Date</th>
           </tr>
         </thead>
+        </div>
         <!-- Table Body -->
         <tbody>
           <tr>
-            <td>Jacob Dyer</td>
-            <td>2023</td>
-            <td>Reviewable</td>
-            <td>10/4/2020</td>
+            <td class="name">Jacob Dyer</td>
+            <td class="year">2023</td>
+            <td class="status">Reviewable</td>
+            <td class="date">10/4/2020</td>
           </tr>
           <tr>
-            <td>Joyce Fang</td>
-            <td>2023</td>
-            <td>Approved</td>
-            <td>10/4/2020</td>
+            <td class="name">Joyce Fang</td>
+            <td class="year">2023</td>
+            <td class="status">Approved</td>
+            <td class="date">10/4/2020</td>
           </tr>
           <tr>
-            <td>Bobby Tables</td>
-            <td>2024</td>
-            <td>None</td>
-            <td>N/A</td>
+            <td class="name">Bobby Tables</td>
+            <td class="year">2024</td>
+            <td class="status">None</td>
+            <td class="date">N/A</td>
           </tr>
         </tbody>
       </table>
