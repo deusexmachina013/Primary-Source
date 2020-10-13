@@ -87,10 +87,10 @@
       <!-- ROW 1 -->
       <div class="row">
         <div class="col-sm col-semester">
-          Fall 2020
+        Semester III
         </div>
         <div class="col-sm col-semester">
-          Spring 2021
+        Semester IV
         </div>
       </div>
       <!-- ROW 2 -->
@@ -147,10 +147,10 @@
     <!-- ROW 1 -->
     <div class="row">
       <div class="col-sm col-semester">
-        Arch Summer 2021
+      Semester V (Arch)
       </div>
       <div class="col-sm col-semester">
-        Fall 2021/Spring 2022
+      Semester VI (Fall/Spring)
       </div>
     </div>
     <!-- ROW 2 -->
@@ -205,10 +205,10 @@
     <!-- ROW 1 -->
     <div class="row">
       <div class="col-sm col-semester">
-        Fall 2022
+      Semester VII
       </div>
       <div class="col-sm col-semester">
-        Spring 2023
+      Semester VIII
       </div>
     </div>
     <!-- ROW 2 -->
