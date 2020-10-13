@@ -25,7 +25,7 @@
         <!-- ROWS -->
         <div class="row">
           <div class="col-sm col-conc">
-            <a class= "concentration" href= "student_home.php"> Main Plan </a>
+            <a class= "concentration" href= "home.php"> Main Plan </a>
           </div>
         </div>
         <div class="row">
