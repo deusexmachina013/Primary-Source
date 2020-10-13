@@ -138,16 +138,24 @@ button:hover {
 }
 
 th {
+    background-color: #CEF0F1;
+    margin: 6px;
+    padding: 12px;
+    height: 50px;
     background-color:#E8E8E8;
     color: black;
   }
 
 td {
+    background-color: #CEF0F1;
+    margin: 6px;
+    padding: 12px;
+    height: 50px;
     background-color:#CEF0F1;
     color: black;
 }
 
-  .name {
+.name {
     width: 25%;
     border: solid;
     border-color: white;
@@ -173,4 +181,15 @@ td {
     border: solid;
     border-color: white;
     text-align: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+.search-bar input[type=text] {
+    margin: 0 auto;
+    display: block;
+    border-radius: 25px;
 }

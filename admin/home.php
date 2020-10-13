@@ -20,9 +20,10 @@
 
     <main class="content">
       <h1>Your Students' Plans</h1>
-      <input class="plan-lookup" type="text" placeholder="Search for student plans..." id="admin-lookup" onkeyup="filterStudentPlans()">
-
-      <table id="plan-table">
+      <div class="search-bar">
+        <input type="text" class="admin-loopup" placeholder="Search for student plans..." id="admin-lookup" onkeyup="filterStudentPlans()">
+      </div>
+      <table class="center" id="plan-table">
         <!-- Table Heading -->
         <div class = "col-sm col-semester">
         <thead>
