@@ -2,7 +2,7 @@
 
 <html lang="en">
   <head>
-    <title>Student Create Plan</title>
+    <title>ITWS Communication Concentration Requirements</title>
 
     <!-- CSS ONLY -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -15,58 +15,57 @@
 
   <body>
     <!--NAVIGATION BAR (implemented with Bootstrap) -->
-    <?php include('student_navbar.php'); ?>
+    <?php include('../student_navbar.php'); ?>
 
     <section class="content">
       <!-- MAIN PLAN -->
-      <h1> Create Plan</h1>
+      <h1>ITWS Communication Concentration Requirements</h1>
       <!-- YEAR 1 -->
       <div class="container">
-      <button class="submit-button" onclick="window.location.href = 'admin_student_plans.php';"> Submit Plan </button>
-        <h2>2019-2020</h2>
+        <h2>First Year</h2>
         <!-- ROW 1 -->
         <div class="row">
           <div class="col-sm col-semester">
-            Fall 2019
+            Semester I
           </div>
           <div class="col-sm col-semester">
-            Spring 2020
+            Semester II
           </div>
         </div>
         <!-- ROW 2 -->
         <div class="row">
           <div class="col-sm">
-            
+            Introduction to ITWS
           </div>
           <div class="col-sm">
-            
+            Communication Theory and Practice
           </div>
         </div>
         <!-- ROW 3 -->
         <div class="row">
           <div class="col-sm">
-            
+            Choice of ARTS Intro Class
           </div>
           <div class="col-sm">
-            
+            Data Structures
           </div>
         </div>
         <!-- ROW 4 -->
         <div class="row">
           <div class="col-sm">
-           
+            Computer Science 1
          </div>
          <div class="col-sm">
-          
+            IT and Society
         </div>
       </div>
       <!-- ROW 5 -->
       <div class="row">
         <div class="col-sm">
-          
+            Introduction to ITWS
         </div>
         <div class="col-sm">
-          
+            Math Elective
         </div>
       </div>
 
@@ -76,7 +75,7 @@
 
         </div>
         <div class="col-sm">
-          
+          IT and Society
         </div>
 
       </div>
@@ -84,7 +83,7 @@
 
     <!-- YEAR 2 -->
     <div class="container">
-      <h2>2020-2021</h2>
+      <h2>Second Year</h2>
       <!-- ROW 1 -->
       <div class="row">
         <div class="col-sm col-semester">
@@ -97,44 +96,44 @@
       <!-- ROW 2 -->
       <div class="row">
         <div class="col-sm">
-         
+          Foundations of Computer Science
         </div>
         <div class="col-sm">
-          
+          Introduction to Algorithms
         </div>
       </div>
       <!-- ROW 3 -->
       <div class="row">
         <div class="col-sm">
-         
+         Computer Organization
        </div>
        <div class="col-sm">
-         
+         Introduction to Human Computer Interaction
        </div>
      </div>
      <!-- ROW 4 -->
      <div class="row">
       <div class="col-sm">
-       
+        Web Systems Development
       </div>
       <div class="col-sm">
-      
+       Web Science Systems Development
      </div>
    </div>
    <!-- ROW 5 -->
    <div class="row">
     <div class="col-sm">
-      
+      Introduction to Logic
     </div>
     <div class="col-sm">
-      
+      Statistical Methods
     </div>
   </div>
 
   <!-- ROW 6 -->
   <div class="row">
     <div class="col-sm">
-     
+      Introduction to Cognitive Science
     </div>
     <div class="col-sm">
 
@@ -145,7 +144,7 @@
 
   <!-- YEAR 3 -->
   <div class="container">
-    <h2>2021-2022</h2>
+    <h2>Third Year</h2>
     <!-- ROW 1 -->
     <div class="row">
       <div class="col-sm col-semester">
@@ -158,44 +157,44 @@
     <!-- ROW 2 -->
     <div class="row">
       <div class="col-sm">
-        
+        Operating Systems
       </div>
       <div class="col-sm">
-        
+        Programming Languages
       </div>
     </div>
     <!-- ROW 3 -->
     <div class="row">
       <div class="col-sm">
-        
+        Linear Algebra
       </div>
       <div class="col-sm">
-        
+        Managing IT Resources
       </div>
     </div>
     <!-- ROW 4 -->
     <div class="row">
       <div class="col-sm">
-        
+        RCOS
       </div>
       <div class="col-sm">
-        
+        Database Systems
       </div>
     </div>
     <!-- ROW 5 -->
     <div class="row">
       <div class="col-sm">
-       
+        Earth and Sky
       </div>
       <div class="col-sm">
-        
+        Strategic Writing
       </div>
     </div>
 
     <!-- ROW 6 -->
     <div class="row">
       <div class="col-sm">
-        
+        Research Method and Statistics
       </div>
       <div class="col-sm">
 
@@ -205,7 +204,7 @@
 
   <!-- YEAR 4 -->
   <div class="container">
-    <h2>2022-2023</h2>
+    <h2>Fourth Year</h2>
     <!-- ROW 1 -->
     <div class="row">
       <div class="col-sm col-semester">
@@ -218,37 +217,37 @@
     <!-- ROW 2 -->
     <div class="row">
       <div class="col-sm">
-       
+        ITWS Capstone Project
       </div>
       <div class="col-sm">
-        
+        Senior Thesis
       </div>
     </div>
     <!-- ROW 3 -->
     <div class="row">
       <div class="col-sm">
-        
+        Network Programming
       </div>
       <div class="col-sm">
-        
+        Introduction to Linguistics
       </div>
     </div>
     <!-- ROW 4 -->
     <div class="row">
       <div class="col-sm">
-        
+        Sensation and Perception
       </div>
       <div class="col-sm">
-        
+        Minds and Machines
       </div>
     </div>
     <!-- ROW 5 -->
     <div class="row">
       <div class="col-sm">
-        
+        Introduction to Artifical Intelligence
       </div>
       <div class="col-sm">
-        
+        Software Design and Documentation
       </div>
     </div>
 
@@ -258,7 +257,7 @@
 
       </div>
       <div class="col-sm">
-       
+       Networking in the Linux Kernal
      </div>
 
    </div>
