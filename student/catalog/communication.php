@@ -157,10 +157,10 @@
     <!-- ROW 2 -->
     <div class="row">
       <div class="col-sm">
-        One of the following:
+        One of the following: Statistical Methods, Biostatistics, Intro to Algorithms
       </div>
       <div class="col-sm">
-        Managin IT Resources
+        Managing IT Resources
       </div>
     </div>
     <!-- ROW 3 -->
@@ -169,7 +169,7 @@
         Communication or Writing Elective
       </div>
       <div class="col-sm">
-        ITWS Elective (one of):
+        ITWS Elective (one of): Database Systems, Data Resource Management
       </div>
     </div>
     <!-- ROW 4 -->
