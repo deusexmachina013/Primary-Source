@@ -11,8 +11,72 @@
 /*** /student/home.php **/
 /************************/
 
-.content {
+body {
     margin-top: 100px;
+}
+
+.plan-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+}
+
+#plan-name {
+    display: inline;
+}
+
+#toggle-config-button {
+    float: right;
+}
+
+
+/* https://www.w3schools.com/howto/howto_css_circles.asp */
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #000;
+}
+
+.semester {
+    margin-bottom: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.semester-title {
+    background-color: #E8E8E8;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.semester-course {
+    background-color: #CEF0F1;
+    margin-bottom: 6px;
+}
+
+.course-title {
+    word-break: break-word;
+}
+
+#schedule-config {
+    display: none;
+}
+
+#schedule-config > div {
+    position: fixed;
+}
+
+.course-add {
+    justify-content: center;
+    background-color: #CEF0F1;
+    padding: 8px;
+    margin-bottom: 24px;
+}
+
+.add-course, .add-course-group {
+    margin: 10px;
 }
 
 /* MAIN PLAN */

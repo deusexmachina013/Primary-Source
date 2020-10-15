@@ -17,253 +17,160 @@
     <!--NAVIGATION BAR (implemented with Bootstrap) -->
     <?php include('student_navbar.php'); ?>
 
-    <section class="content">
-      <!-- MAIN PLAN -->
-      <h1> Create Plan</h1>
-      <!-- YEAR 1 -->
+    <section class="plan-header">
+      <h2 id="plan-name"><a>&starf;</a>PLAN NAME</h2>
+      <a id="toggle-config-button" class="btn btn-outline-primary" href="#" role="button">Show Config</a>
+    </section>
+
+    <section class="schedule">
       <div class="container">
-      <button class="submit-button" onclick="window.location.href = 'admin_student_plans.php';"> Submit Plan </button>
-        <h2>2019-2020</h2>
-        <!-- ROW 1 -->
         <div class="row">
-          <div class="col-sm col-semester">
-            Fall 2019
-          </div>
-          <div class="col-sm col-semester">
-            Spring 2020
-          </div>
-        </div>
-        <!-- ROW 2 -->
-        <div class="row">
-          <div class="col-sm">
+            <div class="col">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="semester">
+                    <div class="row semester-title">
+                      <h3>Fall 2019</h3>
+                    </div> 
+                    <div class="row semester-course">
+                      <div class="col-md-1 course-status"><span class="dot"></span></div>
+                      <div class="col-md-5 course-title">Example</div>
+                      <div class="col-md-4 course-code">EXPL-1000</div>
+                      <div class="col-md-1">4</div>
+                      <div class="col-md-1">&#x1f5d1;</div>
+                    </div>
+                    <div class="row semester-course">
+                      <div class="col-md-1 course-status"><span class="dot"></span></div>
+                      <div class="col-md-5 course-title">Exampleaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                      <div class="col-md-4 course-code">EXPL-1000</div>
+                      <div class="col-md-1">4</div>
+                      <div class="col-md-1">&#x1f5d1;</div>
+                    </div>
+                    <div class="row semester-course">
+                      <div class="col-md-1 course-status"><span class="dot"></span></div>
+                      <div class="col-md-5 course-title">Example</div>
+                      <div class="col-md-4 course-code">EXPL-1000</div>
+                      <div class="col-md-1">4</div>
+                      <div class="col-md-1">&#x1f5d1;</div>
+                    </div>
+                    <div class="row course-add">
+                      <a class="btn btn-primary add-course" href="#" role="button">Add Course</a>
+                      <a class="btn btn-primary add-course-group" href="#" role="button">Add Course Group</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="semester">
+                    <div class="row semester-title">
+                      <h3>Spring 2020</h3>
+                    </div> 
+                    <div class="row semester-course">
+                      <div class="col-md-1 course-status"><span class="dot"></span></div>
+                      <div class="col-md-5 course-title">Example</div>
+                      <div class="col-md-4 course-code">EXPL-1000</div>
+                      <div class="col-md-1">4</div>
+                      <div class="col-md-1">&#x1f5d1;</div>
+                    </div>
+                    <div class="row semester-course">
+                      <div class="col-md-1 course-status"><span class="dot"></span></div>
+                      <div class="col-md-5 course-title">Exampleaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                      <div class="col-md-4 course-code">EXPL-1000</div>
+                      <div class="col-md-1">4</div>
+                      <div class="col-md-1">&#x1f5d1;</div>
+                    </div>
+                    <div class="row semester-course">
+                      <div class="col-md-1 course-status"><span class="dot"></span></div>
+                      <div class="col-md-5 course-title">Example</div>
+                      <div class="col-md-4 course-code">EXPL-1000</div>
+                      <div class="col-md-1">4</div>
+                      <div class="col-md-1">&#x1f5d1;</div>
+                    </div>
+                    <div class="row course-add">
+                      <a class="btn btn-primary add-course" href="#" role="button">Add Course</a>
+                      <a class="btn btn-primary add-course-group" href="#" role="button">Add Course Group</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="semester">
+                    <div class="row semester-title">
+                      <h3>Fall 2020</h3>
+                    </div> 
+                    <div class="row semester-course">
+                      <div class="col-md-1 course-status"><span class="dot"></span></div>
+                      <div class="col-md-5 course-title">Example</div>
+                      <div class="col-md-4 course-code">EXPL-1000</div>
+                      <div class="col-md-1">4</div>
+                      <div class="col-md-1">&#x1f5d1;</div>
+                    </div>
+                    <div class="row semester-course">
+                      <div class="col-md-1 course-status"><span class="dot"></span></div>
+                      <div class="col-md-5 course-title">Exampleaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                      <div class="col-md-4 course-code">EXPL-1000</div>
+                      <div class="col-md-1">4</div>
+                      <div class="col-md-1">&#x1f5d1;</div>
+                    </div>
+                    <div class="row semester-course">
+                      <div class="col-md-1 course-status"><span class="dot"></span></div>
+                      <div class="col-md-5 course-title">Example</div>
+                      <div class="col-md-4 course-code">EXPL-1000</div>
+                      <div class="col-md-1">4</div>
+                      <div class="col-md-1">&#x1f5d1;</div>
+                    </div>
+                    <div class="row course-add">
+                      <a class="btn btn-primary add-course" href="#" role="button">Add Course</a>
+                      <a class="btn btn-primary add-course-group" href="#" role="button">Add Course Group</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="semester">
+                    <div class="row semester-title">
+                      <h3>Spring 2021</h3>
+                    </div> 
+                    <div class="row semester-course">
+                      <div class="col-md-1 course-status"><span class="dot"></span></div>
+                      <div class="col-md-5 course-title">Example</div>
+                      <div class="col-md-4 course-code">EXPL-1000</div>
+                      <div class="col-md-1">4</div>
+                      <div class="col-md-1">&#x1f5d1;</div>
+                    </div>
+                    <div class="row semester-course">
+                      <div class="col-md-1 course-status"><span class="dot"></span></div>
+                      <div class="col-md-5 course-title">Exampleaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                      <div class="col-md-4 course-code">EXPL-1000</div>
+                      <div class="col-md-1">4</div>
+                      <div class="col-md-1">&#x1f5d1;</div>
+                    </div>
+                    <div class="row semester-course">
+                      <div class="col-md-1 course-status"><span class="dot"></span></div>
+                      <div class="col-md-5 course-title">Example</div>
+                      <div class="col-md-4 course-code">EXPL-1000</div>
+                      <div class="col-md-1">4</div>
+                      <div class="col-md-1">&#x1f5d1;</div>
+                    </div>
+                    <div class="row course-add">
+                      <a class="btn btn-primary add-course" href="#" role="button">Add Course</a>
+                      <a class="btn btn-primary add-course-group" href="#" role="button">Add Course Group</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             
-          </div>
-          <div class="col-sm">
             
-          </div>
-        </div>
-        <!-- ROW 3 -->
-        <div class="row">
-          <div class="col-sm">
-            
-          </div>
-          <div class="col-sm">
-            
-          </div>
-        </div>
-        <!-- ROW 4 -->
-        <div class="row">
-          <div class="col-sm">
-           
-         </div>
-         <div class="col-sm">
-          
-        </div>
-      </div>
-      <!-- ROW 5 -->
-      <div class="row">
-        <div class="col-sm">
-          
-        </div>
-        <div class="col-sm">
-          
-        </div>
-      </div>
-
-      <!-- ROW 6 -->
-      <div class="row">
-        <div class="col-sm">
-
-        </div>
-        <div class="col-sm">
-          
+            <div id="schedule-config" class="col-md-6">
+              <div>
+                config
+              </div>
+            </div>
         </div>
 
       </div>
-    </div>
+    </section>
 
-    <!-- YEAR 2 -->
-    <div class="container">
-      <h2>2020-2021</h2>
-      <!-- ROW 1 -->
-      <div class="row">
-        <div class="col-sm col-semester">
-          Fall 2020
-        </div>
-        <div class="col-sm col-semester">
-          Spring 2021
-        </div>
-      </div>
-      <!-- ROW 2 -->
-      <div class="row">
-        <div class="col-sm">
-         
-        </div>
-        <div class="col-sm">
-          
-        </div>
-      </div>
-      <!-- ROW 3 -->
-      <div class="row">
-        <div class="col-sm">
-         
-       </div>
-       <div class="col-sm">
-         
-       </div>
-     </div>
-     <!-- ROW 4 -->
-     <div class="row">
-      <div class="col-sm">
-       
-      </div>
-      <div class="col-sm">
-      
-     </div>
-   </div>
-   <!-- ROW 5 -->
-   <div class="row">
-    <div class="col-sm">
-      
-    </div>
-    <div class="col-sm">
-      
-    </div>
-  </div>
+    <section class="config">
+    </section>
 
-  <!-- ROW 6 -->
-  <div class="row">
-    <div class="col-sm">
-     
-    </div>
-    <div class="col-sm">
-
-    </div>
-
-  </div>
-  </div>
-
-  <!-- YEAR 3 -->
-  <div class="container">
-    <h2>2021-2022</h2>
-    <!-- ROW 1 -->
-    <div class="row">
-      <div class="col-sm col-semester">
-        Arch Summer 2021
-      </div>
-      <div class="col-sm col-semester">
-        Fall 2021/Spring 2022
-      </div>
-    </div>
-    <!-- ROW 2 -->
-    <div class="row">
-      <div class="col-sm">
-        
-      </div>
-      <div class="col-sm">
-        
-      </div>
-    </div>
-    <!-- ROW 3 -->
-    <div class="row">
-      <div class="col-sm">
-        
-      </div>
-      <div class="col-sm">
-        
-      </div>
-    </div>
-    <!-- ROW 4 -->
-    <div class="row">
-      <div class="col-sm">
-        
-      </div>
-      <div class="col-sm">
-        
-      </div>
-    </div>
-    <!-- ROW 5 -->
-    <div class="row">
-      <div class="col-sm">
-       
-      </div>
-      <div class="col-sm">
-        
-      </div>
-    </div>
-
-    <!-- ROW 6 -->
-    <div class="row">
-      <div class="col-sm">
-        
-      </div>
-      <div class="col-sm">
-
-      </div>
-    </div>
-  </div>
-
-  <!-- YEAR 4 -->
-  <div class="container">
-    <h2>2022-2023</h2>
-    <!-- ROW 1 -->
-    <div class="row">
-      <div class="col-sm col-semester">
-        Fall 2022
-      </div>
-      <div class="col-sm col-semester">
-        Spring 2023
-      </div>
-    </div>
-    <!-- ROW 2 -->
-    <div class="row">
-      <div class="col-sm">
-       
-      </div>
-      <div class="col-sm">
-        
-      </div>
-    </div>
-    <!-- ROW 3 -->
-    <div class="row">
-      <div class="col-sm">
-        
-      </div>
-      <div class="col-sm">
-        
-      </div>
-    </div>
-    <!-- ROW 4 -->
-    <div class="row">
-      <div class="col-sm">
-        
-      </div>
-      <div class="col-sm">
-        
-      </div>
-    </div>
-    <!-- ROW 5 -->
-    <div class="row">
-      <div class="col-sm">
-        
-      </div>
-      <div class="col-sm">
-        
-      </div>
-    </div>
-
-    <!-- ROW 6 -->
-    <div class="row">
-      <div class="col-sm">
-
-      </div>
-      <div class="col-sm">
-       
-     </div>
-
-   </div>
-  </div>
-
-  </section>
   </body>
 </html>
