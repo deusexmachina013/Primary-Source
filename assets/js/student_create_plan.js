@@ -1,0 +1,41 @@
+$(document).ready(function() {
+    //https://stackoverflow.com/questions/19878051/pressing-enter-leaves-contenteditable-box
+    $(".course-editable").on("keydown", function(e){
+        var key = e.keyCode || e.charCode;
+        if(key == 13) {
+            $(this).blur();
+        }
+    });
+
+    $("#toggle-config-button").click(function() {
+        var scheduleConfig = $("#schedule-config");
+        var semesters = $("#semester-row").children();
+        if(scheduleConfig.css("display") === "none") {
+            scheduleConfig.css("display", "block");
+            semesters.each(function() {
+                $(this).removeClass("col-md-6");
+                $(this).addClass("col-md-12");
+            });
+        } else {
+            scheduleConfig.css("display", "none");
+            semesters.each(function() {
+                $(this).removeClass("col-md-12");
+                $(this).addClass("col-md-6");
+            });
+        }
+    });
+
+    $(document).on("click", ".add-course-button", function() {
+        $(this).parent().before('<div class="row semester-course">\
+        <div class="col-md-1 course-status"><span class="dot"></span></div>\
+        <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>\
+        <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>\
+        <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>\
+        <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>\
+        </div>');
+    });
+
+    $(document).on("click", ".course-trash-button",function() {
+        $(this).parent().parent().remove();
+    });
+});

@@ -29,6 +29,9 @@ body {
     float: right;
 }
 
+.course-status {
+    height: 25px;
+}
 
 /* https://www.w3schools.com/howto/howto_css_circles.asp */
 .dot {
@@ -36,7 +39,7 @@ body {
     width: 25px;
     border-radius: 50%;
     display: inline-block;
-    background-color: #000;
+    background-color: green;
 }
 
 .semester {
@@ -52,8 +55,14 @@ body {
 }
 
 .semester-course {
+    padding-top: 6px;
+    padding-bottom: 6px;
     background-color: #CEF0F1;
     margin-bottom: 6px;
+}
+
+.semester-course > * {
+    align-self: center;
 }
 
 .course-title {
@@ -77,6 +86,16 @@ body {
 
 .add-course, .add-course-group {
     margin: 10px;
+}
+
+.course-trash, .course-config {
+    text-align: center;
+}
+
+.course-trash-button, .course-config-button {
+    padding: 0px !important;
+    margin: 0px !important;
+    text-decoration: none !important;
 }
 
 /* MAIN PLAN */
