@@ -6,6 +6,21 @@ $(document).ready(function() {
             $(this).blur();
         }
     });
+    console.log($('#schedule-config-nav').find("button").each(function() {
+        $(this).click(function() {
+            var target = $("#plan-config-" + $(this).text().toLowerCase());
+            if(target) {
+                $(this).parent().parent().find(".active").each(function() {
+                    $(this).removeClass("active");
+                });
+                $("#schedule-config-container").children("div").each(function() {
+                    $(this).css("display", "none");
+                });
+                target.css("display", "block");
+                $(this).addClass("active");
+            }
+        });
+    }));
 
     $("#toggle-config-button").click(function() {
         var scheduleConfig = $("#schedule-config");

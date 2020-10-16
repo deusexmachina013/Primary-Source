@@ -64,7 +64,7 @@
                 <div class="col-md-6">
                   <div class="semester">
                     <div class="row semester-title">
-                      <h3>Fall 2019</h3>
+                      <h3>Spring 2020</h3>
                     </div> 
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
@@ -97,7 +97,7 @@
                 <div class="col-md-6">
                   <div class="semester">
                     <div class="row semester-title">
-                      <h3>Fall 2019</h3>
+                      <h3>Fall 2020</h3>
                     </div> 
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
@@ -130,7 +130,7 @@
                 <div class="col-md-6">
                   <div class="semester">
                     <div class="row semester-title">
-                      <h3>Fall 2019</h3>
+                      <h3>Spring 2021</h3>
                     </div> 
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
@@ -165,8 +165,33 @@
             
             
             <div id="schedule-config" class="col-md-6">
-              <div>
-                config
+              <div id="schedule-config-container">
+                <ul id="schedule-config-nav" class="nav nav-tabs">
+                  <li class="nav-item">
+                    <button class="nav-link active" href="#">Validation</button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="nav-link" href="#">Groups</button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="nav-link" href="#">Notes</button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="nav-link" href="#">Settings</button>
+                  </li>
+                </ul>
+                <div id="plan-config-validation">
+                  Validation page
+                </div>
+                <div id="plan-config-groups">
+                  Groups page
+                </div>
+                <div id="plan-config-notes">
+                  Notes page
+                </div>
+                <div id="plan-config-settings">
+                  Settings page
+                </div>
               </div>
             </div>
         </div>

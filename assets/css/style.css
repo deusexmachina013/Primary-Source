@@ -77,6 +77,22 @@ body {
     position: fixed;
 }
 
+#plan-config-validation {
+    display: block;
+}
+
+#plan-config-groups {
+    display: none;
+}
+
+#plan-config-notes {
+    display: none;
+}
+
+#plan-config-settings {
+    display: none;
+}
+
 .course-add {
     justify-content: center;
     background-color: #CEF0F1;
