@@ -76,9 +76,12 @@ body {
 #schedule-config > div {
     position: fixed;
 }
+#plan-config-courses {
+    display: block;
+}
 
 #plan-config-validation {
-    display: block;
+    display: none;
 }
 
 #plan-config-groups {
