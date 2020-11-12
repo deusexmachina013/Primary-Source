@@ -1,7 +1,7 @@
 <!--NAVIGATION BAR (implemented with Bootstrap) -->
 <nav class="navbar navbar-custom navbar-expand-lg navbar-light fixed-top">
     <a class="navbar-brand" href="home.php">
-        <img src="../assets/img/logo.png" alt="CourseMap Logo" width="180px">
+        <img src="/assets/img/logo.png" alt="CourseMap Logo" width="180px">
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
         <a class="nav-link js-scroll-trigger" href="/student/catalog.php">Catalog</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="../index.php">Logout</a>
+        <a class="nav-link js-scroll-trigger" href="/auth.php?logout=true">Logout</a>
         </li>
     </ul>
     </div>

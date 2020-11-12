@@ -2,7 +2,7 @@
 
 <html lang="en">
   <head>
-    <title>Administrator Homepage</title>>
+    <title>Administrator Homepage</title>
 
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -25,6 +25,7 @@
       </div>
       <table class="center" id="plan-table">
         <!-- Table Heading -->
+        <!-- NOTE: Needed for testing, to be ignored for cleanup purposes. -->
         <div class = "col-sm col-semester">
         <thead>
           <tr>

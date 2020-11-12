@@ -6,7 +6,7 @@
 
     <!-- CSS ONLY -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -39,9 +39,11 @@
             <a class= "concentration" href= ""> Cognitive Science </a>
           </div>
         </div>
+        <!-- NOTE: Can be automated via a good mix of JS/PHP and MySQL Tabling and Querying. -->
+        <!--       - This page, like others, will be stripped and auto-generated. -->
         <div class="row">
           <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Communication </a>
+            <a class= "concentration" href= "catalog/communication.php"> Communication </a>
           </div>
         </div>
         <div class="row">

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <!-- NOTE: Ignored in cleanup for the purposes of having a template to work off of when generating a Catalog entry. -->
   <head>
-    <title>Student Homepage</title>
+    <title>ITWS Communication Concentration Requirements</title>
 
     <!-- CSS ONLY -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -15,59 +16,57 @@
 
   <body>
     <!--NAVIGATION BAR (implemented with Bootstrap) -->
-    <?php include('student_navbar.php'); ?>
-
-    <!-- NOTE: To be used as a template for displaying fully completed plans.  Will have to write a function to query plans and display them in this manner. -->
+    <?php include('../student_navbar.php'); ?>
 
     <section class="content">
       <!-- MAIN PLAN -->
-      <h1>My Plan</h1>
+      <h1>ITWS Communication Concentration Requirements</h1>
       <!-- YEAR 1 -->
       <div class="container">
-        <h2>2019-2020</h2>
+        <h2>First Year</h2>
         <!-- ROW 1 -->
         <div class="row">
           <div class="col-sm col-semester">
-            Fall 2019
+            Semester I
           </div>
           <div class="col-sm col-semester">
-            Spring 2020
+            Semester II
           </div>
         </div>
         <!-- ROW 2 -->
         <div class="row">
           <div class="col-sm">
-            Computer Science 1
+            Introduction to ITWS
           </div>
           <div class="col-sm">
-            Data Structures
+            Communication Theory and Practice (Concentration)
           </div>
         </div>
         <!-- ROW 3 -->
         <div class="row">
           <div class="col-sm">
-            Calculus I
+            Strategic Writing (Concentration)
           </div>
           <div class="col-sm">
-            Calculus II
+            Data Structures
           </div>
         </div>
         <!-- ROW 4 -->
         <div class="row">
           <div class="col-sm">
-           Physics 1
+            Computer Science I
          </div>
          <div class="col-sm">
-          Introduction to Biology
+            IT and Society
         </div>
       </div>
       <!-- ROW 5 -->
       <div class="row">
         <div class="col-sm">
-          Introduction to ITWS
+            Calculus I
         </div>
         <div class="col-sm">
-          Introduction to Biology Lab
+            Math Elective
         </div>
       </div>
 
@@ -77,7 +76,7 @@
 
         </div>
         <div class="col-sm">
-          IT and Society
+          
         </div>
 
       </div>
@@ -85,14 +84,14 @@
 
     <!-- YEAR 2 -->
     <div class="container">
-      <h2>2020-2021</h2>
+      <h2>Second Year</h2>
       <!-- ROW 1 -->
       <div class="row">
         <div class="col-sm col-semester">
-          Fall 2020
+          Semester III
         </div>
         <div class="col-sm col-semester">
-          Spring 2021
+          Semester IV
         </div>
       </div>
       <!-- ROW 2 -->
@@ -101,41 +100,41 @@
           Foundations of Computer Science
         </div>
         <div class="col-sm">
-          Introduction to Algorithms
+          Introduction to Human Computer Interaction
         </div>
       </div>
       <!-- ROW 3 -->
       <div class="row">
         <div class="col-sm">
-         Computer Organization
-       </div>
-       <div class="col-sm">
-         Introduction to Human Computer Interaction
-       </div>
+          Free Elective
+        </div>
+        <div class="col-sm">
+          Web Science Systems Development
+        </div>
      </div>
      <!-- ROW 4 -->
-     <div class="row">
+      <div class="row">
       <div class="col-sm">
         Web Systems Development
       </div>
       <div class="col-sm">
-       Web Science Systems Development
+        Computer Organization
      </div>
    </div>
    <!-- ROW 5 -->
    <div class="row">
     <div class="col-sm">
-      Introduction to Logic
+      Intro to Graphic Design (Concentration)
     </div>
     <div class="col-sm">
-      Statistical Methods
+      Intro to Literature (Concentration)
     </div>
   </div>
 
   <!-- ROW 6 -->
   <div class="row">
     <div class="col-sm">
-      Introduction to Cognitive Science
+      
     </div>
     <div class="col-sm">
 
@@ -146,57 +145,57 @@
 
   <!-- YEAR 3 -->
   <div class="container">
-    <h2>2021-2022</h2>
+    <h2>Third Year</h2>
     <!-- ROW 1 -->
     <div class="row">
       <div class="col-sm col-semester">
-        Arch Summer 2021
+        Semester V (Arch)
       </div>
       <div class="col-sm col-semester">
-        Fall 2021/Spring 2022
+        Semester VI (Fall/Spring)
       </div>
     </div>
     <!-- ROW 2 -->
     <div class="row">
       <div class="col-sm">
-        Operating Systems
-      </div>
-      <div class="col-sm">
-        Programming Languages
-      </div>
-    </div>
-    <!-- ROW 3 -->
-    <div class="row">
-      <div class="col-sm">
-        Linear Algebra
+        One of the following: Statistical Methods, Biostatistics, Intro to Algorithms
       </div>
       <div class="col-sm">
         Managing IT Resources
       </div>
     </div>
+    <!-- ROW 3 -->
+    <div class="row">
+      <div class="col-sm">
+        Communication or Writing Elective
+      </div>
+      <div class="col-sm">
+        ITWS Elective (one of): Database Systems, Data Resource Management
+      </div>
+    </div>
     <!-- ROW 4 -->
     <div class="row">
       <div class="col-sm">
-        RCOS
+        Life Science Elective
       </div>
       <div class="col-sm">
-        Database Systems
+        Communication or Writing Elective (Concentration)
       </div>
     </div>
     <!-- ROW 5 -->
     <div class="row">
       <div class="col-sm">
-        Earth and Sky
+        Free Elective
       </div>
       <div class="col-sm">
-        Strategic Writing
+        HASS Elective
       </div>
     </div>
 
     <!-- ROW 6 -->
     <div class="row">
       <div class="col-sm">
-        Research Method and Statistics
+        
       </div>
       <div class="col-sm">
 
@@ -206,50 +205,50 @@
 
   <!-- YEAR 4 -->
   <div class="container">
-    <h2>2022-2023</h2>
+    <h2>Fourth Year</h2>
     <!-- ROW 1 -->
     <div class="row">
       <div class="col-sm col-semester">
-        Fall 2022
+        Semester VII
       </div>
       <div class="col-sm col-semester">
-        Spring 2023
+        Semester VIII
       </div>
     </div>
     <!-- ROW 2 -->
     <div class="row">
       <div class="col-sm">
-        ITWS Capstone Project
+        One of: ITWS Capstone, Senior Thesis
       </div>
       <div class="col-sm">
-        Senior Thesis
+        Communication Thesis (Concentration)
       </div>
     </div>
     <!-- ROW 3 -->
     <div class="row">
       <div class="col-sm">
-        Network Programming
+        Communication or Writing Elective (Concentration)
       </div>
       <div class="col-sm">
-        Introduction to Linguistics
+        HASS Elective
       </div>
     </div>
     <!-- ROW 4 -->
     <div class="row">
       <div class="col-sm">
-        Sensation and Perception
+        HASS Elective
       </div>
       <div class="col-sm">
-        Minds and Machines
+        HASS Elective
       </div>
     </div>
     <!-- ROW 5 -->
     <div class="row">
       <div class="col-sm">
-        Introduction to Artifical Intelligence
+        Physical Science Elective
       </div>
       <div class="col-sm">
-        Software Design and Documentation
+        Free Elective
       </div>
     </div>
 
@@ -259,7 +258,7 @@
 
       </div>
       <div class="col-sm">
-       Networking in the Linux Kernal
+        Senior Thesis
      </div>
 
    </div>
