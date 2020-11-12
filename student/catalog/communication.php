@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <!-- NOTE: Ignored in cleanup for the purposes of having a template to work off of when generating a Catalog entry. -->
   <head>
     <title>ITWS Communication Concentration Requirements</title>
 

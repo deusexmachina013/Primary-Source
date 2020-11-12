@@ -25,6 +25,7 @@
       </div>
       <table class="center" id="plan-table">
         <!-- Table Heading -->
+        <!-- NOTE: Needed for testing, to be ignored for cleanup purposes. -->
         <div class = "col-sm col-semester">
         <thead>
           <tr>

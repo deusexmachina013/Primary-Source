@@ -25,29 +25,10 @@
       <!-- concentrationn List -->
       <div class="container">
         <!-- ROWS -->
+        <!-- NOTE: To be kept as an HTML template for displaying plans. -->
         <div class="row">
           <div class="col-sm col-conc">
             <a class= "concentration" href= "home.php"> &#9733 Main Plan</a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href="all/test.php"> Test Plan </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href=""> Pre-Med Plan </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href=""> MIS Plan </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href=""> Special Interest Plan </a>
           </div>
         </div>
       </div>

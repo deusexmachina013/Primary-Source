@@ -39,6 +39,8 @@
             <a class= "concentration" href= ""> Cognitive Science </a>
           </div>
         </div>
+        <!-- NOTE: Can be automated via a good mix of JS/PHP and MySQL Tabling and Querying. -->
+        <!--       - This page, like others, will be stripped and auto-generated. -->
         <div class="row">
           <div class="col-sm col-conc">
             <a class= "concentration" href= "catalog/communication.php"> Communication </a>

@@ -17,6 +17,8 @@
     <!--NAVIGATION BAR (implemented with Bootstrap) -->
     <?php include('student_navbar.php'); ?>
 
+    <!-- NOTE: To be used as a template for displaying fully completed plans.  Will have to write a function to query plans and display them in this manner. -->
+
     <section class="content">
       <!-- MAIN PLAN -->
       <h1>My Plan</h1>
