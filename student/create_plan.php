@@ -65,6 +65,7 @@
                     </div>
                   </div>
                 </div>
+                
                 <div class="col-md-6">
                   <div class="semester">
                     <div class="row semester-title">
@@ -95,13 +96,16 @@
                         <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
                       </div>
                     </div>
-
+                    
                     <div class="row course-add">
-                      <button class="btn btn-primary add-course-button">Add Course</button>
-                      <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button>
+                        <button class="btn btn-primary add-course-button">Add Course</button>
+                        <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button>
                     </div>
+
                   </div>
                 </div>
+
+                
                 <div class="col-md-6">
                   <div class="semester">
                     <div class="row semester-title">
@@ -203,15 +207,8 @@
                       </div>
 
                       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                        <!-- <div class="card-body"> -->
-                        <!-- <ul id="sortable1" class="connectedSortable">
-                          <li class="ui-state-default">Item 1</li>
-                          <li class="ui-state-default">Item 2</li>
-                          <li class="ui-state-default">Item 3</li>
-                          <li class="ui-state-default">Item 4</li>
-                          <li class="ui-state-default">Item 5</li>
-                        </ul> -->
                         
+                        <!-- sortable2 -->
                         <div id="sortable2" class="connectedSortable">
                           <div class="ui-state-highlight semester-course">Introduction to ITWS</div>
                           <div class="ui-state-highlight semester-course">Web Systems Development</div>
@@ -220,7 +217,6 @@
                           <div class="ui-state-highlight semester-course">Capstone/Senior Thesis</div>
                         </div>
 
-                        <!-- </div> -->
                       </div> 
                     </div>
                     <div class="card">
