@@ -328,25 +328,9 @@ p {
     margin-bottom: 10px;
     height: 100%;
 }
-/* #sortable1, #sortable2 {
-    border: 1px solid #eee;
-    width: 100%;
-    min-height: 20px;
-    list-style-type: none;
-    margin: 0;
-    padding: 5px 0 0 0;
-    float: left;
-    margin-right: 10px;
-  }
-  #sortable1 div, #sortable2 div {
-    margin: 5px;
-    padding: 5px;
-    font-size: 1.2em;
-    width: 100%;
-  } */
 
   #sortable2 {
-
+    min-height: 30px;
     margin-bottom: 15px;
     margin-right: 20px;
     margin-left: 20px;
