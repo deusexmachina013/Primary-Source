@@ -328,6 +328,10 @@ p {
     height: 100%;
 }
 
+#sortable1 {
+    min-height: 30px;
+}
+
 #sortable2 {
     min-height: 30px;
     margin-bottom: 15px;
@@ -337,4 +341,3 @@ p {
 #sortable2 div {
     padding: 12px;
 }
- 
