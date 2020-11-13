@@ -11,6 +11,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/assets/js/student_create_plan.js"></script>
   </head>
 
@@ -31,7 +35,7 @@
                 <div class="col-md-6">
                   <div class="semester">
                     <div class="row semester-title">
-                      <h3>Fall 2019</h3>
+                      Fall 2019
                     </div> 
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
@@ -64,7 +68,44 @@
                 <div class="col-md-6">
                   <div class="semester">
                     <div class="row semester-title">
-                      <h3>Spring 2020</h3>
+                      Spring 2020
+                    </div> 
+
+                    <div id="sortable1" class="connectedSortable">
+                      <div class="row semester-course"> 
+                        <div class="col-md-1 course-status"><span class="dot"></span></div>
+                        <div class="col-md-5 course-editable course-title  " contenteditable=true>Example</div>
+                        <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
+                        <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                        <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                        <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                      </div>
+                      <div class="row semester-course">
+                        <div class="col-md-1 course-status"><span class="dot"></span></div>
+                        <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
+                        <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
+                        <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                        <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                      </div>
+                      <div class="row semester-course">
+                        <div class="col-md-1 course-status"><span class="dot"></span></div>
+                        <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
+                        <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
+                        <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                        <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                      </div>
+                    </div>
+
+                    <div class="row course-add">
+                      <button class="btn btn-primary add-course-button">Add Course</button>
+                      <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="semester">
+                    <div class="row semester-title">
+                      Fall 2020
                     </div> 
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
@@ -97,40 +138,7 @@
                 <div class="col-md-6">
                   <div class="semester">
                     <div class="row semester-title">
-                      <h3>Fall 2020</h3>
-                    </div> 
-                    <div class="row semester-course">
-                      <div class="col-md-1 course-status"><span class="dot"></span></div>
-                      <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
-                      <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
-                      <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                      <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
-                      <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
-                    </div>
-                    <div class="row semester-course">
-                      <div class="col-md-1 course-status"><span class="dot"></span></div>
-                      <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
-                      <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
-                      <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                      <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
-                    </div>
-                    <div class="row semester-course">
-                      <div class="col-md-1 course-status"><span class="dot"></span></div>
-                      <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
-                      <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
-                      <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                      <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
-                    </div>
-                    <div class="row course-add">
-                      <button class="btn btn-primary add-course-button">Add Course</button>
-                      <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="semester">
-                    <div class="row semester-title">
-                      <h3>Spring 2021</h3>
+                      Spring 2021
                     </div> 
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
@@ -195,10 +203,25 @@
                       </div>
 
                       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <!-- <div class="card-body"> -->
+                        <!-- <ul id="sortable1" class="connectedSortable">
+                          <li class="ui-state-default">Item 1</li>
+                          <li class="ui-state-default">Item 2</li>
+                          <li class="ui-state-default">Item 3</li>
+                          <li class="ui-state-default">Item 4</li>
+                          <li class="ui-state-default">Item 5</li>
+                        </ul> -->
+                        
+                        <div id="sortable2" class="connectedSortable">
+                          <div class="ui-state-highlight semester-course">Introduction to ITWS</div>
+                          <div class="ui-state-highlight semester-course">Web Systems Development</div>
+                          <div class="ui-state-highlight semester-course">Web Science Systems Development</div>
+                          <div class="ui-state-highlight semester-course">Managing IT Resources</div>
+                          <div class="ui-state-highlight semester-course">Capstone/Senior Thesis</div>
                         </div>
-                      </div>
+
+                        <!-- </div> -->
+                      </div> 
                     </div>
                     <div class="card">
                       <div class="card-header" id="headingTwo">

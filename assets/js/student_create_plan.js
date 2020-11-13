@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  
+
     //https://stackoverflow.com/questions/19878051/pressing-enter-leaves-contenteditable-box
     $(".course-editable").on("keydown", function(e){
         var key = e.keyCode || e.charCode;
@@ -52,5 +54,11 @@ $(document).ready(function() {
 
     $(document).on("click", ".course-trash-button",function() {
         $(this).parent().parent().remove();
-    });
+    });  
+    
+    $( function() {
+        $( "#sortable1, #sortable2" ).sortable({
+          connectWith: ".connectedSortable"
+        }).disableSelection();
+      } );
 });

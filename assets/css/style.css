@@ -44,14 +44,17 @@ body {
 
 .semester {
     margin-bottom: 15px;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .semester-title {
+    font-size: 25px;
     background-color: #E8E8E8;
     justify-content: center;
-    margin-bottom: 12px;
+    padding-top: 10px; 
+    padding-bottom: 10px;     
+    margin-bottom: 5px;
 }
 
 .semester-course {
@@ -76,6 +79,7 @@ body {
 #schedule-config > div {
     position: fixed;
 }
+
 #plan-config-courses {
     display: block;
 }
@@ -324,3 +328,32 @@ p {
     margin-bottom: 10px;
     height: 100%;
 }
+/* #sortable1, #sortable2 {
+    border: 1px solid #eee;
+    width: 100%;
+    min-height: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0 0 0;
+    float: left;
+    margin-right: 10px;
+  }
+  #sortable1 div, #sortable2 div {
+    margin: 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    width: 100%;
+  } */
+
+  #sortable2 {
+
+    margin-bottom: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin: 10px;
+  }
+
+  #sortable2 div {
+    padding: 10px;
+  }
+ 
