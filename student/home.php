@@ -102,8 +102,8 @@
         <div class="row">
           <!-- Semester 5 -->
           <div class="col-sm">
-            <p>Operating Systems<p>
-            <p>Linear Algebra<p>
+            <p>Operating Systems</p>
+            <p>Linear Algebra</p>
             <p>RCOS</p>
             <p>Earth and Sky</p>
             <p>Research Methods and Statistics</p>
@@ -114,7 +114,6 @@
             <p>Managing IT Resources</p>
             <p>Database Systems</p>
             <p>Strategic Writing</p>
-            <p></p>
           </div>
         </div>
       </div>
