@@ -134,11 +134,21 @@ body {
     text-align: center;
 }
 
-.course-trash-button,
+/* .course-trash-button,
 .course-config-button {
     padding: 0px !important;
     margin: 0px !important;
     text-decoration: none !important;
+} */
+
+.course-trash-button {
+    color: #292b2c;
+    font-size: 20px;
+}
+
+.course-trash-button:hover {
+    color: blue;
+    text-decoration: none;
 }
 
 #accordion {

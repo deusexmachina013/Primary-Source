@@ -48,7 +48,7 @@ $(document).ready(function() {
         <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>\
         <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>\
         <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>\
-        <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>\
+        <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>\
         </div>');
     });
 

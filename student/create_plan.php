@@ -7,6 +7,7 @@
     <!-- CSS ONLY -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -42,7 +43,8 @@
                       <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
                       <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                      <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                      <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                      <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                       <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                     </div>
                     <div class="row semester-course">
@@ -50,14 +52,16 @@
                       <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
                       <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                      <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                      <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                      <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                     </div>
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
                       <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
                       <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                      <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                      <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                      <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                     </div>
                     <div class="row course-add">
                       <button class="btn btn-primary add-course-button">Add Course</button>
@@ -77,7 +81,8 @@
                         <div class="col-md-5 course-editable course-title  " contenteditable=true>Example</div>
                         <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
                         <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                        <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                        <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                        <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                         <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                       </div>
                       <div class="row semester-course">
@@ -85,14 +90,16 @@
                         <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
                         <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
                         <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                        <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                        <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                        <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                       </div>
                       <div class="row semester-course">
                         <div class="col-md-1 course-status"><span class="dot"></span></div>
                         <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
                         <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
                         <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                        <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                        <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                        <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                       </div>
                     </div>
 
@@ -112,7 +119,8 @@
                       <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
                       <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                      <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                      <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                      <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                       <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                     </div>
                     <div class="row semester-course">
@@ -120,14 +128,16 @@
                       <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
                       <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                      <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                      <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                      <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                     </div>
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
                       <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
                       <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                      <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                      <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                      <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                     </div>
                     <div class="row course-add">
                       <button class="btn btn-primary add-course-button">Add Course</button>
@@ -145,7 +155,8 @@
                       <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
                       <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                      <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                      <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                      <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                       <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                     </div>
                     <div class="row semester-course">
@@ -153,14 +164,16 @@
                       <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
                       <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                      <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                      <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                      <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                     </div>
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
                       <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
                       <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                      <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div>
+                      <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                      <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                     </div>
                     <div class="row course-add">
                       <button class="btn btn-primary add-course-button">Add Course</button>
@@ -217,6 +230,7 @@
                             <div class="col-md-5 course-editable course-title  " contenteditable=true>Introduction to ITWS</div>
                             <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-1200</div>
                             <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
                             <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                             <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                           </div>
@@ -225,6 +239,7 @@
                             <div class="col-md-5 course-editable course-title  " contenteditable=true>Web Systems Development</div>
                             <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-2110</div>
                             <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
                             <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                             <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                           </div>
