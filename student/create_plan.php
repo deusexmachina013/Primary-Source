@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col">
               <div id="semester-row" class="row">
-                <div class="col-md-6">
+                <div class="semester-whole col-md-6">
                   <div class="semester">
                     <div class="row semester-title">
                       Fall 2019
@@ -65,11 +65,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="semester-whole col-md-6">
                   <div class="semester">
                     <div class="row semester-title">
                       Spring 2020
-                    </div> 
+                    </div>
 
                     <div id="sortable1" class="connectedSortable">
                       <div class="row semester-course"> 
@@ -102,7 +102,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="semester-whole col-md-6">
                   <div class="semester">
                     <div class="row semester-title">
                       Fall 2020
@@ -135,7 +135,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="semester-whole col-md-6">
                   <div class="semester">
                     <div class="row semester-title">
                       Spring 2021
@@ -206,14 +206,31 @@
 
                       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                         <!-- sortable2 -->
-                        <div id="sortable2" class="connectedSortable">
-                          <div class="ui-state-highlight semester-course">Introduction to ITWS</div>
+                        <div id="sortable2" class="connectedSortable semester">
+                          <!-- <div class="ui-state-highlight semester-course">Introduction to ITWS</div>
                           <div class="ui-state-highlight semester-course">Web Systems Development</div>
                           <div class="ui-state-highlight semester-course">Web Science Systems Development</div>
                           <div class="ui-state-highlight semester-course">Managing IT Resources</div>
-                          <div class="ui-state-highlight semester-course">Capstone/Senior Thesis</div>
+                          <div class="ui-state-highlight semester-course">Capstone/Senior Thesis</div> -->
+                          <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Introduction to ITWS</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-1200</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
+                          <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Web Systems Development</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-2110</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
                         </div>
                       </div> 
+
                     </div>
                     <div class="card">
                       <div class="card-header" id="headingTwo">

@@ -45,11 +45,16 @@ body {
 /* https://www.w3schools.com/howto/howto_css_circles.asp */
 
 .dot {
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     display: inline-block;
     background-color: green;
+}
+
+.semester-whole {
+    padding: 0px;
+    margin: 0px;
 }
 
 .semester {
@@ -63,13 +68,16 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 6px;
+    margin: 6px;
 }
 
 .semester-course {
     padding: 10px;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    /* margin-top: 6px;
+    margin-bottom: 6px; */
+    margin: 6px;
     background-color: #CEF0F1;
+    /* width: 400px; */
 }
 
 .semester-course>* {
@@ -113,6 +121,7 @@ body {
     background-color: #CEF0F1;
     padding: 8px;
     margin-bottom: 24px;
+    margin: 6px;
 }
 
 .add-course,
@@ -380,7 +389,10 @@ p {
 
 /*******************/
 
-#sortable1 {
+.connectedSortable {
+    min-height: 30px;
+}
+/* #sortable1 {
     min-height: 30px;
 }
 
@@ -392,4 +404,4 @@ p {
 
 #sortable2 div {
     padding: 12px;
-}
+} */
