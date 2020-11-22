@@ -1,27 +1,38 @@
 
 // Based on a W3C Tutorial for similar functionality:
 // https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_filters_table
-function filterStudentPlans() {
-	var input  = document.getElementById("admin-lookup");
-  var filter = input.value.toUpperCase().replace(/\s+/g, '');
-	var table	= document.getElementById("plan-table");
-	var rows	= table.getElementsByTagName("tr");
+function displayByClassAndQuery(query, selectedClass) {
+  var filter = query.toUpperCase().replace(/\s+/g, '');
+  var selectedElements = document.getElementsByClassName(selectedClass);
 
-	for(var i = 0; i < rows.length; i++) {
-		var dataCells = rows[i].getElementsByTagName("td");
+	for(var i = 0; i < selectedElements.length; i++) {
+    var element = selectedElements[i];
+    var elementContents = element.innerText.toUpperCase().replace(/\s+/g, '');
 
-    // Go through every element and check the query against it.
-    for(var j = 0; j < dataCells.length; j++) {
-      var cell = (j > 0) ? dataCells[j] : dataCells[j].firstChild;
-      var text = (cell.textContent || cell.innerText);
-      
-      text = text.toUpperCase().replace(/\s+/g, '');
-      if(text.indexOf(filter) > -1) {
-        rows[i].style.display = "";
-        break;
-      } else {
-        rows[i].style.display = "none";
-      }
-		}
+    if(elementContents.indexOf(filter) > -1) {
+      element.style.display = "";
+    } else {
+      element.style.display = "none";
+    }
 	}
 }
+
+$(document).ready(function() {
+  // Automatically set searchbar inputs up with the display function.
+  $("input[class$='-searchbar']").keyup(function() {
+    // Get the class of objects to filter.
+    // NOTE: Going assumption is search by one, not multiple classes.
+    var classToFilterBy = "";
+    var searchbarClasses = this.classList;
+    for(var i = 0; i < searchbarClasses.length; i++) {
+      var filterIndex = searchbarClasses[i].indexOf("-searchbar");
+      if(filterIndex != -1) {
+        classToFilterBy = searchbarClasses[i].substring(0, filterIndex);
+        break;
+      }
+    }
+
+    // Perform the display filter.
+    displayByClassAndQuery(this.value, classToFilterBy);
+  });
+});
