@@ -191,6 +191,8 @@
                     <button class="nav-link" href="#">Settings</button>
                   </li>
                 </ul>
+
+                <!-- Courses -->
                 <div id="plan-config-courses">
                   <h1>Courses page</h1>
                    <div id="accordion">
@@ -203,15 +205,7 @@
                       </div>
 
                       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                        <!-- <div class="card-body"> -->
-                        <!-- <ul id="sortable1" class="connectedSortable">
-                          <li class="ui-state-default">Item 1</li>
-                          <li class="ui-state-default">Item 2</li>
-                          <li class="ui-state-default">Item 3</li>
-                          <li class="ui-state-default">Item 4</li>
-                          <li class="ui-state-default">Item 5</li>
-                        </ul> -->
-                        
+                        <!-- sortable2 -->
                         <div id="sortable2" class="connectedSortable">
                           <div class="ui-state-highlight semester-course">Introduction to ITWS</div>
                           <div class="ui-state-highlight semester-course">Web Systems Development</div>
@@ -219,8 +213,6 @@
                           <div class="ui-state-highlight semester-course">Managing IT Resources</div>
                           <div class="ui-state-highlight semester-course">Capstone/Senior Thesis</div>
                         </div>
-
-                        <!-- </div> -->
                       </div> 
                     </div>
                     <div class="card">
@@ -273,18 +265,26 @@
                   </div>
                 </div>
 
+                <!-- Validation -->
                 <div id="plan-config-validation">
                   Validation page
                 </div>
+
+                <!-- Groups -->
                 <div id="plan-config-groups">
                   Groups page
                 </div>
+
+                <!-- Notes -->
                 <div id="plan-config-notes">
                   Notes page
                 </div>
+
+                <!-- Settings -->
                 <div id="plan-config-settings">
                   Settings page
                 </div>
+
               </div>
             </div>
         </div>

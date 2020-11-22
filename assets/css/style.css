@@ -1,5 +1,9 @@
 /******************/
+
+
 /* NAVIGATION BAR */
+
+
 /******************/
 
 .navbar-custom {
@@ -7,9 +11,13 @@
 }
 
 
-/************************/
-/*** /student/home.php **/
-/************************/
+/*******************/
+
+
+/* create_plan.php */
+
+
+/*******************/
 
 body {
     margin-top: 100px;
@@ -33,7 +41,9 @@ body {
     height: 25px;
 }
 
+
 /* https://www.w3schools.com/howto/howto_css_circles.asp */
+
 .dot {
     height: 25px;
     width: 25px;
@@ -50,7 +60,7 @@ body {
     font-size: 25px;
     background-color: #E8E8E8;
     justify-content: center;
-    padding-top: 10px; 
+    padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 6px;
 }
@@ -62,7 +72,7 @@ body {
     background-color: #CEF0F1;
 }
 
-.semester-course > * {
+.semester-course>* {
     align-self: center;
 }
 
@@ -74,7 +84,7 @@ body {
     display: none;
 }
 
-#schedule-config > div {
+#schedule-config>div {
     position: fixed;
 }
 
@@ -105,15 +115,18 @@ body {
     margin-bottom: 24px;
 }
 
-.add-course, .add-course-group {
+.add-course,
+.add-course-group {
     margin: 10px;
 }
 
-.course-trash, .course-config {
+.course-trash,
+.course-config {
     text-align: center;
 }
 
-.course-trash-button, .course-config-button {
+.course-trash-button,
+.course-config-button {
     padding: 0px !important;
     margin: 0px !important;
     text-decoration: none !important;
@@ -123,7 +136,15 @@ body {
     width: 600px;
 }
 
+
+/*************/
+
+
 /* MAIN PLAN */
+
+
+/*************/
+
 .content .container .col-sm {
     /* background-color: #CEF0F1; */
     margin: 5px;
@@ -138,7 +159,6 @@ body {
     font-weight: bold;
     height: 100%;
     padding: 10px;
-    
 }
 
 h1 {
@@ -177,7 +197,7 @@ h1 {
     display: center;
     display: block;
     margin-left: auto;
-    margin-right: auto;   
+    margin-right: auto;
 }
 
 button:hover {
@@ -204,10 +224,18 @@ button:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20%; 
+    width: 20%;
 }
 
+
+/***************/
+
+
 /* CREATE PLAN */
+
+
+/***************/
+
 .submit-button {
     float: right;
     border: 2px solid;
@@ -219,7 +247,15 @@ button:hover {
     font-weight: bold;
 }
 
+
+/***********/
+
+
 /* CATALOG */
+
+
+/***********/
+
 .content .container .col-conc {
     text-align: center;
     font-weight: 500px;
@@ -229,13 +265,18 @@ button:hover {
 }
 
 .concentration {
-    color:rgb(49, 45, 45);
-
+    color: rgb(49, 45, 45);
 }
 
+
 /**********************/
+
+
 /* .../admin/home.php */
+
+
 /**********************/
+
 .student-column {
     width: 30%;
     border: solid;
@@ -269,16 +310,16 @@ th {
     margin: 6px;
     padding: 12px;
     height: 50px;
-    background-color:#E8E8E8;
+    background-color: #E8E8E8;
     color: black;
-  }
+}
 
 td {
     background-color: #CEF0F1;
     margin: 6px;
     padding: 12px;
     height: 50px;
-    background-color:#CEF0F1;
+    background-color: #CEF0F1;
     color: black;
 }
 
@@ -312,13 +353,15 @@ td {
 
 .center {
     margin-left: auto;
-    margin-right: auto;  
+    margin-right: auto;
 }
+
 .search-bar input[type=text] {
     margin: 0 auto;
     display: block;
     border-radius: 25px;
 }
+
 p {
     background-color: #CEF0F1;
     padding: 10px;
@@ -327,6 +370,15 @@ p {
     margin-bottom: 10px;
     height: 100%;
 }
+
+
+/*******************/
+
+
+/* create_plan.php */
+
+
+/*******************/
 
 #sortable1 {
     min-height: 30px;
