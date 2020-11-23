@@ -21,14 +21,18 @@
 
     <main class="content">
       <h1>Your Students' Plans</h1>
-      <div class="search-bar">
-        <input type="text" class="student-searchbar" placeholder="Search for student plans..." id="admin-lookup">
-        <button class="dropbtn">Filter By:</button>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-          <a href="#">Link 4</a>
+      <div class="utility-bar">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Filter By:
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Student</a>
+              <a class="dropdown-item" href="#">Class Year</a>
+              <a class="dropdown-item" href="#">Status</a>
+              <a class="dropdown-item" href="#">Submission Date</a>
+            </div>
+        <div class="search-bar">
+          <input type="text" class="student-searchbar" placeholder="Search for student plans..." id="admin-lookup">
         </div>
       </div>
       <table class="center" id="plan-table">
