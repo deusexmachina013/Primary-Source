@@ -23,6 +23,13 @@
       <h1>Your Students' Plans</h1>
       <div class="search-bar">
         <input type="text" class="student-searchbar" placeholder="Search for student plans..." id="admin-lookup">
+        <button class="dropbtn">Filter By:</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+        </div>
       </div>
       <table class="center" id="plan-table">
         <!-- Table Heading -->
