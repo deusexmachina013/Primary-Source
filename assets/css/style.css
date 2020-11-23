@@ -93,7 +93,11 @@ body {
 }
 
 #schedule-config>div {
-    position: fixed;
+    position: block;
+    overflow-x:hidden;
+    overflow-y:scroll; 
+    height:400px;
+    width:115%;
 }
 
 #plan-config-courses {
