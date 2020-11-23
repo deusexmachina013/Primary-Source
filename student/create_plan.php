@@ -24,7 +24,7 @@
     <?php include('student_navbar.php'); ?>
 
     <section class="plan-header">
-      <h2 id="plan-name"><a>&starf;</a>PLAN NAME</h2>
+      <h1><a>&starf;</a>PLAN NAME</h1>
       <button id="toggle-config-button" class="btn btn-outline-primary">Show Config</button>
     </section>
     <!-- TODO: discuss how to make fields editable nicely -->
