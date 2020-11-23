@@ -243,6 +243,42 @@
                             <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                             <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                           </div>
+                          <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Web Science Systems Development</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-4500</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
+                          <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Managing IT Resources</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-4310</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
+                          <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>ITWS Capstone (Professional Track)</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-4100</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
+                          <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Senior Thesis</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-4500</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
                         </div>
                       </div> 
 
@@ -257,7 +293,42 @@
                       </div>
                       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Calculus I</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>MATH-1010</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
+                          <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Math Elective</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>MATH-XXXX</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
+                          <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Physical Science Elective</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>PHYS-XXXX</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
+                          <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Life Science Elective</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>BIOL-XXXX</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -272,7 +343,24 @@
 
                       <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>IT and Society</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-1220</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
+                          <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Intro to Human Computer Interaction</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-2210</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -288,7 +376,15 @@
 
                       <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Concentration Course</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>ABCD-XXXX</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
+                          </div>
                         </div>
                       </div>
 
@@ -309,7 +405,9 @@
 
                 <!-- Notes -->
                 <div id="plan-config-notes">
-                  Notes page
+                  
+                <h1>Notes page</h1>
+                  <textarea class="form-control" id="text-area-notes"></textarea>                  
                 </div>
 
                 <!-- Settings -->
