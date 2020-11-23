@@ -59,9 +59,9 @@ $(document).ready(function() {
     $( function() {
         $( "#sortable1, #sortable2" ).sortable({
             connectWith: ".connectedSortable",
-            // helper: 'clone',
-            // appendTo: 'body',
-            // zIndex: 10000
+            helper: 'clone',
+            appendTo: 'body',
+            zIndex: 10000
         }).disableSelection();
     });
 
