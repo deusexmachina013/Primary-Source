@@ -19,13 +19,13 @@
 
     <!-- NOTE: To be used as a template for displaying fully completed plans.  Will have to write a function to query plans and display them in this manner. -->
 
-    <section class="content">
+    <section class="content home-plan">
       <!-- MAIN PLAN -->
       <h1>My Plan</h1>
       <!-- YEAR 1 -->
       <div class="container">
         <h2>2019-2020</h2>
-        <!-- ROW 1 -->
+        <!-- SEMESTER YEAR -->
         <div class="row">
           <div class="col-sm col-semester">
             Fall 2019
@@ -34,236 +34,120 @@
             Spring 2020
           </div>
         </div>
-        <!-- ROW 2 -->
+        <!-- Year 1 -->
         <div class="row">
+          <!-- Semester 1 -->
           <div class="col-sm">
-            Computer Science 1
+            <p>Computer Science 1</p>
+            <p>Introduction to ITWS</p>
+            <p>Physics 1</p>
+            <p>Calculus 1</p>
           </div>
+          <!-- Semester 2 -->
           <div class="col-sm">
-            Data Structures
+            <p>Data Structure</p>
+            <p>Calculus II</p>
+            <p>Introduction to Biology</p>
+            <p>Introduction to Biology Lab</p>
+            <p>IT and Society</p>
           </div>
         </div>
-        <!-- ROW 3 -->
+      </div>
+
+      <!-- YEAR 2 -->
+      <div class="container">
+        <h2>2020-2021</h2>
+        <!-- SEMESTER YEAR -->
         <div class="row">
-          <div class="col-sm">
-            Calculus I
+          <div class="col-sm col-semester">
+            Fall 2020
           </div>
-          <div class="col-sm">
-            Calculus II
+          <div class="col-sm col-semester">
+            Spring 2021
           </div>
         </div>
-        <!-- ROW 4 -->
+        
         <div class="row">
+          <!-- Semester 3 -->
           <div class="col-sm">
-           Physics 1
-         </div>
-         <div class="col-sm">
-          Introduction to Biology
+            <p>Foundations of Computer Science </p>
+            <p>Computer Organization</p>
+            <p>Web Systems Development</p>
+            <p>Introduction to Logic</p>
+            <p>Introduction to Cognitive Science</p>
+          </div>
+          <!-- Semester 4 -->
+          <div class="col-sm">
+            <p>Introduction to Algorithms</p>
+            <p>Introduction to HCI</p>
+            <p>Web Science Systems Development</p>
+            <p>Statistical Methods</p>
+          </div>
         </div>
       </div>
-      <!-- ROW 5 -->
-      <div class="row">
-        <div class="col-sm">
-          Introduction to ITWS
-        </div>
-        <div class="col-sm">
-          Introduction to Biology Lab
-        </div>
-      </div>
 
-      <!-- ROW 6 -->
-      <div class="row">
-        <div class="col-sm">
-
+      <!-- YEAR 3 -->
+      <div class="container">
+        <h2>2021-2022</h2>
+        <!-- SEMESTER YEAR -->
+        <div class="row">
+          <div class="col-sm col-semester">
+            Fall 2021
+          </div>
+          <div class="col-sm col-semester">
+            Spring 2022
+          </div>
         </div>
-        <div class="col-sm">
-          IT and Society
-        </div>
-
-      </div>
-    </div>
-
-    <!-- YEAR 2 -->
-    <div class="container">
-      <h2>2020-2021</h2>
-      <!-- ROW 1 -->
-      <div class="row">
-        <div class="col-sm col-semester">
-          Fall 2020
-        </div>
-        <div class="col-sm col-semester">
-          Spring 2021
+        
+        <div class="row">
+          <!-- Semester 5 -->
+          <div class="col-sm">
+            <p>Operating Systems</p>
+            <p>Linear Algebra</p>
+            <p>RCOS</p>
+            <p>Earth and Sky</p>
+            <p>Research Methods and Statistics</p>
+          </div>
+          <!-- Semester 6 -->
+          <div class="col-sm">
+            <p>Programming Languages</p>
+            <p>Managing IT Resources</p>
+            <p>Database Systems</p>
+            <p>Strategic Writing</p>
+          </div>
         </div>
       </div>
-      <!-- ROW 2 -->
-      <div class="row">
-        <div class="col-sm">
-          Foundations of Computer Science
+      <!-- YEAR 4 -->
+      <div class="container">
+        <h2>2022-2023</h2>
+        <!-- SEMESTER YEAR -->
+        <div class="row">
+          <div class="col-sm col-semester">
+            Fall 2022
+          </div>
+          <div class="col-sm col-semester">
+            Spring 2023
+          </div>
         </div>
-        <div class="col-sm">
-          Introduction to Algorithms
+        
+        <div class="row">
+          <!-- Semester 7 -->
+          <div class="col-sm">
+            <p>ITWS Capstone Project</p>
+            <p>Networking Programming</p>
+            <p>Sensation and Perception</p>
+            <p>Introduction to Artificial Intelligence</p>
+          </div>
+          <!-- Semester 8 -->
+          <div class="col-sm">
+            <p>Senior Thesis</p>
+            <p>Introduction to Linguistics</p>
+            <p>Minds and Machines</p>
+            <p>Software Design and Documentation</p>
+            <p>Networking in the Linux Kernal</p>
+          </div>
         </div>
       </div>
-      <!-- ROW 3 -->
-      <div class="row">
-        <div class="col-sm">
-         Computer Organization
-       </div>
-       <div class="col-sm">
-         Introduction to Human Computer Interaction
-       </div>
-     </div>
-     <!-- ROW 4 -->
-     <div class="row">
-      <div class="col-sm">
-        Web Systems Development
-      </div>
-      <div class="col-sm">
-       Web Science Systems Development
-     </div>
-   </div>
-   <!-- ROW 5 -->
-   <div class="row">
-    <div class="col-sm">
-      Introduction to Logic
-    </div>
-    <div class="col-sm">
-      Statistical Methods
-    </div>
-  </div>
-
-  <!-- ROW 6 -->
-  <div class="row">
-    <div class="col-sm">
-      Introduction to Cognitive Science
-    </div>
-    <div class="col-sm">
-
-    </div>
-
-  </div>
-  </div>
-
-  <!-- YEAR 3 -->
-  <div class="container">
-    <h2>2021-2022</h2>
-    <!-- ROW 1 -->
-    <div class="row">
-      <div class="col-sm col-semester">
-        Arch Summer 2021
-      </div>
-      <div class="col-sm col-semester">
-        Fall 2021/Spring 2022
-      </div>
-    </div>
-    <!-- ROW 2 -->
-    <div class="row">
-      <div class="col-sm">
-        Operating Systems
-      </div>
-      <div class="col-sm">
-        Programming Languages
-      </div>
-    </div>
-    <!-- ROW 3 -->
-    <div class="row">
-      <div class="col-sm">
-        Linear Algebra
-      </div>
-      <div class="col-sm">
-        Managing IT Resources
-      </div>
-    </div>
-    <!-- ROW 4 -->
-    <div class="row">
-      <div class="col-sm">
-        RCOS
-      </div>
-      <div class="col-sm">
-        Database Systems
-      </div>
-    </div>
-    <!-- ROW 5 -->
-    <div class="row">
-      <div class="col-sm">
-        Earth and Sky
-      </div>
-      <div class="col-sm">
-        Strategic Writing
-      </div>
-    </div>
-
-    <!-- ROW 6 -->
-    <div class="row">
-      <div class="col-sm">
-        Research Method and Statistics
-      </div>
-      <div class="col-sm">
-
-      </div>
-    </div>
-  </div>
-
-  <!-- YEAR 4 -->
-  <div class="container">
-    <h2>2022-2023</h2>
-    <!-- ROW 1 -->
-    <div class="row">
-      <div class="col-sm col-semester">
-        Fall 2022
-      </div>
-      <div class="col-sm col-semester">
-        Spring 2023
-      </div>
-    </div>
-    <!-- ROW 2 -->
-    <div class="row">
-      <div class="col-sm">
-        ITWS Capstone Project
-      </div>
-      <div class="col-sm">
-        Senior Thesis
-      </div>
-    </div>
-    <!-- ROW 3 -->
-    <div class="row">
-      <div class="col-sm">
-        Network Programming
-      </div>
-      <div class="col-sm">
-        Introduction to Linguistics
-      </div>
-    </div>
-    <!-- ROW 4 -->
-    <div class="row">
-      <div class="col-sm">
-        Sensation and Perception
-      </div>
-      <div class="col-sm">
-        Minds and Machines
-      </div>
-    </div>
-    <!-- ROW 5 -->
-    <div class="row">
-      <div class="col-sm">
-        Introduction to Artifical Intelligence
-      </div>
-      <div class="col-sm">
-        Software Design and Documentation
-      </div>
-    </div>
-
-    <!-- ROW 6 -->
-    <div class="row">
-      <div class="col-sm">
-
-      </div>
-      <div class="col-sm">
-       Networking in the Linux Kernal
-     </div>
-
-   </div>
-  </div>
 
   </section>
   </body>

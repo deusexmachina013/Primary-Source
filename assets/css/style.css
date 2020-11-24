@@ -11,13 +11,13 @@
 }
 
 
-/************************/
+/*******************/
 
 
-/*** /student/home.php **/
+/* create_plan.php */
 
 
-/************************/
+/*******************/
 
 body {
     margin-top: 100px;
@@ -45,30 +45,41 @@ body {
 /* https://www.w3schools.com/howto/howto_css_circles.asp */
 
 .dot {
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     display: inline-block;
     background-color: green;
 }
 
+.semester-whole {
+    padding: 0px;
+    margin: 0px;
+}
+
 .semester {
-    margin-bottom: 15px;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin: 12px;
 }
 
 .semester-title {
+    font-size: 25px;
     background-color: #E8E8E8;
     justify-content: center;
-    margin-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 6px;
+    margin: 6px;
 }
 
 .semester-course {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    /* position: relative; */
+    padding: 10px;
+    /* margin-top: 6px;
+    margin-bottom: 6px; */
+    margin: 6px;
     background-color: #CEF0F1;
-    margin-bottom: 6px;
+    /* width: 400px; */
+    /* z-index: 10000; */
 }
 
 .semester-course>* {
@@ -85,18 +96,41 @@ body {
 
 #schedule-config>div {
     position: fixed;
+    /* overflow: scroll; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* width: 50%; */
+    max-height: 70%;
 }
-
-#plan-config-validation {
+#plan-config-courses {
     display: block;
 }
 
+#plan-config-validation {
+    display: none;
+}
+
+.validation-message {
+    margin-top: 20px;
+}
+
+.plan-name-editable{
+    height:70px;
+    width:600px;
+    padding:10px;
+    margin:auto
+}
 #plan-config-groups {
     display: none;
 }
 
 #plan-config-notes {
     display: none;
+    width: 500px;
+}
+
+#text-area-notes {
+    margin-top: 20px;
 }
 
 #plan-config-settings {
@@ -108,6 +142,7 @@ body {
     background-color: #CEF0F1;
     padding: 8px;
     margin-bottom: 24px;
+    margin: 6px;
 }
 
 .add-course,
@@ -120,27 +155,51 @@ body {
     text-align: center;
 }
 
-.course-trash-button,
+/* .course-trash-button,
 .course-config-button {
     padding: 0px !important;
     margin: 0px !important;
     text-decoration: none !important;
+} */
+
+.course-trash-button {
+    color: #292b2c;
+    font-size: 20px;
 }
+
+.course-trash-button:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+#accordion {
+    width: 600px;
+    margin-top: 20px;
+}
+
+
+/*************/
 
 
 /* MAIN PLAN */
 
+
+/*************/
+
 .content .container .col-sm {
-    background-color: #CEF0F1;
-    margin: 6px;
-    padding: 12px;
-    height: 50px;
+    /* background-color: #CEF0F1; */
+    margin: 5px;
+    margin-bottom: 0px;
+    padding: 0px;
+    height: 100%;
 }
 
 .content .container .col-semester {
     background-color: #E8E8E8;
     text-align: center;
     font-weight: bold;
+    height: 100%;
+    padding: 10px;
 }
 
 h1 {
@@ -210,7 +269,13 @@ button:hover {
 }
 
 
+/***************/
+
+
 /* CREATE PLAN */
+
+
+/***************/
 
 .submit-button {
     float: right;
@@ -224,12 +289,20 @@ button:hover {
 }
 
 
+/***********/
+
+
 /* CATALOG */
+
+
+/***********/
 
 .content .container .col-conc {
     text-align: center;
     font-weight: 500px;
     text-decoration: none;
+    background-color: #CEF0F1;
+    padding: 10px;
 }
 
 .concentration {
@@ -324,28 +397,43 @@ td {
     margin-right: auto;
 }
 
-.utility-bar {
-    margin-left: auto;
-    margin-right: auto;
-    border: solid red 2px;
-    width: 50%;
-}
-
 .search-bar input[type=text] {
-    display: inline-block;
-    border-radius: 7px;
-    width: 615px;
-    height: 38px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 25px;
 }
 
-.btn-primary {
-    display: inline-block;
-    background-color: #E8E8E8;
-    color: black;
-    width: auto;
+.home-plan p {
+    background-color: #CEF0F1;
+    padding: 10px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
 }
 
 
-/* div {
-    float: left;
+/*******************/
+
+
+/* create_plan.php */
+
+
+/*******************/
+
+.connectedSortable {
+    min-height: 30px;
+}
+/* #sortable1 {
+    min-height: 30px;
+}
+
+#sortable2 {
+    min-height: 30px;
+    margin-bottom: 15px;
+    margin: 10px;
+}
+
+#sortable2 div {
+    padding: 12px;
 } */
