@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 24, 2020 at 05:28 AM
+-- Generation Time: Nov 24, 2020 at 05:35 AM
 -- Server version: 10.1.47-MariaDB-0ubuntu0.18.04.1
 -- PHP Version: 7.2.24-0ubuntu0.18.04.7
 
@@ -238,8 +238,8 @@ ALTER TABLE `plans`
 -- Indexes for table `plan_courses`
 --
 ALTER TABLE `plan_courses`
-  ADD KEY `fk_plan_courses_semester_id` (`semester_id`),
-  ADD KEY `fk_plan_courses_course_id` (`course_id`);
+  ADD KEY `fk_plan_courses_course_id` (`course_id`),
+  ADD KEY `fk_plan_courses_semester_id` (`semester_id`);
 
 --
 -- Indexes for table `plan_semesters`
@@ -354,7 +354,7 @@ ALTER TABLE `plans`
 --
 ALTER TABLE `plan_courses`
   ADD CONSTRAINT `fk_plan_courses_course_id` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_plan_courses_semester_id` FOREIGN KEY (`semester_id`) REFERENCES `plans` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_plan_courses_semester_id` FOREIGN KEY (`semester_id`) REFERENCES `plan_semesters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `plan_semesters`
