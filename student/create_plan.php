@@ -24,7 +24,7 @@
     <?php include('student_navbar.php'); ?>
 
     <section class="plan-header">
-      <h1 class="course-editable" contenteditable=true><a>&starf;</a>PLAN NAME</h1>
+      <h1 contenteditable=true><a>&starf;</a>PLAN NAME</h1>
       <button id="toggle-config-button" class="btn btn-outline-primary">Show Config</button>
     </section>
     <!-- TODO: discuss how to make fields editable nicely -->
@@ -103,7 +103,7 @@
                       </div>
                       <div class="row semester-course">
                         <div class="col-md-1 course-status"><span class="dot"></span></div>
-                        <div class="col-md-5 course-editable course-title" contenteditable=true>IT and Society II</div>
+                        <div class="col-md-5 course-editable course-title" contenteditable=true>IT and Society</div>
                         <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-1220</div>
                         <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
                         <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
