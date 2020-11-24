@@ -190,9 +190,9 @@ body {
 /*************/
 
 .content .container .col-sm {
-    /* background-color: #CEF0F1; */
-    margin: 5px;
-    margin-bottom: 0px;
+    margin-right: 5px;
+    margin-left: 5px;
+    /* margin-bottom: 5px; */
     padding: 0px;
     height: 100%;
 }

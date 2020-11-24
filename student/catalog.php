@@ -24,117 +24,38 @@
       <div class="container">
         <h2>ITWS Concentrations</h2>
         <!-- ROWS -->
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Arts </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Civil/Structural Engineer </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Cognitive Science </a>
-          </div>
-        </div>
+        <?php
+          // Iterate through concentrations table and echo name with link to template
+          // foreach ($concentrations as $row) {
+          //   echo "<div><a class= 'concentration' href= '" . $row['link'] . '.php' . "'> " . $row['name'] . " </a></div>";
+          // }
+        ?>
+        <!-- arts.php -->
+        <div><a class= "concentration" href= ""> Arts </a></div> 
+        <!-- civil-structural-engineer.php -->
+        <div><a class= "concentration" href= ""> Civil/Structural Engineer </a></div>
+        <div><a class= "concentration" href= ""> Cognitive Science </a></div>
+        <div><a class= "concentration" href= "catalog/communication.php"> Communication </a></div>
+        <div><a class= "concentration" href= ""> Computer Hardware </a></div>
+        <div><a class= "concentration" href= ""> Computer Networking </a></div>
+        <div><a class= "concentration" href= ""> Data Science </a></div>
+        <div><a class= "concentration" href= ""> Economics </a></div>
+        <div><a class= "concentration" href= ""> Entrepreneurship </a></div>
+        <div><a class= "concentration" href= ""> Finance </a></div>
+        <div><a class= "concentration" href= ""> Information Security </a></div>
+        <div><a class= "concentration" href= ""> Machine & Computational Learning </a></div>
+        <div><a class= "concentration" href= ""> Management Information Systems </a></div>
+        <div><a class= "concentration" href= ""> Mechanical/Aeronautical Engineering </a></div>
+        <div><a class= "concentration" href= ""> Medicine </a></div>
+        <div><a class= "concentration" href= ""> Pre-Law </a></div>
+        <div><a class= "concentration" href= ""> Psychology </a></div>
+        <div><a class= "concentration" href= ""> Science & Technology Studies </a></div>
+        <div><a class= "concentration" href= ""> Science Informatics </a></div>
+        <div><a class= "concentration" href= ""> Special Interest </a></div>
+        <div><a class= "concentration" href= ""> Web Technology </a></div>
         <!-- NOTE: Can be automated via a good mix of JS/PHP and MySQL Tabling and Querying. -->
         <!--       - This page, like others, will be stripped and auto-generated. -->
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= "catalog/communication.php"> Communication </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Computer Hardware </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Computer Networking </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Data Science </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Economics </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Entrepreneurship </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Finance </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Information Security </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Machine &amp; Computational Learning </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Management Information Systems </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Mechanical/Aeronautical Engineering </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Medicine </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Pre-Law </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Psychology </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Science &amp; Technology Studies </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Science Informatics </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Special Interest </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= ""> Web Technology </a>
-          </div>
-        </div>
-
-
       </div>
-
   </section>
   </body>
 </html>
