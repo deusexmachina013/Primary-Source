@@ -114,6 +114,12 @@ body {
     margin-top: 20px;
 }
 
+.plan-name-editable{
+    height:70px;
+    width:600px;
+    padding:10px;
+    margin:auto
+}
 #plan-config-groups {
     display: none;
 }
