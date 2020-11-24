@@ -400,12 +400,57 @@ td {
     margin-right: auto;
 }
 
-.search-bar input[type=text] {
-    margin: 0 auto;
-    display: block;
-    border-radius: 25px;
+/* BEGIN ADMIN NAVIGATION BAR */
+.student-search {
+    border: solid #212529 2px;
+    padding: 0px;
+    width: 60%;
+    height: 32px;
 }
 
+.left-partition {
+    float: left;
+    width: 25%;
+}
+
+.search-dropdown {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 29px;
+
+    background-color: lightgrey;
+    border: none;
+    color: #212529;
+}
+
+.right-partition {
+    float: left;
+    width: 75%;
+}
+
+.student-searchbar {
+    float: left;
+    margin-left: 4px;
+    width: calc(100% - 36px);
+
+    border: none;
+}
+
+.student-submit {
+    float: left;
+    padding: 0px;
+    height: 29px;
+    width: 32px;
+
+    background-color: lightgrey;
+    border: none;
+    color: #212529;
+    text-align: center;
+}
+/* ================= */
+
+/* Home plan?  Where did this come from, and where should it go? */
 .home-plan p {
     background-color: #CEF0F1;
     padding: 10px;
