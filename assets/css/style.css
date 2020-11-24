@@ -35,6 +35,8 @@ body {
 
 #toggle-config-button {
     float: right;
+    /* position: absolute;
+    right: 25px; */
 }
 
 .course-status {
@@ -95,6 +97,7 @@ body {
 }
 
 #schedule-config>div {
+    margin-top: 25px;
     position: fixed;
     /* overflow: scroll; */
     overflow-x: hidden;
