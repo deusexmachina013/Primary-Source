@@ -20,249 +20,133 @@
 
     <section class="content">
       <!-- MAIN PLAN -->
-      <h1>ITWS Communication Concentration Requirements</h1>
+      <h1>Communication</h1>
       <!-- YEAR 1 -->
       <div class="container">
-        <h2>First Year</h2>
-        <!-- ROW 1 -->
+        <h2>Year 1</h2>
+        <!-- SEMESTER YEAR -->
         <div class="row">
           <div class="col-sm col-semester">
-            Semester I
+            Semester 1
           </div>
           <div class="col-sm col-semester">
-            Semester II
+            Semester 2
           </div>
         </div>
-        <!-- ROW 2 -->
+        <!-- Year 1 -->
         <div class="row">
+          <!-- Semester 1 -->
           <div class="col-sm">
-            Introduction to ITWS
+            <p>Computer Science 1</p>
+            <p>Introduction to ITWS</p>
+            <p>Strategic Writing (Concentration)</p>
+            <p>Calculus 1</p>
           </div>
+          <!-- Semester 2 -->
           <div class="col-sm">
-            Communication Theory and Practice (Concentration)
+            <p>Data Structures</p>
+            <p>Communication Theory and Practice (Concentration)</p>
+            <p>Introduction to Biology</p>
+            <p>Introduction to Biology Lab</p>
+            <p>IT and Society</p>
           </div>
         </div>
-        <!-- ROW 3 -->
+      </div>
+
+      <!-- YEAR 2 -->
+      <div class="container">
+        <h2>Year 2</h2>
+        <!-- SEMESTER YEAR -->
         <div class="row">
-          <div class="col-sm">
-            Strategic Writing (Concentration)
+          <div class="col-sm col-semester">
+            Semester 3
           </div>
-          <div class="col-sm">
-            Data Structures
+          <div class="col-sm col-semester">
+            Semester 4
           </div>
         </div>
-        <!-- ROW 4 -->
-        <div class="row">
-          <div class="col-sm">
-            Computer Science I
-         </div>
-         <div class="col-sm">
-            IT and Society
-        </div>
-      </div>
-      <!-- ROW 5 -->
-      <div class="row">
-        <div class="col-sm">
-            Calculus I
-        </div>
-        <div class="col-sm">
-            Math Elective
-        </div>
-      </div>
-
-      <!-- ROW 6 -->
-      <div class="row">
-        <div class="col-sm">
-
-        </div>
-        <div class="col-sm">
-          
-        </div>
-
-      </div>
-    </div>
-
-    <!-- YEAR 2 -->
-    <div class="container">
-      <h2>Second Year</h2>
-      <!-- ROW 1 -->
-      <div class="row">
-        <div class="col-sm col-semester">
-          Semester III
-        </div>
-        <div class="col-sm col-semester">
-          Semester IV
-        </div>
-      </div>
-      <!-- ROW 2 -->
-      <div class="row">
-        <div class="col-sm">
-          Foundations of Computer Science
-        </div>
-        <div class="col-sm">
-          Introduction to Human Computer Interaction
-        </div>
-      </div>
-      <!-- ROW 3 -->
-      <div class="row">
-        <div class="col-sm">
-          Free Elective
-        </div>
-        <div class="col-sm">
-          Web Science Systems Development
-        </div>
-     </div>
-     <!-- ROW 4 -->
-      <div class="row">
-      <div class="col-sm">
-        Web Systems Development
-      </div>
-      <div class="col-sm">
-        Computer Organization
-     </div>
-   </div>
-   <!-- ROW 5 -->
-   <div class="row">
-    <div class="col-sm">
-      Intro to Graphic Design (Concentration)
-    </div>
-    <div class="col-sm">
-      Intro to Literature (Concentration)
-    </div>
-  </div>
-
-  <!-- ROW 6 -->
-  <div class="row">
-    <div class="col-sm">
-      
-    </div>
-    <div class="col-sm">
-
-    </div>
-
-  </div>
-  </div>
-
-  <!-- YEAR 3 -->
-  <div class="container">
-    <h2>Third Year</h2>
-    <!-- ROW 1 -->
-    <div class="row">
-      <div class="col-sm col-semester">
-        Semester V (Arch)
-      </div>
-      <div class="col-sm col-semester">
-        Semester VI (Fall/Spring)
-      </div>
-    </div>
-    <!-- ROW 2 -->
-    <div class="row">
-      <div class="col-sm">
-        One of the following: Statistical Methods, Biostatistics, Intro to Algorithms
-      </div>
-      <div class="col-sm">
-        Managing IT Resources
-      </div>
-    </div>
-    <!-- ROW 3 -->
-    <div class="row">
-      <div class="col-sm">
-        Communication or Writing Elective
-      </div>
-      <div class="col-sm">
-        ITWS Elective (one of): Database Systems, Data Resource Management
-      </div>
-    </div>
-    <!-- ROW 4 -->
-    <div class="row">
-      <div class="col-sm">
-        Life Science Elective
-      </div>
-      <div class="col-sm">
-        Communication or Writing Elective (Concentration)
-      </div>
-    </div>
-    <!-- ROW 5 -->
-    <div class="row">
-      <div class="col-sm">
-        Free Elective
-      </div>
-      <div class="col-sm">
-        HASS Elective
-      </div>
-    </div>
-
-    <!-- ROW 6 -->
-    <div class="row">
-      <div class="col-sm">
         
+        <div class="row">
+          <!-- Semester 3 -->
+          <div class="col-sm">
+            <p>Foundations of Computer Science </p>
+            <p>Computer Organization</p>
+            <p>Web Systems Development</p>
+            <p>Introduction to Logic</p>
+            <p>Introduction to Cognitive Science</p>
+          </div>
+          <!-- Semester 4 -->
+          <div class="col-sm">
+            <p>Introduction to Algorithms</p>
+            <p>Introduction to HCI</p>
+            <p>Web Science Systems Development</p>
+            <p>Statistical Methods</p>
+          </div>
+        </div>
       </div>
-      <div class="col-sm">
 
+      <!-- YEAR 3 -->
+      <div class="container">
+        <h2>Year 3</h2>
+        <!-- SEMESTER YEAR -->
+        <div class="row">
+          <div class="col-sm col-semester">
+            Semester 4
+          </div>
+          <div class="col-sm col-semester">
+            Semester 5
+          </div>
+        </div>
+        
+        <div class="row">
+          <!-- Semester 5 -->
+          <div class="col-sm">
+            <p>Operating Systems</p>
+            <p>Linear Algebra</p>
+            <p>RCOS</p>
+            <p>Earth and Sky</p>
+            <p>Research Methods and Statistics</p>
+          </div>
+          <!-- Semester 6 -->
+          <div class="col-sm">
+            <p>Programming Languages</p>
+            <p>Managing IT Resources</p>
+            <p>Database Systems</p>
+            <p>Strategic Writing</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <!-- YEAR 4 -->
-  <div class="container">
-    <h2>Fourth Year</h2>
-    <!-- ROW 1 -->
-    <div class="row">
-      <div class="col-sm col-semester">
-        Semester VII
+      <!-- YEAR 4 -->
+      <div class="container">
+        <h2>Year 4</h2>
+        <!-- SEMESTER YEAR -->
+        <div class="row">
+          <div class="col-sm col-semester">
+            Semester 7
+          </div>
+          <div class="col-sm col-semester">
+            Semester 8
+          </div>
+        </div>
+        
+        <div class="row">
+          <!-- Semester 7 -->
+          <div class="col-sm">
+            <p>ITWS Capstone Project</p>
+            <p>Networking Programming</p>
+            <p>Sensation and Perception</p>
+            <p>Introduction to Artificial Intelligence</p>
+          </div>
+          <!-- Semester 8 -->
+          <div class="col-sm">
+            <p>Senior Thesis</p>
+            <p>Introduction to Linguistics</p>
+            <p>Minds and Machines</p>
+            <p>Software Design and Documentation</p>
+            <p>Networking in the Linux Kernal</p>
+          </div>
+        </div>
       </div>
-      <div class="col-sm col-semester">
-        Semester VIII
-      </div>
-    </div>
-    <!-- ROW 2 -->
-    <div class="row">
-      <div class="col-sm">
-        One of: ITWS Capstone, Senior Thesis
-      </div>
-      <div class="col-sm">
-        Communication Thesis (Concentration)
-      </div>
-    </div>
-    <!-- ROW 3 -->
-    <div class="row">
-      <div class="col-sm">
-        Communication or Writing Elective (Concentration)
-      </div>
-      <div class="col-sm">
-        HASS Elective
-      </div>
-    </div>
-    <!-- ROW 4 -->
-    <div class="row">
-      <div class="col-sm">
-        HASS Elective
-      </div>
-      <div class="col-sm">
-        HASS Elective
-      </div>
-    </div>
-    <!-- ROW 5 -->
-    <div class="row">
-      <div class="col-sm">
-        Physical Science Elective
-      </div>
-      <div class="col-sm">
-        Free Elective
-      </div>
-    </div>
-
-    <!-- ROW 6 -->
-    <div class="row">
-      <div class="col-sm">
-
-      </div>
-      <div class="col-sm">
-        Senior Thesis
-     </div>
-
-   </div>
-  </div>
 
   </section>
   </body>

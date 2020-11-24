@@ -24,7 +24,7 @@
     <?php include('student_navbar.php'); ?>
 
     <section class="plan-header">
-      <h1><a>&starf;</a>PLAN NAME</h1>
+      <h1 class="course-editable" contenteditable=true><a>&starf;</a>PLAN NAME</h1>
       <button id="toggle-config-button" class="btn btn-outline-primary">Show Config</button>
     </section>
     <!-- TODO: discuss how to make fields editable nicely -->
@@ -49,23 +49,23 @@
                     </div>
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
-                      <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
-                      <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
+                      <div class="col-md-5 course-editable course-title" contenteditable=true>Calculus I</div>
+                      <div class="col-md-3 course-editable course-code" contenteditable=true>MATH-1010</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
                       <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
                       <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                     </div>
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
-                      <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
-                      <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
+                      <div class="col-md-5 course-editable course-title" contenteditable=true>Physics 1</div>
+                      <div class="col-md-3 course-editable course-code" contenteditable=true>PHYS-1100</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
                       <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
                       <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                     </div>
                     <div class="row course-add">
                       <button class="btn btn-primary add-course-button">Add Course</button>
-                      <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button>
+                      <!-- <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button> -->
                     </div>
                   </div>
                 </div>
@@ -95,8 +95,16 @@
                       </div>
                       <div class="row semester-course">
                         <div class="col-md-1 course-status"><span class="dot"></span></div>
-                        <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
-                        <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
+                        <div class="col-md-5 course-editable course-title" contenteditable=true>Calculus II</div>
+                        <div class="col-md-3 course-editable course-code" contenteditable=true>MATH-1020</div>
+                        <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                        <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                        <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
+                      </div>
+                      <div class="row semester-course">
+                        <div class="col-md-1 course-status"><span class="dot"></span></div>
+                        <div class="col-md-5 course-editable course-title" contenteditable=true>IT and Society II</div>
+                        <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-1220</div>
                         <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
                         <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
                         <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
@@ -105,7 +113,7 @@
 
                     <div class="row course-add">
                       <button class="btn btn-primary add-course-button">Add Course</button>
-                      <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button>
+                      <!-- <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button> -->
                     </div>
                   </div>
                 </div>
@@ -125,8 +133,8 @@
                     </div>
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
-                      <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
-                      <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
+                      <div class="col-md-5 course-editable course-title" contenteditable=true>Introduction to Biology</div>
+                      <div class="col-md-3 course-editable course-code" contenteditable=true>BIOL-1100</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
                       <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
                       <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
@@ -141,7 +149,7 @@
                     </div>
                     <div class="row course-add">
                       <button class="btn btn-primary add-course-button">Add Course</button>
-                      <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button>
+                      <!-- <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button> -->
                     </div>
                   </div>
                 </div>
@@ -169,15 +177,15 @@
                     </div>
                     <div class="row semester-course">
                       <div class="col-md-1 course-status"><span class="dot"></span></div>
-                      <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>
-                      <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>
+                      <div class="col-md-5 course-editable course-title" contenteditable=true>Introduction to HCI</div>
+                      <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-2210</div>
                       <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
                       <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
                       <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
                     </div>
                     <div class="row course-add">
                       <button class="btn btn-primary add-course-button">Add Course</button>
-                      <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button>
+                      <!-- <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button> -->
                     </div>
                   </div>
                 </div>
@@ -194,20 +202,19 @@
                   <li class="nav-item">
                     <button class="nav-link" href="#">Validation</button>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <button class="nav-link" href="#">Groups</button>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                     <button class="nav-link" href="#">Notes</button>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <button class="nav-link" href="#">Settings</button>
-                  </li>
+                  </li> -->
                 </ul>
 
                 <!-- Courses -->
                 <div id="plan-config-courses">
-                  <h1>Courses page</h1>
                    <div id="accordion">
                     <div class="card">
                       <div class="card-header" id="headingOne">
@@ -217,7 +224,7 @@
                         </h5>
                       </div>
 
-                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <!-- sortable2 -->
                         <div id="sortable2" class="connectedSortable semester">
                           <!-- <div class="ui-state-highlight semester-course">Introduction to ITWS</div>
@@ -387,33 +394,46 @@
                           </div>
                         </div>
                       </div>
-
                     </div>
-
                   </div>
                 </div>
 
                 <!-- Validation -->
                 <div id="plan-config-validation">
-                  Validation page
+
+
+                  <h5 class="validation-message">It looks like you have not used all of your required courses.</h5>
+                  <div class="validation-form">
+                    <input type="checkbox" class="validation-form-input" id="itws-requirements">
+                    <label class="form-check-label" for="itws-requirements">ITWS Core Requirements</label>
+                    <br>
+                    <input type="checkbox" class="validation-form-input" id="math-science-requirements" checked>
+                    <label class="form-check-label" for="math-science-requirements">Math/Science Requirements</label>
+                    <br>
+                    <input type="checkbox" class="validation-form-input" id="hass-requirements" checked>
+                    <label class="form-check-label" for="hass-requirements">HASS Requirements</label>
+                    <br>
+                    <input type="checkbox" class="validation-form-input" id="concentration-requirements">
+                    <label class="form-check-label" for="concentration-requirements">Concentration Requirements</label>
+                  </div>
                 </div>
 
-                <!-- Groups -->
+                <!-- Groups
                 <div id="plan-config-groups">
                   Groups page
-                </div>
+                </div> -->
 
                 <!-- Notes -->
                 <div id="plan-config-notes">
-                  
-                <h1>Notes page</h1>
-                  <textarea class="form-control" id="text-area-notes"></textarea>                  
+                  <textarea class="form-control" id="text-area-notes">-Possibly considering a concentration in Infosec 
+-Considering Dual Major with Comp Sci
+                  </textarea>                  
                 </div>
 
-                <!-- Settings -->
+                <!-- Settings
                 <div id="plan-config-settings">
                   Settings page
-                </div>
+                </div> -->
 
               </div>
             </div>
