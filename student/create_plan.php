@@ -1,5 +1,6 @@
 <?php
-  $dbconn = new PDO('mysql:host=localhost;dbname=website', 'vagrant', 'vagrant');
+  require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
+  $dbconn = Database::getDatabase();
   $selected_plan = 1; //hardcoded lol
   $plan_details_stmt = $dbconn->prepare("SELECT * FROM plans WHERE id = ?;");
   $plan_details_stmt->execute(array($selected_plan));
