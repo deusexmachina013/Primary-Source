@@ -439,6 +439,18 @@ td {
     max-width: 700px;
 }
 
+#plan-table tr:nth-child(odd) > td {
+    background-color: #CEF0F1;
+}
+
+#plan-table tr:nth-child(even) > td {
+    background-color: #abe5e7;
+}
+
+#plan-table tr:hover > td {
+    background-color: #77d5d8;
+}
+
 .table-fixed tbody {
     height: 300px;
     overflow-y: auto;
