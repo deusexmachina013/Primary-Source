@@ -374,8 +374,75 @@ td {
     margin-right: auto;
 }
 
-.search-bar input[type=text] {
-    margin: 0 auto;
+
+/* BEGIN ADMIN NAVIGATION BAR */
+
+.student-search {
+    border: solid #212529 2px;
+    padding: 0px;
+    width: 600px;
+    /* 757px if we want the full length of table*/
+    height: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.left-partition {
+    float: left;
+    width: 25%;
+}
+
+.search-dropdown {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 28px;
+    background-color: lightgrey;
+    border: none;
+    color: #212529;
+}
+
+.right-partition {
+    float: left;
+    width: 75%;
+}
+
+.student-searchbar {
+    float: left;
+    margin-left: 4px;
+    width: calc(100% - 36px);
+    border: none;
+}
+
+.student-submit {
+    float: left;
+    padding: 0px;
+    height: 28px;
+    width: 32px;
+    background-color: lightgrey;
+    border: none;
+    color: #212529;
+    text-align: center;
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
     display: block;
-    border-radius: 25px;
+}
+
+
+/* Home plan?  Where did this come from, and where should it go? */
+
+.home-plan p {
+    background-color: #CEF0F1;
+    padding: 10px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
 }

@@ -21,7 +21,7 @@
     <main class="content">
       <h1>Your Students' Plans</h1>
 
-      <div class="search-bar">
+      <!-- <div class="search-bar">
         <input type="text" class="admin-loopup" placeholder="Search for student plans..." id="admin-lookup" onkeyup="filterStudentPlans()">
       </div>
       <table class="center" id="plan-table">
@@ -39,7 +39,7 @@
           <input type="text" class="student-searchbar" placeholder="Look up student plans." id="admin-lookup">
           <input type="submit" class="student-submit" value="&#128269">
         </div>
-      </form>
+      </form> -->
 
       <table class="table table-bordered table-striped table-hover center" id="plan-table">
 
@@ -50,7 +50,6 @@
             <th scope="col">Student</th>
             <th scope="col">Class Year</th>
             <th scope="col">Status</th>
-            <th scope="col">Submission Date</th>
           </tr>
         </thead>
         </div>
@@ -60,19 +59,128 @@
             <td>Jacob Dyer</td>
             <td>2023</td>
             <td>Reviewable</td>
-            <td>10/4/2020</td>
           </tr>
           <tr scope="row">
             <td>Joyce Fang</td>
             <td>2023</td>
             <td>Approved</td>
-            <td>10/4/2020</td>
           </tr>
           <tr scope="row">
             <td>Bobby Tables</td>
             <td>2024</td>
             <td>None</td>
-            <td>N/A</td>
+          </tr>
+
+          <tr scope="row">
+            <td>Jacob Dyer</td>
+            <td>2023</td>
+            <td>Reviewable</td>
+          </tr>
+          <tr scope="row">
+            <td>Joyce Fang</td>
+            <td>2023</td>
+            <td>Approved</td>
+          </tr>
+          <tr scope="row">
+            <td>Bobby Tables</td>
+            <td>2024</td>
+            <td>None</td>
+          </tr>
+
+          <tr scope="row">
+            <td>Jacob Dyer</td>
+            <td>2023</td>
+            <td>Reviewable</td>
+          </tr>
+          <tr scope="row">
+            <td>Joyce Fang</td>
+            <td>2023</td>
+            <td>Approved</td>
+          </tr>
+          <tr scope="row">
+            <td>Bobby Tables</td>
+            <td>2024</td>
+            <td>None</td>
+          </tr>
+
+          <tr scope="row">
+            <td>Jacob Dyer</td>
+            <td>2023</td>
+            <td>Reviewable</td>
+          </tr>
+          <tr scope="row">
+            <td>Joyce Fang</td>
+            <td>2023</td>
+            <td>Approved</td>
+          </tr>
+          <tr scope="row">
+            <td>Bobby Tables</td>
+            <td>2024</td>
+            <td>None</td>
+          </tr>
+
+          <tr scope="row">
+            <td>Jacob Dyer</td>
+            <td>2023</td>
+            <td>Reviewable</td>
+          </tr>
+          <tr scope="row">
+            <td>Joyce Fang</td>
+            <td>2023</td>
+            <td>Approved</td>
+          </tr>
+          <tr scope="row">
+            <td>Bobby Tables</td>
+            <td>2024</td>
+            <td>None</td>
+          </tr>
+
+          <tr scope="row">
+            <td>Jacob Dyer</td>
+            <td>2023</td>
+            <td>Reviewable</td>
+          </tr>
+          <tr scope="row">
+            <td>Joyce Fang</td>
+            <td>2023</td>
+            <td>Approved</td>
+          </tr>
+          <tr scope="row">
+            <td>Bobby Tables</td>
+            <td>2024</td>
+            <td>None</td>
+          </tr>
+
+          <tr scope="row">
+            <td>Jacob Dyer</td>
+            <td>2023</td>
+            <td>Reviewable</td>
+          </tr>
+          <tr scope="row">
+            <td>Joyce Fang</td>
+            <td>2023</td>
+            <td>Approved</td>
+          </tr>
+          <tr scope="row">
+            <td>Bobby Tables</td>
+            <td>2024</td>
+            <td>None</td>
+          </tr>
+
+                    <tr scope="row">
+            <td>Jacob Dyer</td>
+            <td>2023</td>
+            <td>Reviewable</td>
+          </tr>
+          <tr scope="row">
+            <td>Joyce Fang</td>
+            <td>2023</td>
+            <td>Approved</td>
+          </tr>
+          <tr scope="row">
+            <td>Bobby Tables</td>
+            <td>2024</td>
+            <td>None</td>
           </tr>
         </tbody>
       </table>
