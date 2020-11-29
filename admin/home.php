@@ -19,168 +19,94 @@
     <?php include("admin_navbar.php"); ?>
 
     <main class="content">
-      <h1>Your Students' Plans</h1>
-
-      <!-- <div class="search-bar">
-        <input type="text" class="admin-loopup" placeholder="Search for student plans..." id="admin-lookup" onkeyup="filterStudentPlans()">
-      </div>
-      <table class="center" id="plan-table">
+      <h1>Administration</h1>
 
       <form class="student-search center" accept-charset="utf-8" method="GET" name="student-search" role="search">
         <div class="left-partition">
           <select id="student-search-dropdown" class="search-dropdown" title="Filter by">
             <option selected="selected" value="student-column">Student Name</option>
-            <option value="student-column">Class Year</option>
-            <option value="student-column">Status</option>
-            <option value="student-column">Submission Date</option>
+            <option value="class-column">Class Year</option>
+            <option value="status-column">Status</option>
           </select>
         </div>
         <div class="right-partition">
           <input type="text" class="student-searchbar" placeholder="Look up student plans." id="admin-lookup">
           <input type="submit" class="student-submit" value="&#128269">
         </div>
-      </form> -->
+      </form>
 
-      <table class="table table-bordered table-striped table-hover center" id="plan-table">
-
+      <table class="table table-bordered table-striped table-hover table-sm table-fixed center" id="plan-table">
         <!-- Table Heading -->
-        <div class = "col-sm col-semester">
-        <thead class="thead-light">
-          <tr>
-            <th scope="col">Student</th>
-            <th scope="col">Class Year</th>
-            <th scope="col">Status</th>
-          </tr>
-        </thead>
+        <div class="col-sm col-semester">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col" class="col-5">Student</th>
+              <th scope="col" class="col-3">Class Year</th>
+              <th scope="col" class="col-4">Status</th>
+            </tr>
+          </thead>
         </div>
         <!-- Table Body -->
         <tbody>
           <tr scope="row">
-            <td>Jacob Dyer</td>
-            <td>2023</td>
-            <td>Reviewable</td>
+            <td class="col-5">Jacob Dyer</td>
+            <td class="col-3">2023</td>
+            <td class="col-4">Reviewable</td>
           </tr>
           <tr scope="row">
-            <td>Joyce Fang</td>
-            <td>2023</td>
-            <td>Approved</td>
+            <td class="col-5">Joyce Fang</td>
+            <td class="col-3">2023</td>
+            <td class="col-4">Approved</td>
           </tr>
           <tr scope="row">
-            <td>Bobby Tables</td>
-            <td>2024</td>
-            <td>None</td>
-          </tr>
-
-          <tr scope="row">
-            <td>Jacob Dyer</td>
-            <td>2023</td>
-            <td>Reviewable</td>
+            <td class="col-5">Bobby Tables</td>
+            <td class="col-3">2024</td>
+            <td class="col-4">None</td>
           </tr>
           <tr scope="row">
-            <td>Joyce Fang</td>
-            <td>2023</td>
-            <td>Approved</td>
+            <td class="col-5">Jacob Dyer</td>
+            <td class="col-3">2023</td>
+            <td class="col-4">Reviewable</td>
           </tr>
           <tr scope="row">
-            <td>Bobby Tables</td>
-            <td>2024</td>
-            <td>None</td>
-          </tr>
-
-          <tr scope="row">
-            <td>Jacob Dyer</td>
-            <td>2023</td>
-            <td>Reviewable</td>
+            <td class="col-5">Joyce Fang</td>
+            <td class="col-3">2023</td>
+            <td class="col-4">Approved</td>
           </tr>
           <tr scope="row">
-            <td>Joyce Fang</td>
-            <td>2023</td>
-            <td>Approved</td>
+            <td class="col-5">Bobby Tables</td>
+            <td class="col-3">2024</td>
+            <td class="col-4">None</td>
           </tr>
           <tr scope="row">
-            <td>Bobby Tables</td>
-            <td>2024</td>
-            <td>None</td>
-          </tr>
-
-          <tr scope="row">
-            <td>Jacob Dyer</td>
-            <td>2023</td>
-            <td>Reviewable</td>
+            <td class="col-5">Jacob Dyer</td>
+            <td class="col-3">2023</td>
+            <td class="col-4">Reviewable</td>
           </tr>
           <tr scope="row">
-            <td>Joyce Fang</td>
-            <td>2023</td>
-            <td>Approved</td>
+            <td class="col-5">Joyce Fang</td>
+            <td class="col-3">2023</td>
+            <td class="col-4">Approved</td>
           </tr>
           <tr scope="row">
-            <td>Bobby Tables</td>
-            <td>2024</td>
-            <td>None</td>
-          </tr>
-
-          <tr scope="row">
-            <td>Jacob Dyer</td>
-            <td>2023</td>
-            <td>Reviewable</td>
+            <td class="col-5">Bobby Tables</td>
+            <td class="col-3">2024</td>
+            <td class="col-4">None</td>
           </tr>
           <tr scope="row">
-            <td>Joyce Fang</td>
-            <td>2023</td>
-            <td>Approved</td>
+            <td class="col-5">Jacob Dyer</td>
+            <td class="col-3">2023</td>
+            <td class="col-4">Reviewable</td>
           </tr>
           <tr scope="row">
-            <td>Bobby Tables</td>
-            <td>2024</td>
-            <td>None</td>
-          </tr>
-
-          <tr scope="row">
-            <td>Jacob Dyer</td>
-            <td>2023</td>
-            <td>Reviewable</td>
+            <td class="col-5">Joyce Fang</td>
+            <td class="col-3">2023</td>
+            <td class="col-4">Approved</td>
           </tr>
           <tr scope="row">
-            <td>Joyce Fang</td>
-            <td>2023</td>
-            <td>Approved</td>
-          </tr>
-          <tr scope="row">
-            <td>Bobby Tables</td>
-            <td>2024</td>
-            <td>None</td>
-          </tr>
-
-          <tr scope="row">
-            <td>Jacob Dyer</td>
-            <td>2023</td>
-            <td>Reviewable</td>
-          </tr>
-          <tr scope="row">
-            <td>Joyce Fang</td>
-            <td>2023</td>
-            <td>Approved</td>
-          </tr>
-          <tr scope="row">
-            <td>Bobby Tables</td>
-            <td>2024</td>
-            <td>None</td>
-          </tr>
-
-                    <tr scope="row">
-            <td>Jacob Dyer</td>
-            <td>2023</td>
-            <td>Reviewable</td>
-          </tr>
-          <tr scope="row">
-            <td>Joyce Fang</td>
-            <td>2023</td>
-            <td>Approved</td>
-          </tr>
-          <tr scope="row">
-            <td>Bobby Tables</td>
-            <td>2024</td>
-            <td>None</td>
+            <td class="col-5">Bobby Tables</td>
+            <td class="col-3">2024</td>
+            <td class="col-4">None</td>
           </tr>
         </tbody>
       </table>

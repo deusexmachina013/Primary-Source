@@ -23,7 +23,7 @@
     margin-top: 100px;
 }
 
-<<<<<<< Updated upstream=======.plan-header {
+.plan-header {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 25px;
@@ -431,10 +431,33 @@ td {
     overflow: auto;
 }
 
-.table-wrapper-scroll-y {
+/* TABLE FIXATION */
+
+#plan-table {
+    /* TODO: Scale by percentage.  Little too wide otherwise. */
+    min-width: 600px;
+    max-width: 700px;
+}
+
+.table-fixed tbody {
+    height: 300px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
     display: block;
 }
 
+.table-fixed tbody td,
+.table-fixed tbody th,
+.table-fixed thead > tr > th {
+    float: left;
+}
 
 /* Home plan?  Where did this come from, and where should it go? */
 
