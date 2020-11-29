@@ -35,7 +35,7 @@
         </div>
       </form>
 
-      <table class="table table-bordered table-striped table-hover table-sm table-fixed center" id="plan-table">
+      <table class="table table-bordered table-sm table-fixed center" id="plan-table">
         <!-- Table Heading -->
         <div class="col-sm col-semester">
           <thead class="thead-light">
