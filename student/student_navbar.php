@@ -10,13 +10,7 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarNav">
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-        <a class="nav-link js-scroll-trigger active" href="/student/home.php">Home</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="/student/create_plan.php">Create Plan</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="/student/all_plans.php">All Plans</a>
+        <a class="nav-link js-scroll-trigger active" href="/student/all_plans.php">Home</a>
         </li>
         <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="/student/catalog.php">Catalog</a>

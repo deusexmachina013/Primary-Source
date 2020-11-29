@@ -23,6 +23,7 @@
       <!-- All Plans -->
       <h1>All Plans</h1>
       <!-- concentrationn List -->
+      <a id="toggle-create_plan-button" href="/student/create_plan.php" class="btn btn-outline-primary">Create Plan</a>
       <div class="container">
         <!-- ROWS -->
         <!-- NOTE: To be kept as an HTML template for displaying plans. -->

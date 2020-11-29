@@ -35,10 +35,14 @@ body {
 
 #toggle-config-button {
     float: right;
-    /* position: absolute;
+    /* position: absoluteF-primary;
     right: 25px; */
 }
-
+#toggle-create_plan-button {
+    float: right;
+    /* position: absoluteF-primary;*/
+    margin-right: 25px; 
+}
 .course-status {
     height: 25px;
 }
