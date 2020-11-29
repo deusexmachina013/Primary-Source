@@ -20,18 +20,37 @@
 
     <main class="content">
       <h1>Your Students' Plans</h1>
+<<<<<<< Updated upstream
       <div class="search-bar">
         <input type="text" class="admin-loopup" placeholder="Search for student plans..." id="admin-lookup" onkeyup="filterStudentPlans()">
       </div>
       <table class="center" id="plan-table">
+=======
+      <form class="student-search center" accept-charset="utf-8" method="GET" name="student-search" role="search">
+        <div class="left-partition">
+          <select id="student-search-dropdown" class="search-dropdown" title="Filter by">
+            <option selected="selected" value="student-column">Student Name</option>
+            <option value="student-column">Class Year</option>
+            <option value="student-column">Status</option>
+            <option value="student-column">Submission Date</option>
+          </select>
+        </div>
+        <div class="right-partition">
+          <input type="text" class="student-searchbar" placeholder="Look up student plans." id="admin-lookup">
+          <input type="submit" class="student-submit" value="&#128269">
+        </div>
+      </form>
+
+      <table class="table table-bordered table-striped table-hover center" id="plan-table">
+>>>>>>> Stashed changes
         <!-- Table Heading -->
         <div class = "col-sm col-semester">
-        <thead>
+        <thead class="thead-light">
           <tr>
-            <th class="student-column">Student</th>
-            <th class="year-column">Class Year</th>
-            <th class="status-column">Status</th>
-            <th class="date-column">Submission Date</th>
+            <th scope="col" class="student-column">Student</th>
+            <th scope="col" class="year-column">Class Year</th>
+            <th scope="col" class="status-column">Status</th>
+            <th scope="col" class="date-column">Submission Date</th>
           </tr>
         </thead>
         </div>
