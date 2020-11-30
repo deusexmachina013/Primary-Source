@@ -24,16 +24,16 @@
     <main class="content">
       <h1>Administration</h1>
 
-      <form class="student-search center" accept-charset="utf-8" method="GET" name="student-search" role="search">
+      <form id="student-lookup" class="student-search center" accept-charset="utf-8" method="GET" name="student-search" role="search">
         <div class="left-partition">
-          <select id="student-search-dropdown" class="search-dropdown" title="Filter by">
-            <option selected="selected" value="student-column">Student Name</option>
-            <option value="cohort-column">Cohort Year</option>
-            <option value="status-column">Status</option>
+          <select id="student-search-dropdown" class="search-dropdown" name="student-search-dropdown" title="Filter by">
+            <option selected="selected" value="student_name">Student Name</option>
+            <option value="class_year">Cohort Year</option>
+            <option value="plan_status">Status</option>
           </select>
         </div>
         <div class="right-partition">
-          <input type="text" class="student-searchbar" placeholder="Look up student plans." id="admin-lookup">
+          <input type="text" id="admin-lookup" class="student-searchbar" placeholder="Look up student plans." name="search-bar">
           <input type="submit" class="student-submit" value="&#128269">
         </div>
       </form>

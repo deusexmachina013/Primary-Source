@@ -1,3 +1,4 @@
+/*
 // Based on a W3C Tutorial for similar functionality:
 // https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_filters_table
 function displayByClassAndQuery(query, selectedClass) {
@@ -33,5 +34,23 @@ $(document).ready(function() {
 
     // Perform the display filter.
     displayByClassAndQuery(this.value, classToFilterBy);
+  });
+});
+*/
+
+// TODO: Make it so that dropdown selection determines what
+// the example text reads!
+// If by status: "Ex: 'Approved', 'None', 'Reviewable'."
+
+/// AJAX to PHP pull.
+$("#student-lookup").submit(function(e) {
+  e.preventDefault();
+  $.ajax({
+    type: "GET",
+    url: 'pull_students.php',
+    dataType: "json",
+    success: function(response) {
+      var jsonData = JSON.parse(response);
+    }
   });
 });
