@@ -8,8 +8,8 @@ class AuthModule extends AuthenticationABC {
       #required modules - php-curl, php-dom
       phpCAS::client(CAS_VERSION_2_0, "cas-auth.rpi.edu", 443, "/cas");
 
-      #TODO: check if it ok to put certificate in repository
       phpCAS::setNoCasServerValidation();
+
       if(phpCAS::forceAuthentication()) {
         return phpCAS::getUser();
       }
@@ -18,6 +18,9 @@ class AuthModule extends AuthenticationABC {
 
     public function logout() {
       phpCAS::logout();
+      //TODO: get logout working with redirection back to site; if CAS has disabled, maybe look into 
+      //https://shib-idp.rpi.edu/idp/profile/SAML2 to see if it is possible to get working
+      // phpCAS::logoutWithRedirectService("https://localhost");
     }
   
 }

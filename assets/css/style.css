@@ -19,7 +19,12 @@
 
 /************************/
 
-.content {
+/* create_plan.php */
+
+
+/*******************/
+
+body {
     margin-top: 100px;
 }
 
@@ -38,7 +43,11 @@
     /* position: absolute;
     right: 25px; */
 }
-
+#toggle-create_plan-button {
+    float: right;
+    /* position: absoluteF-primary;*/
+    margin-right: 25px; 
+}
 .course-status {
     height: 25px;
 }
@@ -186,20 +195,133 @@
 
 /*************/
 
->>>>>>>Stashed changes
 /* MAIN PLAN */
 
 .content .container .col-sm {
     background-color: #CEF0F1;
+    /* width: 400px; */
+    /* z-index: 10000; */
+}
+
+.semester-course>* {
+    align-self: center;
+}
+
+.course-title {
+    word-break: break-word;
+}
+
+#schedule-config {
+    display: none;
+}
+
+#schedule-config>div {
+    margin-top: 25px;
+    position: fixed;
+    /* overflow: scroll; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* width: 50%; */
+    max-height: 70%;
+}
+#plan-config-courses {
+    display: block;
+}
+
+#plan-config-validation {
+    display: none;
+}
+
+.validation-message {
+    margin-top: 20px;
+}
+
+.plan-name-editable{
+    height:70px;
+    width:600px;
+    padding:10px;
+    margin:auto
+}
+#plan-config-groups {
+    display: none;
+}
+
+#plan-config-notes {
+    display: none;
+    width: 500px;
+}
+
+#text-area-notes {
+    margin-top: 20px;
+}
+
+#plan-config-settings {
+    display: none;
+}
+
+.course-add {
+    justify-content: center;
+    background-color: #CEF0F1;
+    padding: 8px;
+    margin-bottom: 24px;
     margin: 6px;
-    padding: 12px;
-    height: 50px;
+}
+
+.add-course,
+.add-course-group {
+    margin: 10px;
+}
+
+.course-trash,
+.course-config {
+    text-align: center;
+}
+
+/* .course-trash-button,
+.course-config-button {
+    padding: 0px !important;
+    margin: 0px !important;
+    text-decoration: none !important;
+} */
+
+.course-trash-button {
+    color: #292b2c;
+    font-size: 20px;
+}
+
+.course-trash-button:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+#accordion {
+    width: 600px;
+    margin-top: 20px;
+}
+
+
+/*************/
+
+
+/* MAIN PLAN */
+
+
+/*************/
+
+.content .container .col-sm {
+    margin-right: 5px;
+    margin-left: 5px;
+    /* margin-bottom: 5px; */
+    padding: 0px;
+    height: 100%;
 }
 
 .content .container .col-semester {
     background-color: #E8E8E8;
     text-align: center;
     font-weight: bold;
+    height: 100%;
+    padding: 10px;
 }
 
 h1 {
@@ -209,10 +331,10 @@ h1 {
 .button {
     display: inline-block;
     padding: 1em 3em;
-    margin: 0 0.3em 0.3em 0;
+    margin-left: 20px;
     border: 2px solid;
     border-radius: 2em;
-    border-color: #CEF0F1;
+    border-color: black;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
@@ -220,6 +342,19 @@ h1 {
     font-weight: 300;
     color: black;
     background-color: #CEF0F1;
+    text-align: center;
+    transition: all 0.2s;
+    display: center;
+}
+
+.button-center {
+    display: inline-block;
+    padding: 1em 3em;
+    margin: 0 0.3em 0.3em 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    font-weight: 300;
     text-align: center;
     transition: all 0.2s;
     display: center;
@@ -241,22 +376,28 @@ button:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 60%;
 }
 
 .img2 {
     max-width: 100%;
-    height: 25%;
+    height: 20%;
     margin-top: 25px;
     display: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 25%;
+    width: 20%;
 }
 
 
+/***************/
+
+
 /* CREATE PLAN */
+
+
+/***************/
 
 .submit-button {
     float: right;
@@ -270,12 +411,20 @@ button:hover {
 }
 
 
+/***********/
+
+
 /* CATALOG */
+
+
+/***********/
 
 .content .container .col-conc {
     text-align: center;
     font-weight: 500px;
     text-decoration: none;
+    background-color: #CEF0F1;
+    padding: 10px;
 }
 
 .concentration {
@@ -290,84 +439,6 @@ button:hover {
 
 
 /**********************/
-
-
-/* .student-column {
-
-    width: 30%;
-    border: solid;
-    border-color: white;
-    text-align: center;
-}
-
-.year-column {
-    width: 20%;
-    border: solid;
-    border-color: white;
-    text-align: center;
-}
-
-.status-column {
-    width: 25%;
-    border: solid;
-    border-color: white;
-    text-align: center;
-}
-
-.date-column {
-    width: 25%;
-    border: solid;
-    border-color: white;
-    text-align: center;
-} */
-
-
-/* 
-th {
-    background-color: #CEF0F1;
-    margin: 6px;
-    padding: 12px;
-    height: 50px;
-    background-color:#E8E8E8;
-    color: black;
-  }
-
-td {
-    background-color: #CEF0F1;
-    margin: 6px;
-    padding: 12px;
-    height: 50px;
-    background-color:#CEF0F1;
-    color: black;
-}
-
-.name {
-    width: 25%;
-    border: solid;
-    border-color: white;
-    text-align: center;
-}
-
-.year {
-    width: 25%;
-    border: solid;
-    border-color: white;
-    text-align: center;
-}
-
-.status {
-    width: 25%;
-    border: solid;
-    border-color: white;
-    text-align: center;
-}
-
-.date {
-    width: 25%;
-    border: solid;
-    border-color: white;
-    text-align: center;
-} */
 
 .center {
     margin-left: auto;
@@ -481,3 +552,31 @@ td {
     margin-bottom: 10px;
     height: 100%;
 }
+/* ================= */
+
+
+
+/*******************/
+
+
+/* create_plan.php */
+
+
+/*******************/
+
+.connectedSortable {
+    min-height: 30px;
+}
+/* #sortable1 {
+    min-height: 30px;
+}
+
+#sortable2 {
+    min-height: 30px;
+    margin-bottom: 15px;
+    margin: 10px;
+}
+
+#sortable2 div {
+    padding: 12px;
+} */

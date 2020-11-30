@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <!-- NOTE: Ignored in cleanup for the purposes of having a template to work off of when generating a Catalog entry. -->
   <head>
-    <title>Student Homepage</title>
+    <title>ITWS Communication Concentration Requirements</title>
 
     <!-- CSS ONLY -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -15,23 +16,21 @@
 
   <body>
     <!--NAVIGATION BAR (implemented with Bootstrap) -->
-    <?php include('student_navbar.php'); ?>
+    <?php include('../student_navbar.php'); ?>
 
-    <!-- NOTE: To be used as a template for displaying fully completed plans.  Will have to write a function to query plans and display them in this manner. -->
-
-    <section class="content home-plan">
+    <section class="content">
       <!-- MAIN PLAN -->
-      <h1>My Plan</h1>
+      <h1>Communication</h1>
       <!-- YEAR 1 -->
       <div class="container">
-        <h2>2019-2020</h2>
+        <h2>Year 1</h2>
         <!-- SEMESTER YEAR -->
         <div class="row">
           <div class="col-sm col-semester">
-            Fall 2019
+            Semester 1
           </div>
           <div class="col-sm col-semester">
-            Spring 2020
+            Semester 2
           </div>
         </div>
         <!-- Year 1 -->
@@ -40,13 +39,13 @@
           <div class="col-sm">
             <p>Computer Science 1</p>
             <p>Introduction to ITWS</p>
-            <p>Physics 1</p>
+            <p>Strategic Writing (Concentration)</p>
             <p>Calculus 1</p>
           </div>
           <!-- Semester 2 -->
           <div class="col-sm">
-            <p>Data Structure</p>
-            <p>Calculus II</p>
+            <p>Data Structures</p>
+            <p>Communication Theory and Practice (Concentration)</p>
             <p>Introduction to Biology</p>
             <p>Introduction to Biology Lab</p>
             <p>IT and Society</p>
@@ -56,14 +55,14 @@
 
       <!-- YEAR 2 -->
       <div class="container">
-        <h2>2020-2021</h2>
+        <h2>Year 2</h2>
         <!-- SEMESTER YEAR -->
         <div class="row">
           <div class="col-sm col-semester">
-            Fall 2020
+            Semester 3
           </div>
           <div class="col-sm col-semester">
-            Spring 2021
+            Semester 4
           </div>
         </div>
         
@@ -88,14 +87,14 @@
 
       <!-- YEAR 3 -->
       <div class="container">
-        <h2>2021-2022</h2>
+        <h2>Year 3</h2>
         <!-- SEMESTER YEAR -->
         <div class="row">
           <div class="col-sm col-semester">
-            Fall 2021
+            Semester 4
           </div>
           <div class="col-sm col-semester">
-            Spring 2022
+            Semester 5
           </div>
         </div>
         
@@ -119,14 +118,14 @@
       </div>
       <!-- YEAR 4 -->
       <div class="container">
-        <h2>2022-2023</h2>
+        <h2>Year 4</h2>
         <!-- SEMESTER YEAR -->
         <div class="row">
           <div class="col-sm col-semester">
-            Fall 2022
+            Semester 7
           </div>
           <div class="col-sm col-semester">
-            Spring 2023
+            Semester 8
           </div>
         </div>
         
