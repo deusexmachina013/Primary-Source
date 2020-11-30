@@ -1,3 +1,19 @@
+<?php 
+$username = "root";
+$password = "root";
+try {
+  $dbconn = new PDO('mysql:host=localhost;dbname=website', $username, $password);
+}
+catch(PDOException $e) {
+  echo "Connection failed";
+}
+
+// $clickedConc = 
+// $concentration = $dbconn->query("SELECT * from `template` WHERE `template`.name=$clickedConc")
+
+// $arts = array[]
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -31,7 +47,8 @@
           // }
         ?>
         <!-- arts.php -->
-        <div><a class= "concentration" href= ""> Arts </a></div> 
+        <div><a class= "concentration" href= ""> Arts </a></div>
+
         <!-- civil-structural-engineer.php -->
         <div><a class= "concentration" href= ""> Civil/Structural Engineer </a></div>
         <div><a class= "concentration" href= ""> Cognitive Science </a></div>
