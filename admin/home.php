@@ -28,7 +28,7 @@
         <div class="left-partition">
           <select id="student-search-dropdown" class="search-dropdown" title="Filter by">
             <option selected="selected" value="student-column">Student Name</option>
-            <option value="class-column">Class Year</option>
+            <option value="cohort-column">Cohort Year</option>
             <option value="status-column">Status</option>
           </select>
         </div>
@@ -44,7 +44,7 @@
           <thead class="thead-light">
             <tr>
               <th scope="col" class="col-5">Student</th>
-              <th scope="col" class="col-3">Class Year</th>
+              <th scope="col" class="col-3">Cohort Year</th>
               <th scope="col" class="col-4">Status</th>
             </tr>
           </thead>
