@@ -23,7 +23,9 @@
       <!-- All Plans -->
       <h1>All Plans</h1>
       <!-- concentrationn List -->
-      <a id="toggle-create_plan-button" href="/student/create_plan.php" class="btn btn-outline-primary">Create Plan</a>
+      
+      <!-- Button trigger modal -->
+      <button id="toggle-create_plan-button" class="btn btn-outline-primary" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">Create Plan</button>
       <div class="container">
         <!-- ROWS -->
         <!-- NOTE: To be kept as an HTML template for displaying plans. -->
@@ -34,5 +36,81 @@
         </div>
       </div>
     </section>
+
+
+    
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create Plan</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputPlanName">Plan Name</label>
+              <input type="text" class="form-control" id="inputPlanName" placeholder="Enter Plan Name">
+            </div>
+            <div class="form-group">
+              <!-- <label for="inputMajor">Major</label>
+              <input type="text" class="form-control" id="inputMajor" placeholder="Enter Major"> -->
+              <label for="major">Choose a major from the list:</label> <br>
+              
+              <input class="formDropdown" list="majors" name="major" id="major">
+              <datalist id="majors">
+                <option value="Information Technology and Web Science">
+              </datalist>
+
+            </div>
+            <div class="form-group">
+              <!-- <label for="inputConcentration">Concentration</label> -->
+              <!-- <input type="text" class="form-control" id="inputConcentration" placeholder="Enter Concentration"> -->
+              <label for="concentration">Choose a concentration from the list:</label> <br>
+              
+              <input class="formDropdown" list="concentrations" name="concentration" id="concentration">
+              <datalist id="concentrations">
+                <?php 
+                  // foreach ($concentrations as $row) { 
+                  // echo "<option value=' . $row['name'] . '>" 
+                  // }
+                ?>
+                <option value="Arts">
+                <option value="Civil/Structural Engineer">
+                <option value="Cognitive Science">
+                <option value="Communication">
+                <option value="Computer Hardware">
+                <option value="Computer Networking">
+                <option value="Data Science">
+                <option value="Economcs">
+                <option value="Entrepreneurship">
+                <option value="Finance">
+                <option value="Information Security">
+                <option value="Machine & Computational Learning">
+                <option value="Management Information Systems">
+                <option value="Mechanical/Aeronautical Engineering">
+                <option value="Medicine">
+                <option value="Pre-Law">
+                <option value="Psychology">
+                <option value="Science & Technology Studies">
+                <option value="Science Informatics">
+                <option value="Special Interest">
+                <option value="Web Technology">
+              </datalist>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a type="submit" class="btn btn-primary" href="/student/create_plan.php">Create Plan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   </body>
 </html>
