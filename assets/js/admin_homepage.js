@@ -43,14 +43,24 @@ $(document).ready(function() {
 // If by status: "Ex: 'Approved', 'None', 'Reviewable'."
 
 /// AJAX to PHP pull.
-$("#student-lookup").submit(function(e) {
-  e.preventDefault();
-  $.ajax({
-    type: "GET",
-    url: 'pull_students.php',
-    dataType: "json",
-    success: function(response) {
-      var jsonData = JSON.parse(response);
-    }
-  });
+$(document).ready(function() {
+    $("#student-lookup").submit(function(e) {
+        e.preventDefault();
+        alert("Form Submitted");
+        $.ajax({
+            type: "POST",
+            url: 'pull_students.php',
+            data: $(this).serialize(),
+            dataType: "json",
+            success: function(response) {
+                console.log("Success");
+                var jsonData = JSON.parse(response);
+                console.log(jsonData);
+            },
+            error: function(code, message) {
+                console.log(code);
+                console.log(message);
+            }
+        });
+    });
 });

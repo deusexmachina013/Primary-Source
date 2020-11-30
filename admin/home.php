@@ -11,7 +11,7 @@
 
 
     <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
@@ -24,7 +24,7 @@
     <main class="content">
       <h1>Administration</h1>
 
-      <form id="student-lookup" class="student-search center" accept-charset="utf-8" method="GET" name="student-search" role="search">
+      <form id="student-lookup" class="student-search center" accept-charset="utf-8" method="POST" name="student-search" role="search" action="pull_students.php">
         <div class="left-partition">
           <select id="student-search-dropdown" class="search-dropdown" name="student-search-dropdown" title="Filter by">
             <option selected="selected" value="student_name">Student Name</option>
@@ -38,7 +38,7 @@
         </div>
       </form>
 
-      <table class="table table-bordered table-sm table-fixed center" id="plan-table">
+      <table class="table table-sm table-fixed center" id="plan-table">
         <!-- Table Heading -->
         <div class="col-sm col-semester">
           <thead class="thead-light">
