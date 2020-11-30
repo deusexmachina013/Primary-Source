@@ -12,10 +12,6 @@ catch(PDOException $e) {
 // $concentration = $dbconn->query("SELECT * from `template` WHERE `template`.name=$clickedConc")
 
 // $arts = array[]
-?>
-
-<!DOCTYPE html>
-
 <html lang="en">
   <head>
     <title>Student Catalog</title>
