@@ -1,3 +1,16 @@
+<?php 
+$username = "root";
+$password = "root";
+try {
+  $dbconn = new PDO('mysql:host=localhost;dbname=website', $username, $password);
+}
+catch(PDOException $e) {
+  echo "Connection failed";
+}
+
+$conc = $dbconn->query("SELECT * from `template`");
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -37,9 +50,6 @@
       </div>
     </section>
 
-
-    
-
   <!-- Modal -->
   <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -75,11 +85,11 @@
               <input class="formDropdown" list="concentrations" name="concentration" id="concentration">
               <datalist id="concentrations">
                 <?php 
-                  // foreach ($concentrations as $row) { 
-                  // echo "<option value=' . $row['name'] . '>" 
-                  // }
-                ?>
-                <option value="Arts">
+                  foreach ($conc as $row) { 
+                    echo "<option value=" . $row['name'] . ">";
+                  }
+                ?> 
+                <!-- <option value="Arts">
                 <option value="Civil/Structural Engineer">
                 <option value="Cognitive Science">
                 <option value="Communication">
@@ -99,7 +109,7 @@
                 <option value="Science & Technology Studies">
                 <option value="Science Informatics">
                 <option value="Special Interest">
-                <option value="Web Technology">
+                <option value="Web Technology"> -->
               </datalist>
             </div>
           </form>

@@ -1,3 +1,16 @@
+<?php 
+$username = "root";
+$password = "root";
+try {
+  $dbconn = new PDO('mysql:host=localhost;dbname=website', $username, $password);
+}
+catch(PDOException $e) {
+  echo "Connection failed";
+}
+
+$conc = $dbconn->query("SELECT * from `template`");
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -70,7 +83,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="semester-whole col-md-6">
+                <div class="semester-whole col-md-6"> 
                   <div class="semester">
                     <div class="row semester-title">
                       Spring 2020
