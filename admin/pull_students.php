@@ -1,13 +1,12 @@
 <?php
   // Query the student table and get relevant students.
-  echo "Proof this Connects.";
   if(isset($_POST['student-search-dropdown']) && isset($_POST['search-bar'])) {
     // Connect to the database.
     $dbconn = new PDO('mysql:host=localhost;dbname=website', 'root', 'password');
 
     // Prepare the request.
     $argumentArray = NULL;
-    $request = "SELECT users.first_name, users.last_name, users.class_year, plans.advisor_validated, plans.id FROM `users`, `plans` WHERE ";
+    $request = "SELECT users.first_name, users.last_name, users.class_year, plans.id, plans.advisor_validated, plans.favorited FROM `users`, `plans` WHERE ";
     switch($_POST['student-search-dropdown']) {
       // Case: Searched by student name.
       case 'student_name':
@@ -40,7 +39,7 @@
       break;
     }
     $request = $request . " AND plans.advisor_validated <> 3 AND users.id = plans.user_id ORDER BY users.identity;";
-    echo($request);
+    // echo("THIS IS A PLACEHOLDER");
     // Execute the query.
     $query = $dbconn->prepare($request);
     $query->execute($argumentArray);

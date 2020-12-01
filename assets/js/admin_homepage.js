@@ -43,6 +43,13 @@ $(document).ready(function() {
 // If by status: "Ex: 'Approved', 'None', 'Reviewable'."
 
 /// AJAX to PHP pull.
+{
+    /* <tr scope="row">
+      <td class="col-5">Jacob Dyer</td>
+      <td class="col-3">2023</td>
+      <td class="col-4">Reviewable</td>
+    </tr> */
+}
 $(document).ready(function() {
     $("#student-lookup").submit(function(e) {
         e.preventDefault();
@@ -52,10 +59,17 @@ $(document).ready(function() {
             url: 'pull_students.php',
             data: $(this).serialize(),
             dataType: "json",
-            success: function(response) {
-                console.log("Success");
-                var jsonData = JSON.parse(response);
-                console.log(jsonData);
+            success: function(jsonObject) {
+                for (entry in jsonObject) {
+                    var rowEntry = "<tr scope='row'>";
+                    var option = $("#student-search-dropdown option:selected").text();
+                    if (entry.advisor_validated == 2) {
+                        rowEntry += "<td class='col-4'>Jacob Dyer</td>"
+                    } else if (entry.favortied == 1) {
+
+                    }
+                    $("INSERT TABLE HERE").append();
+                }
             },
             error: function(code, message) {
                 console.log(code);
