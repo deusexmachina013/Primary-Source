@@ -33,8 +33,9 @@ $conc = $dbconn->query("SELECT * from `template`");
     <?php include('student_navbar.php'); ?>
 
     <section class="content">
+      
       <!-- All Plans -->
-      <h1 class="all-plans-title">All Plans</h1>
+      <h1 class="all-plans-title">Hi!<span style='font-size:45px;'>&#128075;</span> here are your plans:</h1>
       <!-- concentrationn List -->
       
       <!-- Button trigger modal -->

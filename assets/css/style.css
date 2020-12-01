@@ -512,3 +512,8 @@ td {
 #sortable2 div {
     padding: 12px;
 } */
+
+.card {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
