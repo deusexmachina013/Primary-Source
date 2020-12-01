@@ -49,10 +49,10 @@ body {
     /* position: absoluteF-primary;
     right: 25px; */
 }
-#toggle-create_plan-button {
-    float: right;
+#toggle-create-plan-button {
+    /* float: right; */
     /* position: absoluteF-primary;*/
-    margin-right: 25px; 
+    margin-right: 80px; 
 }
 .course-status {
     height: 25px;
@@ -307,24 +307,31 @@ button:hover {
 }
 
 
-/***********/
+/*****************/
 
 
-/* CATALOG */
+/* all_plans.php */
 
 
-/***********/
+/*****************/
 
-.content .container .col-conc {
-    text-align: center;
-    font-weight: 500px;
-    text-decoration: none;
-    background-color: #CEF0F1;
-    padding: 10px;
+.all-plans-title {
+    margin-bottom: 20px;
 }
 
-.concentration {
+.content .plan-name-container {
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+    margin: auto;
+}
+
+.all-plans-header {
     color: rgb(49, 45, 45);
+    background-color: #CEF0F1;
+    margin: 6px;
+    width: 60%;
 }
 
 

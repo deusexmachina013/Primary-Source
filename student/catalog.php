@@ -129,10 +129,7 @@ $conc = $dbconn->query("SELECT * from `template`");
                                 </div>
                               <div id="coursesCollapse' . $row6["id"] . '" class="collapse" aria-labelledby="courseHeading' . $row6["id"] . '" data-parent="#accordionOptions' . $row6["id"] . '">
                                 <div class="card-body">';
-                          
-
-                      // echo $row6["name"] . "<br>";
-                             
+                                                   
                       // if 2 in (2=>array(12, 13, 14), 4=>array(15, 16, 17))
                       // print out all courses 12, 13, 14
                       foreach ($dictionary[$row6["id"]] as $key) {

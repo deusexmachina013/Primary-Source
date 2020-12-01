@@ -34,19 +34,19 @@ $conc = $dbconn->query("SELECT * from `template`");
 
     <section class="content">
       <!-- All Plans -->
-      <h1>All Plans</h1>
+      <h1 class="all-plans-title">All Plans</h1>
       <!-- concentrationn List -->
       
       <!-- Button trigger modal -->
-      <button id="toggle-create_plan-button" class="btn btn-outline-primary" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">Create Plan</button>
-      <div class="container">
-        <!-- ROWS -->
-        <!-- NOTE: To be kept as an HTML template for displaying plans. -->
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= "home.php"> &#9733 Main Plan</a>
-          </div>
-        </div>
+      <button id="toggle-create-plan-button" class="btn btn-secondary float-right" type="button" data-toggle="modal" data-target="#modalForm">Create Plan</button>
+
+       
+      <!-- NOTE: To be kept as an HTML template for displaying plans. -->
+      <div class="col-sm plan-name-container">
+      
+        <a class= "all-plans-header btn btn-secondary" href= "home.php"> &#9733 Main Plan</a>
+        <a class= "all-plans-header btn btn-secondary" href= "home.php"> &#9733 Arts Plan</a>
+    
       </div>
     </section>
 
