@@ -35,7 +35,7 @@ $conc = $dbconn->query("SELECT * from `template`");
       <div class="container">
         <h2>ITWS Concentrations</h2>
         <!-- Bootstrap Accordion (displays concentration requirements) -->
-        <div class="accordion" id="accordionExample"> 
+        <div class="accordion" id="accordionExample">
         
           <?php
           // Iterate through the template table and echo name of concentration
@@ -115,8 +115,9 @@ $conc = $dbconn->query("SELECT * from `template`");
                   // $dictionary contains (2=>array(12, 13, 14), 4=>array(15, 16, 17))
                   
                   foreach ($yes_courses as $row6) {
+                    // when it's a course group
                     if (array_key_exists($row6["id"], $dictionary)) {
-                      
+
                     
                       echo '<div class="accordion" id="accordionOptions' . $row6["id"] . '">
                               <div class="card">
@@ -133,7 +134,12 @@ $conc = $dbconn->query("SELECT * from `template`");
                       // if 2 in (2=>array(12, 13, 14), 4=>array(15, 16, 17))
                       // print out all courses 12, 13, 14
                       foreach ($dictionary[$row6["id"]] as $key) {
+                        $course_single = $dbconn->query("SELECT * from `course_single` WHERE `course_single`.course_id=$key");
                         
+                        foreach ($course_single as $row12) {
+                          echo $row12["prefix"] . "-" . $row12["number"] . " ";
+                        }
+
                         $query = $dbconn->query("SELECT * from `courses` WHERE `courses`.id=$key");
                         foreach ($query as $row10) {
                           echo $row10["name"];
@@ -147,10 +153,16 @@ $conc = $dbconn->query("SELECT * from `template`");
                       </div>';
 
                     }
-
+                    // when it's a single course
                     else {
+                      $course_id = $row6['id'];
+                      $course_single = $dbconn->query("SELECT * from `course_single` WHERE `course_single`.course_id=$course_id");
+                      
                       echo '<div class="card border-0">
                               <div class="card-header border-0">';
+                      foreach ($course_single as $row11) {
+                        echo $row11["prefix"] . "-" . $row11["number"] . " ";
+                      }
                       echo $row6["name"] . "<br>";
                       echo    '</div>
                             </div>';
