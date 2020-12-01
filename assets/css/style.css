@@ -218,6 +218,17 @@ body {
     font-weight: bold;
     height: 100%;
     padding: 10px;
+    border-radius: 4px;
+}
+
+.main-plan p {
+    background-color: #CEF0F1;
+    padding: 10px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    border-radius: 4px;
 }
 
 h1 {
@@ -474,15 +485,7 @@ td {
 }
 /* ================= */
 
-/* Home plan?  Where did this come from, and where should it go? */
-.home-plan p {
-    background-color: #CEF0F1;
-    padding: 10px;
-    margin: 0px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 100%;
-}
+
 
 
 /*******************/

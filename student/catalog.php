@@ -120,11 +120,11 @@ $conc = $dbconn->query("SELECT * from `template`");
 
                     
                       echo '<div class="accordion" id="accordionOptions' . $row6["id"] . '">
-                              <div class="card">
+                              <div class="card" style="margin: 8px;">
                                 <div class="card-header" id="courseHeading' . $row6["id"] . '">
                                   <h2 class="mb-0">
                                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#coursesCollapse' . $row6["id"] . '" aria-expanded="false" aria-controls="coursesCollapse' . $row6["id"] . '">'
-                                    . $row6["name"] .
+                                    . $row6["name"] . " (Choose One)" .
                                     '</button>
                                   </h2>
                                 </div>
@@ -158,8 +158,8 @@ $conc = $dbconn->query("SELECT * from `template`");
                       $course_id = $row6['id'];
                       $course_single = $dbconn->query("SELECT * from `course_single` WHERE `course_single`.course_id=$course_id");
                       
-                      echo '<div class="card border-0">
-                              <div class="card-header border-0">';
+                      echo '<div class="card" style="margin: 8px;">
+                              <div class="card-header border-0" style="padding-left:33px;">';
                       foreach ($course_single as $row11) {
                         echo $row11["prefix"] . "-" . $row11["number"] . " ";
                       }

@@ -19,7 +19,7 @@
 
     <!-- NOTE: To be used as a template for displaying fully completed plans.  Will have to write a function to query plans and display them in this manner. -->
 
-    <section class="content home-plan">
+    <section class="content main-plan">
       <!-- MAIN PLAN -->
       <h1>My Plan</h1>
       <!-- YEAR 1 -->
