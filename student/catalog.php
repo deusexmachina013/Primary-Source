@@ -9,8 +9,6 @@ catch(PDOException $e) {
 }
 
 $conc = $dbconn->query("SELECT * from `template`");
-
-
 ?>
 
 <html lang="en">
@@ -78,7 +76,7 @@ $conc = $dbconn->query("SELECT * from `template`");
                     if ($i == sizeof($yes_courses_id)-1) {
                       $yes_courses_string = $yes_courses_string . strval($yes_courses_id[$i]);
                     }
-                  else {
+                    else {
                     $yes_courses_string = $yes_courses_string . strval($yes_courses_id[$i]);
                     $yes_courses_string = $yes_courses_string . " OR ";
                     }
