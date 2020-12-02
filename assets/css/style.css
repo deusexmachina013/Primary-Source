@@ -34,6 +34,15 @@ body {
     margin-top: 100px;
 }
 
+.ri-star-s-line, .ri-star-s-fill {
+    font-size: 40px;
+    /* margin-right: 500px; */
+}
+
+ul#plan-name-star li {
+    display: inline;
+}
+
 .plan-header {
     padding-left: 15px;
     padding-right: 15px;
@@ -42,6 +51,10 @@ body {
 
 #plan-name {
     display: inline;
+}
+
+#plan-name-star{
+    text-align: center;
 }
 
 #toggle-config-button {
@@ -143,9 +156,9 @@ body {
 
 .plan-name-editable{
     height:70px;
-    width:600px;
+    width:30%;
     padding:10px;
-    margin:auto
+    font-size: 45px;
 }
 #plan-config-groups {
     display: none;

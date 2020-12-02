@@ -53,6 +53,7 @@
   </head>
 
   <body>
+  
     <!--NAVIGATION BAR (implemented with Bootstrap) -->
     <?php include('student_navbar.php'); ?>
 
@@ -60,19 +61,25 @@
       <!-- <input type="text" class="plan-name" placeholder="&starf;PLAN NAME"> -->
       <?php $favorited = $plan_details["favorited"];
         if ($favorited == 0) {
-      
-          $string_star = "<span id='star-0' style='cursor: pointer'><i class='ri-star-s-line'></i></span>";
-
+          $string_star = "<span id='star' style='cursor: pointer'><i class='ri-star-s-line'></i></span>";
         }
         else {
-          // $string_star = "&#9733";
-          $string_star = "<span id='star-1' style='cursor: pointer'><i class='ri-star-s-fill'></i></span>";
+          $string_star = "<span id='star' style='cursor: pointer'><i class='ri-star-s-fill'></i></span>";
         }
       ?>
-
-
-      <h1 class="plan-name-editable" contenteditable=true><?php echo $plan_details["name"] ?></h1>
-      <h1><?php echo $string_star ?></h1>
+     
+      <script>
+        $(function() {
+          $('span').click(function() {
+              $(this).find('[class^="ri-star-s"]').toggleClass('ri-star-s-fill').toggleClass('ri-star-s-line');
+          });
+        });
+      </script>
+      
+      <ul id="plan-name-star">        
+        <li class="plan-name-editable center" contenteditable=true><?php echo $plan_details["name"] ?></li>
+        <li><?php echo $string_star ?></li>
+      <ul>
       
       <button id="toggle-config-button" class="btn btn-outline-primary">More Details</button>
     </section>
