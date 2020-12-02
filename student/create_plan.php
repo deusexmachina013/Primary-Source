@@ -1,24 +1,29 @@
 <?php
   require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
   $dbconn = Database::getDatabase();
-  $selected_plan = 1; //hardcoded lol
+  // need to determine which plan the user clicked on
+  $selected_plan = 2; //hardcoded lol
   $plan_details_stmt = $dbconn->prepare("SELECT * FROM plans WHERE id = ?;");
   $plan_details_stmt->execute(array($selected_plan));
-
-  $plan_details = $plan_details_stmt->fetch();
+  
+  $plan_details = $plan_details_stmt->fetch(); // Plan Notes: ""This is my 4-year plan..."
 
   $plan_semesters_stmt = $dbconn->prepare("SELECT * FROM plan_semesters WHERE plan_id = ?;");
   $plan_semesters_stmt->execute(array($selected_plan));
   
-  $plan_semesters = $plan_semesters_stmt->fetchAll();
+  $plan_semesters = $plan_semesters_stmt->fetchAll(); // all semesters - year and id 
+
   $semester_list = array();
   foreach($plan_semesters as $semester) {
-    $semester_list[] = $semester['id'];
+    $semester_list[] = $semester['id']; // tells you the position of each semester
   }
-  $in  = str_repeat('?,', count($arr) - 1) . '?';
-  $plan_courses_stmt = $dbconn->prepare("SELECT plan_courses.semester_id, plan_courses.course_id, plan_courses.position, courses.name, course_single.prefix, course_single.number FROM plan_courses INNER JOIN courses ON plan_courses.course_id = courses.id INNER JOIN course_single ON plan_courses.course_id = course_single.course_id WHERE plan_courses.semester_id IN (" . implode(", ", $semester_list) . ") ORDER BY plan_courses.semester_id, plan_courses.position;");
+
+  // $in  = str_repeat('?,', count($arr) - 1) . '?'; // alternative option if you want to do prepared statement
+  $plan_courses_stmt = $dbconn->prepare("SELECT plan_courses.semester_id, plan_courses.course_id, plan_courses.position, courses.name, course_single_catalog.prefix, course_single_catalog.number FROM plan_courses INNER JOIN courses ON plan_courses.course_id = courses.id INNER JOIN course_single_catalog ON plan_courses.course_id = course_single_catalog.course_single_id WHERE plan_courses.semester_id IN (" . implode(", ", $semester_list) . ") ORDER BY plan_courses.semester_id, plan_courses.position;");
   $plan_courses_stmt->execute();
   $plan_courses = $plan_courses_stmt->fetchAll();
+
+  
 ?>
 <!DOCTYPE html>
 
