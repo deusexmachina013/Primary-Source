@@ -8,7 +8,7 @@ catch(PDOException $e) {
   echo "Connection failed";
 }
 
-$conc = $dbconn->query("SELECT * from `template`");
+$conc = $dbconn->query("SELECT * from `concentrations`");
 ?>
 
 <html lang="en">
@@ -222,7 +222,7 @@ $conc = $dbconn->query("SELECT * from `template`");
           </div>
         </div>
       </div>
-      <!-- concentration List -->
+      <!-- Concentration List -->
       <div class="container">
         <h2>ITWS Concentrations</h2>
         <!-- Bootstrap Accordion (displays concentration requirements) -->
@@ -242,18 +242,18 @@ $conc = $dbconn->query("SELECT * from `template`");
                     <div id="collapse' . $row1["id"] . '" class="collapse" aria-labelledby="heading' . $row1["id"] . '" data-parent="#accordionExample">
                   <div class="card-body">';
                   
-                  $template_data = $dbconn->query("SELECT * from `template_data`");
+                  $concentration_data = $dbconn->query("SELECT * from `concentration_data`");
                   $courses = $dbconn->query("SELECT * from `courses`");
                   $course_group_catalog_data = $dbconn->query("SELECT * from `course_group_catalog_data`");
                   $yes_courses_id = array(); // 2 3 4 5 6 7 8 11
 
-                  foreach ($template_data as $row2) {
-                    if ($row1["id"] == $row2["template_id"]) {
+                  foreach ($concentration_data as $row2) {
+                    if ($row1["id"] == $row2["concentration_id"]) {
                       foreach ($courses as $row3) {
                         if ($row2["course_id"] == $row3["id"]) {
                           foreach ($course_group_catalog_data as $row4) {
                             if ($row3["id"] == $row4["course_group_id"]) {
-                              array_push($yes_courses_id, $row4["course_id"]);
+                              array_push($yes_courses_id, $row4["course_group_id"]);
                             }
                           }
                         }
@@ -273,18 +273,18 @@ $conc = $dbconn->query("SELECT * from `template`");
                     }
                   }
                   
-                  $yes_courses = $dbconn->query($yes_courses_string);
+                  $yes_courses = $dbconn->query($yes_courses_string); // 8 required concentration courses
 
                   // $yes_courses_options = array(); // 2 4
                   $course_group_catalog_ids = array(); // 1 2 4
                   
                   // find the intersection of [2 3 4 5 6 7 8 11] and [1 2 4] to get [2 4]
-                  $yes_courses_options = $dbconn->query("SELECT * from `course_group_catalog` WHERE `course_group_catalog`.course_id in (" . implode(", ", $yes_courses_id) . ")");
+                  $yes_courses_options = $dbconn->query("SELECT * from `course_group_catalog` WHERE `course_group_catalog`.course_group_id in (" . implode(", ", $yes_courses_id) . ")");
                   $yes_courses_options_arr = array(); // [2, 4]
 
                   foreach ($yes_courses_options as $row5) {
                     // echo $row5["course_id"] . "<br>";
-                    array_push($yes_courses_options_arr, $row5["course_id"]);
+                    array_push($yes_courses_options_arr, $row5["course_group_id"]);
                   }
 
                   $option_details_ids = $dbconn->query("SELECT * from `course_group_catalog_data` WHERE `course_group_catalog_data`.course_group_id in (" . implode(", ", $yes_courses_options_arr) . ")");
@@ -299,7 +299,7 @@ $conc = $dbconn->query("SELECT * from `template`");
 
                     foreach ($my_courses as $row9) {
                       // echo $row9["course_id"] . "<br>";
-                      array_push($dictionary[$key], $row9["course_id"]);
+                      array_push($dictionary[$key], $row9["course_group_id"]);
                     }
                     // echo "<br>";
                   }
@@ -325,7 +325,7 @@ $conc = $dbconn->query("SELECT * from `template`");
                       // if 2 in (2=>array(12, 13, 14), 4=>array(15, 16, 17))
                       // print out all courses 12, 13, 14
                       foreach ($dictionary[$row6["id"]] as $key) {
-                        $course_single = $dbconn->query("SELECT * from `course_single` WHERE `course_single`.course_id=$key");
+                        $course_single = $dbconn->query("SELECT * from `course_single` WHERE `course_single`.course_single_id=$key");
                         
                         foreach ($course_single as $row12) {
                           echo $row12["prefix"] . "-" . $row12["number"] . " ";
@@ -347,7 +347,7 @@ $conc = $dbconn->query("SELECT * from `template`");
                     // when it's a single course
                     else {
                       $course_id = $row6['id'];
-                      $course_single = $dbconn->query("SELECT * from `course_single` WHERE `course_single`.course_id=$course_id");
+                      $course_single = $dbconn->query("SELECT * from `course_single` WHERE `course_single`.course_single_id=$course_id");
                       
                       echo '<div class="card" style="margin: 8px;">
                               <div class="card-header border-0" style="padding-left:33px;">';
