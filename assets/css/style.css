@@ -88,6 +88,7 @@ body {
 .semester-title {
     font-size: 25px;
     background-color: #E8E8E8;
+    border-radius: 4px;
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -102,6 +103,7 @@ body {
     margin-bottom: 6px; */
     margin: 6px;
     background-color: #CEF0F1;
+    border-radius: 4px;
     /* width: 400px; */
     /* z-index: 10000; */
 }
@@ -168,6 +170,7 @@ body {
     padding: 8px;
     margin-bottom: 24px;
     margin: 6px;
+    border-radius: 4px;
 }
 
 .add-course,

@@ -58,8 +58,23 @@
 
     <section class="plan-header">
       <!-- <input type="text" class="plan-name" placeholder="&starf;PLAN NAME"> -->
-      <h1 class="plan-name-editable" contenteditable=true>&starf;<?php echo $plan_details["name"] ?></h1>
-      <button id="toggle-config-button" class="btn btn-outline-primary">Show Config</button>
+      <?php $favorited = $plan_details["favorited"];
+        if ($favorited == 0) {
+      
+          $string_star = "<span id='star-0' style='cursor: pointer'><i class='ri-star-s-line'></i></span>";
+
+        }
+        else {
+          // $string_star = "&#9733";
+          $string_star = "<span id='star-1' style='cursor: pointer'><i class='ri-star-s-fill'></i></span>";
+        }
+      ?>
+
+
+      <h1 class="plan-name-editable" contenteditable=true><?php echo $plan_details["name"] ?></h1>
+      <h1><?php echo $string_star ?></h1>
+      
+      <button id="toggle-config-button" class="btn btn-outline-primary">More Details</button>
     </section>
     <!-- TODO: discuss how to make fields editable nicely -->
     <section class="schedule">
@@ -91,7 +106,7 @@
                     </div>
                           <?php } ?>
                     <div class="row course-add">
-                      <button class="btn btn-primary add-course-button">Add Course</button>
+                      <button class="btn btn-secondary add-course-button">Add Course</button>
                       <!-- <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button> -->
                     </div>
                   </div>
@@ -105,7 +120,7 @@
               <div id="schedule-config-container">
                 <ul id="schedule-config-nav" class="nav nav-tabs">
                   <li class="nav-item">
-                    <button class="nav-link active" href="#">Courses</button>
+                    <button class="nav-link active" href="#">Catalog</button>
                   </li>
                   <li class="nav-item">
                     <button class="nav-link" href="#">Validation</button>
