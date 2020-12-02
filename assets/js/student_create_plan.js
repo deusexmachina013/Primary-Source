@@ -2,12 +2,47 @@ $(document).ready(function() {
   
 
     //https://stackoverflow.com/questions/19878051/pressing-enter-leaves-contenteditable-box
-    $(".course-editable").on("keydown", function(e){
+    $("#semester-row").on("keydown", '.course-editable', function(e){
         var key = e.keyCode || e.charCode;
         if(key == 13) {
             $(this).blur();
         }
     });
+
+    $("#semester-row").on('focusout', '.course-editable', function(e) {
+        var code = $(this).parent();
+        var course = code.parent();
+        var prefix = code.find(".course-prefix").first().text();
+        var number = code.find(".course-number").first().text();
+        if(prefix.length == 4 && number.length == 4 && /^\d+$/.test(number)) {
+            $.ajax({
+                type: "POST",
+                url: "api.php",
+                data: {"get_course": true,
+                       "prefix": prefix,
+                       "number": number},
+                success: function (data) {
+                    console.log(data);
+                    data = JSON.parse(data);
+                    console.log(data);
+                    if("name" in data) {
+                        course.find(".course-status").first().children().first().removeClass("dot-red");
+                        course.find(".course-status").first().children().first().addClass("dot-green");
+                        course.find(".course-title").first().text(data["name"]);
+                    } else {
+                        course.find(".course-status").first().children().first().removeClass("dot-green");
+                        course.find(".course-status").first().children().first().addClass("dot-red");
+                        course.find(".course-title").first().text("");
+                    }
+                }
+            });
+        } else {
+            course.find(".course-status").first().children().first().removeClass("dot-green");
+            course.find(".course-status").first().children().first().addClass("dot-red");
+            course.find(".course-title").first().text("");
+        }
+    });
+    
     console.log($('#schedule-config-nav').find("button").each(function() {
         $(this).click(function() {
             var target = $("#plan-config-" + $(this).text().toLowerCase());
@@ -44,10 +79,10 @@ $(document).ready(function() {
 
     $(document).on("click", ".add-course-button", function() {
         $(this).parent().before('<div class="row semester-course">\
-        <div class="col-md-1 course-status"><span class="dot"></span></div>\
-        <div class="col-md-5 course-editable course-title" contenteditable=true>Example</div>\
-        <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-1000</div>\
-        <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>\
+        <div class="col-md-1 course-status"><span class="dot dot-red"></span></div>\
+        <div class="col-md-5 course-title"></div>\
+        <div class="col-md-3 course-code"><span class="course-editable course-prefix" contenteditable=true>AAAA</span>-<span class="course-editable course-number" contenteditable=true>0000</span></div>\
+        <div class="col-md-1 course-credits">4</div>\
         <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>\
         </div>');
     });
