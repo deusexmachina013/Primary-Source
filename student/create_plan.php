@@ -2,7 +2,13 @@
   require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
   $dbconn = Database::getDatabase();
   // need to determine which plan the user clicked on
-  // $selected_plan = 2; //hardcoded lol
+  
+  if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $selected_plan=$id;
+  }
+  
+  // $selected_plan = ; //hardcoded lol
   $plan_details_stmt = $dbconn->prepare("SELECT * FROM plans WHERE id = ?;");
   $plan_details_stmt->execute(array($selected_plan));
   
@@ -22,7 +28,7 @@
   $plan_courses_stmt = $dbconn->prepare("SELECT plan_courses.semester_id, plan_courses.course_id, plan_courses.position, courses.name, course_single_catalog.prefix, course_single_catalog.number FROM plan_courses INNER JOIN courses ON plan_courses.course_id = courses.id INNER JOIN course_single_catalog ON plan_courses.course_id = course_single_catalog.course_single_id WHERE plan_courses.semester_id IN (" . implode(", ", $semester_list) . ") ORDER BY plan_courses.semester_id, plan_courses.position;");
   $plan_courses_stmt->execute();
   $plan_courses = $plan_courses_stmt->fetchAll();
-
+  
   
 ?>
 <!DOCTYPE html>
@@ -62,7 +68,7 @@
             <div class="col">
               <div id="semester-row" class="row">
                 <?php $index = 0;
-                      for($i = 0; $i < count($semester_list); $i++) {
+                  for($i = 0; $i < count($semester_list); $i++) {
                 ?>
                 <div class="semester-whole col-md-6">
                   <div class="semester">

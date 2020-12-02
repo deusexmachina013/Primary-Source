@@ -9,7 +9,7 @@ $conc = $dbconn->query("SELECT * from `template`");
 
 <html lang="en">
   <head>
-    <title>Student All Plans</title>
+    <title>Home Page</title>
 
     <!-- CSS ONLY -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -43,7 +43,9 @@ $conc = $dbconn->query("SELECT * from `template`");
             // loop through plans table
             $plans = $dbconn->query("SELECT * from `plans` WHERE `plans`.user_id = $current_user_id")->fetchAll();
             // var_dump($plans);
+            
             foreach($plans as $row){
+              $current_plan_id = $row["id"];
               $favorited = $row["favorited"];
               if ($favorited == 0) {
                 $string_star = "";
@@ -51,11 +53,11 @@ $conc = $dbconn->query("SELECT * from `template`");
               else {
                 $string_star = "&#9733";
               }
-              echo "<a class= 'all-plans-header btn btn-secondary' href='home.php'>" . $string_star . $row['name'] . "</a>";
+              
+              echo "<a class='all-plans-header btn btn-secondary' href='create_plan.php?id=$current_plan_id' name='$current_plan_id'>" . $string_star . $row['name'] . "</a>";
               $string_star = "";
             }
-            // 
-            
+
         ?>
         
 
@@ -63,10 +65,6 @@ $conc = $dbconn->query("SELECT * from `template`");
     
       </div>
     </section>
-    <?php 
-      $selected_plan = 2;
-      include('create_plan.php'); 
-    ?>
 
   <!-- Modal -->
   <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" aria-hidden="true">
