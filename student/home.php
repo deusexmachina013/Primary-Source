@@ -54,7 +54,7 @@ $conc = $dbconn->query("SELECT * from `template`");
                 $string_star = "&#9733";
               }
               
-              echo "<a class='all-plans-header btn btn-secondary' href='create_plan.php?id=$current_plan_id' name='$current_plan_id'>" . $string_star . $row['name'] . "</a>";
+              echo "<a class='all-plans-header btn btn-secondary' href='create_plan.php?id=$current_plan_id' name='$current_plan_id'>" . $row['name'] . " " . $string_star . "</a>";
               $string_star = "";
             }
 

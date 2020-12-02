@@ -81,7 +81,7 @@
         <li><?php echo $string_star ?></li>
       <ul>
       
-      <button id="toggle-config-button" class="btn btn-outline-primary">More Details</button>
+      <button id="toggle-config-button" class="btn btn-secondary">More Details</button>
     </section>
     <!-- TODO: discuss how to make fields editable nicely -->
     <section class="schedule">
@@ -113,7 +113,7 @@
                     </div>
                           <?php } ?>
                     <div class="row course-add">
-                      <button class="btn btn-secondary add-course-button">Add Course</button>
+                      <button class="btn btn-info add-course-button">Add Course</button>
                       <!-- <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button> -->
                     </div>
                   </div>
@@ -132,20 +132,14 @@
                   <li class="nav-item">
                     <button class="nav-link" href="#">Validation</button>
                   </li>
-                  <!-- <li class="nav-item">
-                    <button class="nav-link" href="#">Groups</button>
-                  </li> -->
                   <li class="nav-item">
                     <button class="nav-link" href="#">Notes</button>
                   </li>
-                  <!-- <li class="nav-item">
-                    <button class="nav-link" href="#">Settings</button>
-                  </li> -->
                 </ul>
 
                 <!-- Courses -->
                 <div id="plan-config-courses">
-                   <div id="accordion">
+                  <div id="accordion">
                     <div class="card">
                       <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
@@ -348,26 +342,14 @@
                   </div>
                 </div>
 
-                <!-- Groups
-                <div id="plan-config-groups">
-                  Groups page
-                </div> -->
-
                 <!-- Notes -->
                 <div id="plan-config-notes">
                   <textarea class="form-control" id="text-area-notes"><?php echo $plan_details["notes"] ?>
                   </textarea>                  
                 </div>
-
-                <!-- Settings
-                <div id="plan-config-settings">
-                  Settings page
-                </div> -->
-
               </div>
             </div>
         </div>
-
       </div>
     </section>
 
