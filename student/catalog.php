@@ -1,12 +1,14 @@
 <?php 
-$username = "root";
-$password = "root";
-try {
-  $dbconn = new PDO('mysql:host=localhost;dbname=website', $username, $password);
-}
-catch(PDOException $e) {
-  echo "Connection failed";
-}
+// $username = "root";
+// $password = "root";
+// try {
+//   $dbconn = new PDO('mysql:host=localhost;dbname=website', $username, $password);
+// }
+// catch(PDOException $e) {
+//   echo "Connection failed";
+// }
+require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
+$dbconn = Database::getDatabase();
 
 $conc = $dbconn->query("SELECT * from `concentrations`");
 ?>

@@ -1,12 +1,6 @@
 <?php 
-$username = "root";
-$password = "root";
-try {
-  $dbconn = new PDO('mysql:host=localhost;dbname=website', $username, $password);
-}
-catch(PDOException $e) {
-  echo "Connection failed";
-}
+require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
+$dbconn = Database::getDatabase();
 
 $conc = $dbconn->query("SELECT * from `template`");
 ?>
@@ -30,7 +24,7 @@ $conc = $dbconn->query("SELECT * from `template`");
 
   <body>
     <!--NAVIGATION BAR (implemented with Bootstrap) -->
-    <?php include('student_navbar.php'); ?>
+    <?php include('student_navbar.php');?>
 
     <section class="content">
       
@@ -41,15 +35,38 @@ $conc = $dbconn->query("SELECT * from `template`");
       <!-- Button trigger modal -->
       <button id="toggle-create-plan-button" class="btn btn-secondary float-right" type="button" data-toggle="modal" data-target="#modalForm">Create Plan</button>
 
-       
       <!-- NOTE: To be kept as an HTML template for displaying plans. -->
       <div class="col-sm plan-name-container">
-      
-        <a class= "all-plans-header btn btn-secondary" href= "home.php"> &#9733 Main Plan</a>
-        <a class= "all-plans-header btn btn-secondary" href= "home.php"> &#9733 Arts Plan</a>
+        <?php
+            // find the user first
+            $current_user_id = 2;
+            // loop through plans table
+            $plans = $dbconn->query("SELECT * from `plans` WHERE `plans`.user_id = $current_user_id")->fetchAll();
+            // var_dump($plans);
+            foreach($plans as $row){
+              $favorited = $row["favorited"];
+              if ($favorited == 0) {
+                $string_star = "";
+              }
+              else {
+                $string_star = "&#9733";
+              }
+              echo "<a class= 'all-plans-header btn btn-secondary' href='home.php'>" . $string_star . $row['name'] . "</a>";
+              $string_star = "";
+            }
+            // 
+            
+        ?>
+        
+
+       
     
       </div>
     </section>
+    <?php 
+      $selected_plan = 2;
+      include('create_plan.php'); 
+    ?>
 
   <!-- Modal -->
   <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" aria-hidden="true">

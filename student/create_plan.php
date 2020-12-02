@@ -2,7 +2,7 @@
   require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
   $dbconn = Database::getDatabase();
   // need to determine which plan the user clicked on
-  $selected_plan = 2; //hardcoded lol
+  // $selected_plan = 2; //hardcoded lol
   $plan_details_stmt = $dbconn->prepare("SELECT * FROM plans WHERE id = ?;");
   $plan_details_stmt->execute(array($selected_plan));
   
@@ -125,7 +125,7 @@
                           ITWS Core Requirements</a> <br>
                         </h5>
                       </div>
-
+                      <!-- Show Config drag and drop -->
                       <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <!-- sortable2 -->
                         <div id="sortable2" class="connectedSortable semester">

@@ -8,8 +8,8 @@ $dbconn = Database::getDatabase();
 class Database {
     const host = "localhost";
     const database_name = "website";
-    const username = "vagrant";
-    const password = "vagrant";
+    const username = "root";
+    const password = "root";
 
     public static function getDatabase() {
         return new PDO('mysql:host=' . self::host . ';dbname=' . self::database_name, self::username, self::password);
