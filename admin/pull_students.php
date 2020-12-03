@@ -2,11 +2,11 @@
   // Query the student table and get relevant students.
   if(isset($_POST['student-search-dropdown']) && isset($_POST['search-bar'])) {
     // Connect to the database.
-    $dbconn = new PDO('mysql:host=localhost;dbname=website', 'root', 'root');
+    $dbconn = new PDO('mysql:host=localhost;dbname=website', 'root', 'password');
 
     // Prepare the request.
     $argumentArray = NULL;
-    $request = "SELECT users.first_name, users.last_name, users.class_year, plans.id, plans.advisor_status, plans.favorited FROM `users`, `plans` WHERE ";
+    $request = "SELECT users.first_name, users.last_name, users.class_year, plans.id, plans.advisor_validated, plans.favorited FROM `users`, `plans` WHERE ";
     switch($_POST['student-search-dropdown']) {
       // Case: Searched by student name.
       case 'student_name':
@@ -23,18 +23,23 @@
       // Case: Searched by plan status.
       case 'plan_status':
         // Translate the text to status codes.
-        $barTerm = $_POST['search-bar'];
-        if($barTerm == "0" || $barTerm == "Unsubmitted") $_POST['search-bar'] = 0;
-        else if($barTerm == "1" || $barTerm == "Submitted") $_POST['search-bar'] = 1;
-        else if($barTerm == "2" || $barTerm == "Approved") $_POST['search-bar'] = 2;
-        else if($barTerm == "3" || $barTerm == "Unapproved") $_POST['search-bar'] = 3;
+        switch($_POST['search-bar']) {
+          // 0 -- Unsubmitted.
+          case "Unsubmitted": $_POST['search-bar'] = 0; break;
+          // 1 -- Submitted.
+          case "Submitted": $_POST['search-bar'] = 1; break;
+          // 2 -- Approved.
+          case "Approved": $_POST['search-bar'] = 2; break;
+          // 3 -- Unapproved.
+          case "Unapproved": $_POST['search-bar'] = 3; break;
+        }
 
-        $request = $request . "plans.advisor_status = ?";
+        $request = $request . "plans.advisor_validated = ?";
         $argumentArray = Array($_POST['search-bar']);
       break;
     }
-    $request = $request . " AND plans.advisor_status <> 3 AND users.id = plans.user_id ORDER BY users.identity;";
-
+    $request = $request . " AND plans.advisor_validated <> 3 AND users.id = plans.user_id ORDER BY users.identity;";
+    // echo("THIS IS A PLACEHOLDER");
     // Execute the query.
     $query = $dbconn->prepare($request);
     $query->execute($argumentArray);
