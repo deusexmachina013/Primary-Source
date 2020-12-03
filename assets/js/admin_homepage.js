@@ -51,15 +51,53 @@ $(document).ready(function() {
     </tr> */
 }
 $(document).ready(function() {
-    $("#student-lookup").submit(function(e) {
-        e.preventDefault();
-        $.ajax({
-            type: "POST",
-            url: 'pull_students.php',
-            data: $(this).serialize(),
-            dataType: "json",
-            success: function(jsonObject) {
-                for (var index in jsonObject) {
+  // Handle Administator Lookup
+  $("#student-lookup").submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: 'pull_students.php',
+      data: $(this).serialize(),
+      dataType: "json",
+      success: function(jsonObject) {
+        var table = $("tbody");
+        table.empty();
+        for (var index in jsonObject) {
+          var entry = jsonObject[index];
+
+          console.log(entry); // DEBUG
+
+          // Prune results by what's truly submitted.
+          // Note: Not done in Query for testing purposes.
+          if(entry.advisor_status == 2 ||
+            (entry.advisor_status == 1 && entry.favorited == 1) ||
+             entry.favorited == 1) {
+            var printout = "<tr scope='row'>";
+
+            // Get basic data.
+            printout += "<td class='col-5'>" 
+                      + entry.first_name + " " + entry.last_name
+                      + "</td>"
+            printout += "<td class='col-3'>" + entry.class_year + "</td>"
+
+            // Parse status code.
+            printout += "<td class='col-4'>";
+            switch(entry.advisor_status) {
+              case "0": printout += "Unsubmitted"; break;
+              case "1": printout += "Reviewable"; break;
+              case "2": printout += "Accepted"; break;
+              case "3": printout += "Rejected"; break;
+            }
+            printout += "</td>";
+
+            printout += "</tr>"
+
+            console.log(printout); // DEBUG
+
+            table.append(printout);
+          }
+        }
+                /*
                     var search = $(this)[0].data;
                     var approved = "Approved";
                     var unsubmitted = "Unsubmitted";
@@ -83,7 +121,7 @@ $(document).ready(function() {
                         }
                     }
                     rowEntry += "</tr>";
-                    if (option == "Student Name") {
+                    if (option == "student_name") {
                         search = search.replace('student-search-dropdown=student_name&search-bar=', '');
                         search = search.toLowerCase();
                         fName = entry.first_name.toLowerCase();
@@ -91,12 +129,12 @@ $(document).ready(function() {
                         if (fName.includes(search) || lName.includes(search)) {
                             $("tbody").append(rowEntry);
                         }
-                    } else if (option == "Cohort Year") {
+                    } else if (option == "class_year") {
                         search = search.replace('student-search-dropdown=class_year&search-bar=', '');
                         if (entry.class_year.includes(search)) {
                             $("tbody").append(rowEntry);
                         }
-                    } else if (option == "Status") {
+                    } else if (option == "plan_status") {
                         search = search.replace('student-search-dropdown=plan_status&search-bar=', '');
                         search = search.toLowerCase();
                         approved = approved.toLowerCase();
@@ -114,6 +152,7 @@ $(document).ready(function() {
                         }
                     }
                 }
+                */
             },
             error: function(code, message) {
                 console.log(code);
