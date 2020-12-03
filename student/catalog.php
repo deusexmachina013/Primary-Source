@@ -218,8 +218,76 @@
       </div>
 
       <?php 
-        $catalog = $dbconn->query("SELECT courses.id, courses.name, concentrations.id, concentrations.name, concentration_data.concentration_id, concentration_data.course_id FROM `courses`, `concentrations`, `concentration_data` WHERE courses.id=concentration_data.course_id AND concentrations.id = concentration_data.concentration_id")
-      
+        // $catalog = $dbconn->query("SELECT courses.id, courses.name, concentrations.id, concentrations.name, concentration_data.concentration_id, concentration_data.course_id FROM `courses`, `concentrations`, `concentration_data` WHERE courses.id=concentration_data.course_id AND concentrations.id = concentration_data.concentration_id");
+
+        $concentration_ids = $dbconn->query("SELECT id, name FROM concentrations");
+        
+
+        // query to get course-singles
+        $catalog_course_singles = $dbconn->query("SELECT concentration_data.concentration_id, courses.name FROM `courses`, `concentration_data`, `course_single` WHERE courses.id=concentration_data.course_id AND course_single.course_single_id = courses.id");
+
+        $course_singles = array();
+        foreach($catalog_course_singles as $catalog_course_single) {
+          if(!array_key_exists($catalog_course_single["concentration_id"], $course_singles)) {
+            $course_singles[$catalog_course_single["concentration_id"]] = array();
+          }
+          $course_singles[$catalog_course_single["concentration_id"]][] = $catalog_course_single["name"];
+        }
+
+        // query to get course-groups
+        $catalog_course_groups = $dbconn->query("SELECT concentration_data.concentration_id, courses.name FROM `courses`, `concentration_data`, `course_groups` WHERE courses.id=concentration_data.course_id AND course_groups.course_group_id = courses.id");
+
+
+        $course_groups = array(); // [Conc id=>Course Group Name 1, Course Group Name 2]
+        foreach($catalog_course_groups as $catalog_course_group) {
+          if(!array_key_exists($catalog_course_group["concentration_id"], $course_groups)) {
+            $course_groups[$catalog_course_group["concentration_id"]] = array();
+          }
+          $course_groups[$catalog_course_group["concentration_id"]][] = $catalog_course_group["name"];
+        }
+
+
+
+        // query to get course-singles that are inside course_groups
+        $catalog_course_group_singles = $dbconn->query("SELECT courses.id, courses.name, course_group_catalog_data.course_group_id FROM `course_group_catalog_data`, `courses`, `course_single` WHERE courses.id=course_group_catalog_data.course_id AND course_group_catalog_data.course_id=course_single.course_single_id");
+
+        $course_group_singles = array(); // [course_group_id=>(course_id, course_id), course_group_id=>(course_id, course_id)]
+        foreach($catalog_course_group_singles as $course_group_single) {
+          if(!array_key_exists($course_group_single["course_group_id"], $course_group_singles)) {
+            $course_group_singles[$course_group_single["course_group_id"]] = array();
+          }
+          $course_group_singles[$course_group_single["course_group_id"]][] = $course_group_single["name"];
+        }
+        // var_dump($course_group_singles);
+        
+        foreach($concentration_ids as $con_query) {
+          //print name of concentration here, start
+          echo $con_query["name"] . "<br>";
+
+          // var_dump($con_query);
+
+          if (array_key_exists($con_query["id"], $course_singles)) {
+            foreach($course_singles[$con_query["id"]] as $course) {
+              //print each course
+              
+              echo "---" . $course  . "<br>";
+            }
+          }
+          
+          if (array_key_exists($con_query["id"], $course_groups)) {
+            foreach($course_groups[$con_query["id"]] as $group) {
+
+              //print each course      
+              echo "---" . $group  . "<br>";
+
+              if (array_key_exists($course_groups["course_group_id"], $course_group_singles)) {
+                // var_dump($course_group_singles);
+                echo "hi";
+              
+              }              
+            }
+          }
+        }
       ?>
 
     </section>
