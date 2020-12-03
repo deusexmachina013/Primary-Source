@@ -59,13 +59,11 @@ ul#plan-name-star li {
     /* position: absolute;
     right: 25px; */
 }
-
 #toggle-create-plan-button {
     /* float: right; */
     /* position: absoluteF-primary;*/
     margin-right: 80px; 
 }
-
 .course-status {
     height: 25px;
 }
@@ -222,7 +220,6 @@ ul#plan-name-star li {
 
 /*************/
 
-
 /* MAIN PLAN */
 
 .content .container .col-sm {
@@ -252,7 +249,6 @@ ul#plan-name-star li {
     /* width: 50%; */
     max-height: 70%;
 }
-
 #plan-config-courses {
     display: block;
 }
@@ -271,7 +267,6 @@ ul#plan-name-star li {
     padding:10px;
     font-size: 45px;
 }
-
 #plan-config-groups {
     display: none;
 }
@@ -535,9 +530,8 @@ button:hover {
 
 .student-search {
     border: solid #212529 2px;
-    border-right: none;
     padding: 0px;
-    width: 743px;
+    width: 600px;
     /* 757px if we want the full length of table*/
     height: 32px;
     margin-top: 20px;
@@ -546,7 +540,7 @@ button:hover {
 
 .left-partition {
     float: left;
-    width: 20%;
+    width: 25%;
 }
 
 .search-dropdown {
@@ -561,53 +555,7 @@ button:hover {
 
 .right-partition {
     float: left;
-    width: 48%;
-}
-
-.button-position {
-    float: left;
-    width: 32%;
-}
-
-.courses-add-button {
-    display: inline-block;
-    height: 32px;
-    margin-top: -2px;
-    border: 2px solid;
-    border-right: 1px;
-    border-color: black;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: medium;
-    font-weight: 100;
-    color: black;
-    background-color: #CEF0F1;
-    transition: all 0.2s;
-    white-space: nowrap;
-    text-align: center;
-    display: center;
-}
-
-.courses-add-requirement {
-    display: inline-block;
-    height: 32px;
-    margin-top: -2px;
-    margin-left: -4.5px;
-    border: 2px solid;
-    border-left: 1px;
-    border-color: black;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: medium;
-    font-weight: 100;
-    color: black;
-    background-color: #CEF0F1;
-    transition: all 0.2s;
-    white-space: nowrap;
-    text-align: center;
-    display: center;
+    width: 75%;
 }
 
 .student-searchbar {
@@ -634,7 +582,6 @@ button:hover {
     overflow: auto;
 }
 
-
 /* TABLE FIXATION */
 
 #plan-table {
@@ -643,15 +590,15 @@ button:hover {
     max-width: 700px;
 }
 
-#plan-table tr:nth-child(odd)>td {
+#plan-table tr:nth-child(odd) > td {
     background-color: #CEF0F1;
 }
 
-#plan-table tr:nth-child(even)>td {
+#plan-table tr:nth-child(even) > td {
     background-color: #abe5e7;
 }
 
-#plan-table tr:hover>td {
+#plan-table tr:hover > td {
     background-color: #77d5d8;
 }
 
@@ -671,14 +618,9 @@ button:hover {
 
 .table-fixed tbody td,
 .table-fixed tbody th,
-.table-fixed thead>tr>th {
+.table-fixed thead > tr > th {
     float: left;
 }
-
-[data-href] {
-    cursor: pointer;
-}
-
 
 /* Home plan?  Where did this come from, and where should it go? */
 
@@ -690,33 +632,4 @@ button:hover {
     margin-bottom: 10px;
     height: 100%;
 }
-
 /* ================= */
-
-
-/*******************/
-
-
-/* create_plan.php */
-
-
-/*******************/
-
-.connectedSortable {
-    min-height: 30px;
-}
-
-
-/* #sortable1 {
-    min-height: 30px;
-}
-
-#sortable2 {
-    min-height: 30px;
-    margin-bottom: 15px;
-    margin: 10px;
-}
-
-#sortable2 div {
-    padding: 12px;
-} */
