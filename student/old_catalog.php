@@ -216,12 +216,153 @@
           </div>
         </div>
       </div>
+      <!-- Concentration List -->
+      <div class="container">
+        <h2>ITWS Concentrations</h2>
+        <!-- Bootstrap Accordion (displays concentration requirements) -->
+        <div class="accordion" id="accordionExample">
+        
+          <?php
+          // Iterate through the template table and echo name of concentration
+            foreach ($conc as $row1) {
+              echo '<div class="card">
+                      <div class="card-header" id="heading' . $row1["id"] . '">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse' . $row1["id"] . '" aria-expanded="false" aria-controls= "collapse' . $row1["id"] . '">'
+                            . $row1["name"] . 
+                          '</button>
+                        </h2>
+                      </div>
+                    <div id="collapse' . $row1["id"] . '" class="collapse" aria-labelledby="heading' . $row1["id"] . '" data-parent="#accordionExample">
+                  <div class="card-body">';
+                  
+                  $concentration_data = $dbconn->query("SELECT * from `concentration_data`");
+                  $courses = $dbconn->query("SELECT * from `courses`");
+                  $course_group_catalog_data = $dbconn->query("SELECT * from `course_group_catalog_data`");
+                  $yes_courses_id = array(); // 2 3 4 5 6 7 8 11
 
-      <?php 
-        $catalog = $dbconn->query("SELECT concentrations.id, concentrations.name, concentration_data.concentration_id, concentration_data.course_id, course_groups.course_group_id, course_group_catalog.course_group_id, course_group_catalog_data.course_group_id, course_group_catalog_data.course_id from `concentration_data`, `concentrations`, `course_groups`, `course_group_catalog`, `course_group_catalog_data` WHERE concentrations.id = concentration_data.concentration_id ")
-      
-      ?>
+                  foreach ($concentration_data as $row2) {
+                    if ($row1["id"] == $row2["concentration_id"]) {
+                      foreach ($courses as $row3) {
+                        if ($row2["course_id"] == $row3["id"]) {
+                          foreach ($course_group_catalog_data as $row4) {
+                            if ($row3["id"] == $row4["course_group_id"]) {
+                              array_push($yes_courses_id, $row4["course_group_id"]);
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
 
+                  $yes_courses_string = strval("SELECT * from `courses` WHERE");
+                  for ($i = 0; $i < sizeof($yes_courses_id); $i++) {
+                    $yes_courses_string = $yes_courses_string . strval("`courses`.id=");
+                    if ($i == sizeof($yes_courses_id)-1) {
+                      $yes_courses_string = $yes_courses_string . strval($yes_courses_id[$i]);
+                    }
+                    else {
+                    $yes_courses_string = $yes_courses_string . strval($yes_courses_id[$i]);
+                    $yes_courses_string = $yes_courses_string . " OR ";
+                    }
+                  }
+                  
+                  $yes_courses = $dbconn->query($yes_courses_string); // 8 required concentration courses
+
+                  // $yes_courses_options = array(); // 2 4
+                  $course_group_catalog_ids = array(); // 1 2 4
+                  
+                  // find the intersection of [2 3 4 5 6 7 8 11] and [1 2 4] to get [2 4]
+                  $yes_courses_options = $dbconn->query("SELECT * from `course_group_catalog` WHERE `course_group_catalog`.course_group_id in (" . implode(", ", $yes_courses_id) . ")");
+                  $yes_courses_options_arr = array(); // [2, 4]
+
+                  foreach ($yes_courses_options as $row5) {
+                    // echo $row5["course_id"] . "<br>";
+                    array_push($yes_courses_options_arr, $row5["course_group_id"]);
+                  }
+
+                  $option_details_ids = $dbconn->query("SELECT * from `course_group_catalog_data` WHERE `course_group_catalog_data`.course_group_id in (" . implode(", ", $yes_courses_options_arr) . ")");
+                  
+                  $option_details_ids_arr = array(); // 12, 13, 14, 15, 16, 17
+                  
+                  $dictionary = array_fill_keys($yes_courses_options_arr, array());
+                  
+                  foreach ($dictionary as $key=>$value) {
+                    // echo $key;
+                    $my_courses = $dbconn->query("SELECT * from `course_group_catalog_data` WHERE `course_group_catalog_data`.course_group_id=$key");
+
+                    foreach ($my_courses as $row9) {
+                      // echo $row9["course_id"] . "<br>";
+                      array_push($dictionary[$key], $row9["course_group_id"]);
+                    }
+                    // echo "<br>";
+                  }
+                  // $dictionary contains (2=>array(12, 13, 14), 4=>array(15, 16, 17))
+                  
+                  foreach ($yes_courses as $row6) {
+                    // when it's a course group
+                    if (array_key_exists($row6["id"], $dictionary)) {
+
+                    
+                      echo '<div class="accordion" id="accordionOptions' . $row6["id"] . '">
+                              <div class="card" style="margin: 8px;">
+                                <div class="card-header" id="courseHeading' . $row6["id"] . '">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#coursesCollapse' . $row6["id"] . '" aria-expanded="false" aria-controls="coursesCollapse' . $row6["id"] . '">'
+                                    . $row6["name"] . " (Choose One)" .
+                                    '</button>
+                                  </h2>
+                                </div>
+                              <div id="coursesCollapse' . $row6["id"] . '" class="collapse" aria-labelledby="courseHeading' . $row6["id"] . '" data-parent="#accordionOptions' . $row6["id"] . '">
+                                <div class="card-body">';
+                                                   
+                      // if 2 in (2=>array(12, 13, 14), 4=>array(15, 16, 17))
+                      // print out all courses 12, 13, 14
+                      foreach ($dictionary[$row6["id"]] as $key) {
+                        $course_single = $dbconn->query("SELECT * from `course_single` WHERE `course_single`.course_single_id=$key");
+                        
+                        foreach ($course_single as $row12) {
+                          echo $row12["prefix"] . "-" . $row12["number"] . " ";
+                        }
+
+                        $query = $dbconn->query("SELECT * from `courses` WHERE `courses`.id=$key");
+                        foreach ($query as $row10) {
+                          echo $row10["name"];
+                          echo "<br>";
+                          
+                        }
+                      }
+                      echo '</div>
+                          </div>
+                        </div>
+                      </div>';
+
+                    }
+                    // when it's a single course
+                    else {
+                      $course_id = $row6['id'];
+                      $course_single = $dbconn->query("SELECT * from `course_single` WHERE `course_single`.course_single_id=$course_id");
+                      
+                      echo '<div class="card" style="margin: 8px;">
+                              <div class="card-header border-0" style="padding-left:33px;">';
+                      foreach ($course_single as $row11) {
+                        echo $row11["prefix"] . "-" . $row11["number"] . " ";
+                      }
+                      echo $row6["name"] . "<br>";
+                      echo    '</div>
+                            </div>';
+                    }
+                  }
+
+                  $yes_courses_string = "";
+            
+              echo '</div>
+                </div>
+              </div>';
+            }
+          ?>
+        </div>
+      </div>
     </section>
   </body>
 </html>
