@@ -1,6 +1,6 @@
 <!--NAVIGATION BAR (implemented with Bootstrap) -->
 <nav class="navbar navbar-custom navbar-expand-lg navbar-light fixed-top">
-    <a class="navbar-brand" href="home.php">
+    <a class="navbar-brand" href="/student/home.php">
         <img src="/assets/img/logo.png" alt="CourseMap Logo" width="180px">
     </a>
 
@@ -10,7 +10,7 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarNav">
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-        <a class="nav-link js-scroll-trigger active" href="/student/all_plans.php">Home</a>
+        <a class="nav-link js-scroll-trigger active" href="/student/home.php">Home</a>
         </li>
         <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="/student/catalog.php">Catalog</a>

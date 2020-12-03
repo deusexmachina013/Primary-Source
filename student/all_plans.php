@@ -1,8 +1,15 @@
+<?php 
+require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
+$dbconn = Database::getDatabase();
+
+$conc = $dbconn->query("SELECT * from `template`");
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
   <head>
-    <title>Student All Plans</title>
+    <title>Home Page</title>
 
     <!-- CSS ONLY -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -17,28 +24,47 @@
 
   <body>
     <!--NAVIGATION BAR (implemented with Bootstrap) -->
-    <?php include('student_navbar.php'); ?>
+    <?php include('student_navbar.php');?>
 
     <section class="content">
+      
       <!-- All Plans -->
-      <h1>All Plans</h1>
+      <h1 class="all-plans-title">Hi!<span style='font-size:45px;'>&#128075;</span> here are your plans:</h1>
       <!-- concentrationn List -->
       
       <!-- Button trigger modal -->
-      <button id="toggle-create_plan-button" class="btn btn-outline-primary" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">Create Plan</button>
-      <div class="container">
-        <!-- ROWS -->
-        <!-- NOTE: To be kept as an HTML template for displaying plans. -->
-        <div class="row">
-          <div class="col-sm col-conc">
-            <a class= "concentration" href= "home.php"> &#9733 Main Plan</a>
-          </div>
-        </div>
+      <button id="toggle-create-plan-button" class="btn btn-secondary float-right" type="button" data-toggle="modal" data-target="#modalForm">Create Plan</button>
+
+      <!-- NOTE: To be kept as an HTML template for displaying plans. -->
+      <div class="col-sm plan-name-container">
+        <?php
+            // find the user first
+            $current_user_id = 2;
+            // loop through plans table
+            $plans = $dbconn->query("SELECT * from `plans` WHERE `plans`.user_id = $current_user_id")->fetchAll();
+            // var_dump($plans);
+            
+            foreach($plans as $row){
+              $current_plan_id = $row["id"];
+              $favorited = $row["favorited"];
+              if ($favorited == 0) {
+                $string_star = "";
+              }
+              else {
+                $string_star = "&#9733";
+              }
+              
+              echo "<a class='all-plans-header btn btn-secondary' href='create_plan.php?id=$current_plan_id' name='$current_plan_id'>" . $string_star . $row['name'] . "</a>";
+              $string_star = "";
+            }
+
+        ?>
+        
+
+       
+    
       </div>
     </section>
-
-
-    
 
   <!-- Modal -->
   <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" aria-hidden="true">
@@ -75,11 +101,11 @@
               <input class="formDropdown" list="concentrations" name="concentration" id="concentration">
               <datalist id="concentrations">
                 <?php 
-                  // foreach ($concentrations as $row) { 
-                  // echo "<option value=' . $row['name'] . '>" 
-                  // }
-                ?>
-                <option value="Arts">
+                  foreach ($conc as $row) { 
+                    echo "<option value=" . $row['name'] . ">";
+                  }
+                ?> 
+                <!-- <option value="Arts">
                 <option value="Civil/Structural Engineer">
                 <option value="Cognitive Science">
                 <option value="Communication">
@@ -99,7 +125,7 @@
                 <option value="Science & Technology Studies">
                 <option value="Science Informatics">
                 <option value="Special Interest">
-                <option value="Web Technology">
+                <option value="Web Technology"> -->
               </datalist>
             </div>
           </form>
