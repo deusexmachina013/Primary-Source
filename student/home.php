@@ -59,10 +59,7 @@ $conc = $dbconn->query("SELECT * from `template`");
             }
 
         ?>
-        
-
-       
-    
+      
       </div>
     </section>
 

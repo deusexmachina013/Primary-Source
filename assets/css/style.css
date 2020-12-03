@@ -34,6 +34,15 @@ body {
     margin-top: 100px;
 }
 
+.search-results {
+    margin-top: 10px;
+}
+
+.search-results-table .search-results-body tr:hover > td {
+    background-color: #CEF0F1;
+    transition: 0.2s;
+}
+
 .ri-star-s-line, .ri-star-s-fill {
     font-size: 40px;
     /* margin-right: 500px; */
@@ -403,24 +412,6 @@ button:hover {
     border: solid;
     border-color: white;
     text-align: center;
-}
-
-th {
-    background-color: #CEF0F1;
-    margin: 6px;
-    padding: 12px;
-    height: 50px;
-    background-color: #E8E8E8;
-    color: black;
-}
-
-td {
-    background-color: #CEF0F1;
-    margin: 6px;
-    padding: 12px;
-    height: 50px;
-    background-color: #CEF0F1;
-    color: black;
 }
 
 .name {

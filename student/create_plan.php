@@ -113,16 +113,58 @@
                     </div>
                           <?php } ?>
                     <div class="row course-add">
-                      <button class="btn btn-info add-course-button">Add Course</button>
+                      <!-- <button class="btn btn-info add-course-button">Add Course</button> -->
                       <!-- <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button> -->
+                    
+                      <button type="button" class="btn btn-info add-course-button" data-toggle="modal" data-target="#addCourseModal">
+                        Add Course
+                      </button>
                     </div>
                   </div>
                 </div>
                       <?php }?>
               </div>
             </div>
-            
-            
+
+            <!-- Add Course Modal -->
+            <div class="modal fade" id="addCourseModal" tabindex="-1" role="dialog" aria-labelledby="addCourseModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="addCourseModalLabel">Add Course</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- two options -->
+                    <!-- add catalog course -->
+                    <nav class="navbar navbar-light bg-light">
+                      <form id="add-course-form" class="form-inline">
+                        <input name="search-input-course" class="form-control mr-sm-2 search-input-course" type="search" placeholder="Search for Courses" aria-label="Search" style=" width:340px">
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                      
+                    </nav>
+                    
+                    <table class="table table-striped search-results-table">
+                      <tbody class="search-results-body">
+             
+                      </tbody>
+                    </table>
+
+                    <!-- add custom course -->
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              
             <div id="schedule-config" class="col-md-6">
               <div id="schedule-config-container">
                 <ul id="schedule-config-nav" class="nav nav-tabs">
@@ -322,36 +364,35 @@
                   </div>
                 </div>
 
-                <!-- Validation -->
-                <div id="plan-config-validation">
+              <!-- Validation -->
+              <div id="plan-config-validation">
 
 
-                  <h5 class="validation-message">It looks like you have not used all of your required courses.</h5>
-                  <div class="validation-form">
-                    <input type="checkbox" class="validation-form-input" id="itws-requirements">
-                    <label class="form-check-label" for="itws-requirements">ITWS Core Requirements</label>
-                    <br>
-                    <input type="checkbox" class="validation-form-input" id="math-science-requirements" checked>
-                    <label class="form-check-label" for="math-science-requirements">Math/Science Requirements</label>
-                    <br>
-                    <input type="checkbox" class="validation-form-input" id="hass-requirements" checked>
-                    <label class="form-check-label" for="hass-requirements">HASS Requirements</label>
-                    <br>
-                    <input type="checkbox" class="validation-form-input" id="concentration-requirements">
-                    <label class="form-check-label" for="concentration-requirements">Concentration Requirements</label>
-                  </div>
-                </div>
-
-                <!-- Notes -->
-                <div id="plan-config-notes">
-                  <textarea class="form-control" id="text-area-notes"><?php echo $plan_details["notes"] ?>
-                  </textarea>                  
+                <h5 class="validation-message">It looks like you have not used all of your required courses.</h5>
+                <div class="validation-form">
+                  <input type="checkbox" class="validation-form-input" id="itws-requirements">
+                  <label class="form-check-label" for="itws-requirements">ITWS Core Requirements</label>
+                  <br>
+                  <input type="checkbox" class="validation-form-input" id="math-science-requirements" checked>
+                  <label class="form-check-label" for="math-science-requirements">Math/Science Requirements</label>
+                  <br>
+                  <input type="checkbox" class="validation-form-input" id="hass-requirements" checked>
+                  <label class="form-check-label" for="hass-requirements">HASS Requirements</label>
+                  <br>
+                  <input type="checkbox" class="validation-form-input" id="concentration-requirements">
+                  <label class="form-check-label" for="concentration-requirements">Concentration Requirements</label>
                 </div>
               </div>
+
+              <!-- Notes -->
+              <div id="plan-config-notes">
+                <textarea class="form-control" id="text-area-notes"><?php echo $plan_details["notes"] ?>
+                </textarea>                  
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
-
   </body>
 </html>
