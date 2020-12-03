@@ -36,7 +36,112 @@
           <input type="text" id="admin-lookup" class="student-searchbar" placeholder="Look up student plans." name="search-bar">
           <input type="submit" class="student-submit" value="&#128269">
         </div>
+        <div class="button-position">
+          <button type="button" class="courses-add-button" data-toggle="modal" data-target="#addCourseModal">Add Course</button>
+          <button type="button" class="courses-add-requirement" data-toggle="modal" data-target="#addRequirementModal">Add Requirement</button>
+        </div>
       </form>
+
+      <div class="modal fade" id="addCourseModal" tabindex="-1" role="dialog" aria-labelledby="addStudentModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addStudentModalLabel">Add Course</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form-student" action="." method="post">
+              <div class="form-group">
+                <label for="form-course-name" class="col-form-label">Name:</label>
+                <input type="text" class="form-control" id="form-course-name" name="form-course-name" required="required" maxlenght=100>
+              </div>
+              <div class="form-group">
+                <label for="form-course-prefix" class="col-form-label">Prefix:</label>
+                <input type="text" class="form-control" id="form-course-prefix" name="form-course-prefix" maxlength=4>
+              </div>
+              <div class="form-group">
+                <label for="form-course-number" class="col-form-label">Number:</label>
+                <input type="number" class="form-control" id="form-course-number" name="form-course-number" required="required" min=1000 max=10000>
+              </div>
+              <div class="form-group">
+                <label for="form-course-cl" class="col-form-label">Credit-Low:</label>
+                <input type="number" class="form-control" id="form-course-cl"name="form-course-cl" required="required" min=0 max=1>
+              </div>
+              <div class="form-group">
+                <label for="form-course-hl" class="col-form-label">Credit-High:</label>
+                <input type="number" class="form-control" id="form-course-hl"name="form-course-hl" required="required" min=4 max=6>
+              </div>
+            </form>
+            <div class="form-group">
+                <label for="form-course-pre" class="col-form-label">Prerequisites:</label>
+                <input type="text" class="form-control" id="form-course-pre" name="form-course-pre" maxlength=1000>
+              </div>
+            </form>
+            <div class="form-group">
+                <label for="form-course-co" class="col-form-label">Corequisites:</label>
+                <input type="text" class="form-control" id="form-course-co" name="form-course-co" maxlength=1000>
+              </div>
+            <div class="form-group">
+              <label for="form-course-term" class="col-form-label">Terms Offered:</label>
+              <input type="text" class="form-control" id="form-course-term" name="form-course-term" required="required" maxlength=100>
+            </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <input type="submit" class="btn btn-primary" form="form-student" name="add_student" value="Submit">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="addRequirementModal" tabindex="-1" role="dialog" aria-labelledby="addStudentModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addStudentModalLabel">Add Student</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form-student" action="." method="post">
+              <div class="form-group">
+                <label for="form-student-rin" class="col-form-label">Name:</label>
+                <input type="number" class="form-control" id="form-student-rin" name="form-student-rin" required="required" min=0 max=999999999>
+              </div>
+              <div class="form-group">
+                <label for="form-student-rcsid" class="col-form-label">Prefix:</label>
+                <input type="text" class="form-control" id="form-student-rcsid" name="form-student-rcsid" maxlength=7>
+              </div>
+              <div class="form-group">
+                <label for="form-student-fname" class="col-form-label">Number:</label>
+                <input type="text" class="form-control" id="form-student-fname" name="form-student-fname" required="required" maxlength=100>
+              </div>
+              <div class="form-group">
+                <label for="form-student-lname" class="col-form-label">Credit-Low:</label>
+                <input type="text" class="form-control" id="form-student-lname"name="form-student-lname" required="required" maxlength=100>
+              </div>
+              <div class="form-group">
+                <label for="form-student-alias" class="col-form-label">Credit-High:</label>
+                <input type="text" class="form-control" id="form-student-alias" name="form-student-alias" required="required" maxlength=100>
+              </div>
+            </form>
+            <div class="form-group">
+                <label for="form-student-alias" class="col-form-label">:</label>
+                <input type="text" class="form-control" id="form-student-alias" name="form-student-alias" required="required" maxlength=100>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <input type="submit" class="btn btn-primary" form="form-student" name="add_student" value="Submit">
+          </div>
+        </div>
+      </div>
+    </div>
 
       <table class="table table-sm table-fixed center" id="plan-table">
         <!-- Table Heading -->
