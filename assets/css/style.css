@@ -1,32 +1,43 @@
 /******************/
-
-
 /* NAVIGATION BAR */
-
-
 /******************/
 
 .navbar-custom {
     background-color: #ececec;
 }
 
+/*************************/
+/* /student/old_home.php */
+/*************************/
 
-/************************/
+.formDropdown {
+    width: 350px;
+}
 
-
-/* .../student/home.php */
-
-
-/************************/
-
-
+/*******************/
 /* create_plan.php */
-
-
 /*******************/
 
 body {
     margin-top: 100px;
+}
+
+.search-results {
+    margin-top: 10px;
+}
+
+.search-results-table .search-results-body tr:hover > td {
+    background-color: #CEF0F1;
+    transition: 0.2s;
+}
+
+.ri-star-s-line, .ri-star-s-fill {
+    font-size: 40px;
+    /* margin-right: 500px; */
+}
+
+ul#plan-name-star li {
+    display: inline;
 }
 
 .plan-header {
@@ -39,16 +50,20 @@ body {
     display: inline;
 }
 
+#plan-name-star{
+    text-align: center;
+}
+
 #toggle-config-button {
     float: right;
     /* position: absolute;
     right: 25px; */
 }
 
-#toggle-create_plan-button {
-    float: right;
+#toggle-create-plan-button {
+    /* float: right; */
     /* position: absoluteF-primary;*/
-    margin-right: 25px;
+    margin-right: 80px; 
 }
 
 .course-status {
@@ -63,7 +78,14 @@ body {
     width: 20px;
     border-radius: 50%;
     display: inline-block;
+}
+
+.dot-green {
     background-color: green;
+}
+
+.dot-red {
+    background-color: red;
 }
 
 .semester-whole {
@@ -78,6 +100,7 @@ body {
 .semester-title {
     font-size: 25px;
     background-color: #E8E8E8;
+    border-radius: 4px;
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -92,6 +115,7 @@ body {
     margin-bottom: 6px; */
     margin: 6px;
     background-color: #CEF0F1;
+    border-radius: 4px;
     /* width: 400px; */
     /* z-index: 10000; */
 }
@@ -241,11 +265,11 @@ body {
     margin-top: 20px;
 }
 
-.plan-name-editable {
-    height: 70px;
-    width: 600px;
-    padding: 10px;
-    margin: auto
+.plan-name-editable{
+    height:70px;
+    width:30%;
+    padding:10px;
+    font-size: 45px;
 }
 
 #plan-config-groups {
@@ -271,6 +295,7 @@ body {
     padding: 8px;
     margin-bottom: 24px;
     margin: 6px;
+    border-radius: 4px;
 }
 
 .add-course,
@@ -282,14 +307,6 @@ body {
 .course-config {
     text-align: center;
 }
-
-
-/* .course-trash-button,
-.course-config-button {
-    padding: 0px !important;
-    margin: 0px !important;
-    text-decoration: none !important;
-} */
 
 .course-trash-button {
     color: #292b2c;
@@ -306,13 +323,13 @@ body {
     margin-top: 20px;
 }
 
+.card {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
 
 /*************/
-
-
 /* MAIN PLAN */
-
-
 /*************/
 
 .content .container .col-sm {
@@ -329,6 +346,17 @@ body {
     font-weight: bold;
     height: 100%;
     padding: 10px;
+    border-radius: 4px;
+}
+
+.main-plan p {
+    background-color: #CEF0F1;
+    padding: 10px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    border-radius: 4px;
 }
 
 h1 {
@@ -399,11 +427,7 @@ button:hover {
 
 
 /***************/
-
-
 /* CREATE PLAN */
-
-
 /***************/
 
 .submit-button {
@@ -418,34 +442,88 @@ button:hover {
 }
 
 
-/***********/
+/*****************/
+/**** home.php ***/
+/*****************/
 
+.all-plans-title {
+    margin-bottom: 20px;
+}
 
-/* CATALOG */
-
-
-/***********/
-
-.content .container .col-conc {
+.content .plan-name-container {
+    font-size: 20px;
     text-align: center;
-    font-weight: 500px;
     text-decoration: none;
-    background-color: #CEF0F1;
-    padding: 10px;
+    width: 50%;
+    margin: auto;
 }
 
-.concentration {
+.all-plans-header {
     color: rgb(49, 45, 45);
+    background-color: #CEF0F1;
+    margin: 6px;
+    width: 60%;
 }
 
-
 /**********************/
-
-
 /* .../admin/home.php */
-
-
 /**********************/
+
+.student-column {
+    width: 30%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.year-column {
+    width: 20%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.status-column {
+    width: 25%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.date-column {
+    width: 25%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.name {
+    width: 25%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.year {
+    width: 25%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.status {
+    width: 25%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.date {
+    width: 25%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
 
 .center {
     margin-left: auto;
@@ -612,7 +690,6 @@ button:hover {
     margin-bottom: 10px;
     height: 100%;
 }
-
 
 /* ================= */
 
