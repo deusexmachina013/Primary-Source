@@ -218,7 +218,7 @@
       </div>
 
       <?php 
-        $catalog = $dbconn->query("SELECT concentrations.id, concentrations.name, concentration_data.concentration_id, concentration_data.course_id, course_groups.course_group_id, course_group_catalog.course_group_id, course_group_catalog_data.course_group_id, course_group_catalog_data.course_id from `concentration_data`, `concentrations`, `course_groups`, `course_group_catalog`, `course_group_catalog_data` WHERE concentrations.id = concentration_data.concentration_id ")
+        $catalog = $dbconn->query("SELECT courses.id, courses.name, concentrations.id, concentrations.name, concentration_data.concentration_id, concentration_data.course_id FROM `courses`, `concentrations`, `concentration_data` WHERE courses.id=concentration_data.course_id AND concentrations.id = concentration_data.concentration_id")
       
       ?>
 
