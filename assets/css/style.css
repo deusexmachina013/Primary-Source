@@ -1,21 +1,35 @@
 /******************/
+
+
 /* NAVIGATION BAR */
+
+
 /******************/
 
 .navbar-custom {
     background-color: #ececec;
 }
 
+
 /*************************/
+
+
 /* /student/old_home.php */
+
+
 /*************************/
 
 .formDropdown {
     width: 350px;
 }
 
+
 /*******************/
+
+
 /* create_plan.php */
+
+
 /*******************/
 
 body {
@@ -26,12 +40,13 @@ body {
     margin-top: 10px;
 }
 
-.search-results-table .search-results-body tr:hover > td {
+.search-results-table .search-results-body tr:hover>td {
     background-color: #CEF0F1;
     transition: 0.2s;
 }
 
-.ri-star-s-line, .ri-star-s-fill {
+.ri-star-s-line,
+.ri-star-s-fill {
     font-size: 40px;
     /* margin-right: 500px; */
 }
@@ -50,7 +65,7 @@ ul#plan-name-star li {
     display: inline;
 }
 
-#plan-name-star{
+#plan-name-star {
     text-align: center;
 }
 
@@ -63,7 +78,7 @@ ul#plan-name-star li {
 #toggle-create-plan-button {
     /* float: right; */
     /* position: absoluteF-primary;*/
-    margin-right: 80px; 
+    margin-right: 80px;
 }
 
 .course-status {
@@ -147,6 +162,14 @@ ul#plan-name-star li {
 }
 
 #plan-config-validation {
+    display: none;
+}
+
+#plan-config-validation-admin {
+    display: block;
+}
+
+#plan-config-status-admin {
     display: none;
 }
 
@@ -265,10 +288,10 @@ ul#plan-name-star li {
     margin-top: 20px;
 }
 
-.plan-name-editable{
-    height:70px;
-    width:30%;
-    padding:10px;
+.plan-name-editable {
+    height: 70px;
+    width: 30%;
+    padding: 10px;
     font-size: 45px;
 }
 
@@ -328,8 +351,13 @@ ul#plan-name-star li {
     margin-bottom: 8px !important;
 }
 
+
 /*************/
+
+
 /* MAIN PLAN */
+
+
 /*************/
 
 .content .container .col-sm {
@@ -427,7 +455,11 @@ button:hover {
 
 
 /***************/
+
+
 /* CREATE PLAN */
+
+
 /***************/
 
 .submit-button {
@@ -443,7 +475,11 @@ button:hover {
 
 
 /*****************/
+
+
 /**** home.php ***/
+
+
 /*****************/
 
 .all-plans-title {
@@ -465,8 +501,13 @@ button:hover {
     width: 60%;
 }
 
+
 /**********************/
+
+
 /* .../admin/home.php */
+
+
 /**********************/
 
 .student-column {
@@ -530,14 +571,45 @@ button:hover {
     margin-right: auto;
 }
 
+.approve {
+    border: 1.5px solid;
+    border-color: black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    font-weight: 300;
+    color: black;
+    background-color: #b5daa2;
+    text-align: center;
+    transition: all 0.2s;
+    display: center;
+}
+
+.deny {
+    border: 1.5px solid;
+    border-color: black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    font-weight: 300;
+    color: black;
+    background-color: #FC766AFF;
+    text-align: center;
+    transition: all 0.2s;
+    display: center;
+}
+
 
 /* BEGIN ADMIN NAVIGATION BAR */
 
 .student-search {
     border: solid #212529 2px;
-    border-right: none;
     padding: 0px;
-    width: 743px;
+    width: 643px;
     /* 757px if we want the full length of table*/
     height: 32px;
     margin-top: 20px;
@@ -546,7 +618,7 @@ button:hover {
 
 .left-partition {
     float: left;
-    width: 20%;
+    width: 25%;
 }
 
 .search-dropdown {
@@ -561,53 +633,7 @@ button:hover {
 
 .right-partition {
     float: left;
-    width: 48%;
-}
-
-.button-position {
-    float: left;
-    width: 32%;
-}
-
-.courses-add-button {
-    display: inline-block;
-    height: 32px;
-    margin-top: -2px;
-    border: 2px solid;
-    border-right: 1px;
-    border-color: black;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: medium;
-    font-weight: 100;
-    color: black;
-    background-color: #CEF0F1;
-    transition: all 0.2s;
-    white-space: nowrap;
-    text-align: center;
-    display: center;
-}
-
-.courses-add-requirement {
-    display: inline-block;
-    height: 32px;
-    margin-top: -2px;
-    margin-left: -4.5px;
-    border: 2px solid;
-    border-left: 1px;
-    border-color: black;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: medium;
-    font-weight: 100;
-    color: black;
-    background-color: #CEF0F1;
-    transition: all 0.2s;
-    white-space: nowrap;
-    text-align: center;
-    display: center;
+    width: 75%;
 }
 
 .student-searchbar {
@@ -690,6 +716,7 @@ button:hover {
     margin-bottom: 10px;
     height: 100%;
 }
+
 
 /* ================= */
 
