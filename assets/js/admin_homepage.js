@@ -72,7 +72,7 @@ $(document).ready(function() {
           if(entry.advisor_status == 2 ||
             (entry.advisor_status == 1 && entry.favorited == 1) ||
              entry.favorited == 1) {
-            var printout = "<tr scope='row'>";
+            var printout = "<tr data-href='../student/create_plan.php?id=" + entry.id + "' scope='row'>";
 
             // Get basic data.
             printout += "<td class='col-5'>" 
@@ -88,76 +88,23 @@ $(document).ready(function() {
               case "2": printout += "Accepted"; break;
               case "3": printout += "Rejected"; break;
             }
-            printout += "</td>";
-
-            printout += "</tr>"
+            printout += "</td></tr></a>";
 
             console.log(printout); // DEBUG
 
             table.append(printout);
           }
         }
-                /*
-                    var search = $(this)[0].data;
-                    var approved = "Approved";
-                    var unsubmitted = "Unsubmitted";
-                    var reviewed = "Reviewed";
-                    var rejected = "Rejected";
-                    var entry = jsonObject[index];
-                    var name = "<td class='col-5'>" + entry.first_name + " " + entry.last_name + "</td>";
-                    var year = "<td class='col-3'>" + entry.class_year + "</td>";
-                    var rowEntry = "<tr scope='row'>" + name + year;
-                    var option = $("#student-search-dropdown option:selected").text();
-                    console.log(option);
-                    if (entry.advisor_validated == 2) {
-                        rowEntry += "<td class='col-4'>" + approved + "</td>";
-                    } else if (entry.favorited == 1) {
-                        if (entry.advisor_validated == 0) {
-                            rowEntry += "<td class='col-4'>" + unsubmitted + "</td>";
-                        } else if (entry.advisor_validated == 1) {
-                            rowEntry += "<td class='col-4'>" + reviewed + "</td>";
-                        } else if (entry.advisor_validated == 3) {
-                            rowEntry += "<td class='col-4'>" + rejected + "</td>";
-                        }
-                    }
-                    rowEntry += "</tr>";
-                    if (option == "student_name") {
-                        search = search.replace('student-search-dropdown=student_name&search-bar=', '');
-                        search = search.toLowerCase();
-                        fName = entry.first_name.toLowerCase();
-                        lName = entry.last_name.toLowerCase();
-                        if (fName.includes(search) || lName.includes(search)) {
-                            $("tbody").append(rowEntry);
-                        }
-                    } else if (option == "class_year") {
-                        search = search.replace('student-search-dropdown=class_year&search-bar=', '');
-                        if (entry.class_year.includes(search)) {
-                            $("tbody").append(rowEntry);
-                        }
-                    } else if (option == "plan_status") {
-                        search = search.replace('student-search-dropdown=plan_status&search-bar=', '');
-                        search = search.toLowerCase();
-                        approved = approved.toLowerCase();
-                        unsubmitted = unsubmitted.toLowerCase();
-                        reviewed = reviewed.toLowerCase();
-                        rejected = rejected.toLowerCase();
-                        if (approved.includes(search)) {
-                            $("tbody").append(rowEntry);
-                        } else if (unsubmitted.includes(search)) {
-                            $("tbody").append(rowEntry);
-                        } else if (reviewed.includes(search)) {
-                            $("tbody").append(rowEntry);
-                        } else if (rejected.includes(search)) {
-                            $("tbody").append(rowEntry);
-                        }
-                    }
-                }
-                */
-            },
-            error: function(code, message) {
-                console.log(code);
-                console.log(message);
-            }
+
+        // Handle the clicking of dynamically generated links.
+        $("tr[data-href]").click(function() {
+            window.location = $(this).data("href");
         });
+      },
+      error: function(code, message) {
+          console.log(code);
+          console.log(message);
+      }
     });
+  });
 });

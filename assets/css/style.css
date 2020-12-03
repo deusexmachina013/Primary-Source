@@ -542,6 +542,10 @@ button:hover {
     float: left;
 }
 
+[data-href] {
+    cursor: pointer;
+}
+
 /* Home plan?  Where did this come from, and where should it go? */
 
 .home-plan p {
