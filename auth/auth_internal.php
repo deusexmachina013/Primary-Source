@@ -20,6 +20,13 @@ class Auth {
         return self::$instance->authenticate();
     }
 
+    public static function getIdentity() {
+        if(self::$instance == null) {
+            self::makeInstance();
+        }
+        return self::$instance->getIdentity();
+    }
+
     public static function logout() {
         if(self::$instance == null) {
             self::makeInstance();

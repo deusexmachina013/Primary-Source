@@ -4,13 +4,19 @@ require_once "auth_abc.php";
 
 class AuthModule extends AuthenticationABC {
 
-    public function authenticate() {
-      #required modules - php-curl, php-dom
+    public function __construct() {
       phpCAS::client(CAS_VERSION_2_0, "cas-auth.rpi.edu", 443, "/cas");
 
       phpCAS::setNoCasServerValidation();
+    }
 
-      if(phpCAS::forceAuthentication()) {
+    public function authenticate() {
+      #required modules - php-curl, php-dom
+      phpCAS::forceAuthentication();
+    }
+
+    public function getIdentity() {
+      if(phpCAS::isAuthenticated()) {
         return phpCAS::getUser();
       }
       return NULL;
@@ -18,9 +24,7 @@ class AuthModule extends AuthenticationABC {
 
     public function logout() {
       phpCAS::logout();
-      //TODO: get logout working with redirection back to site; if CAS has disabled, maybe look into 
-      //https://shib-idp.rpi.edu/idp/profile/SAML2 to see if it is possible to get working
-      // phpCAS::logoutWithRedirectService("https://localhost");
+      //Note: logout redirection is disabled with RPI's CAS system :(
     }
   
 }
