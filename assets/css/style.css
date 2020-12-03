@@ -1,33 +1,21 @@
 /******************/
-
-
 /* NAVIGATION BAR */
-
-
 /******************/
 
 .navbar-custom {
     background-color: #ececec;
 }
 
-/*********************/
-
-
+/*************************/
 /* /student/old_home.php */
-
-
-/*********************/
+/*************************/
 
 .formDropdown {
     width: 350px;
 }
 
 /*******************/
-
-
 /* create_plan.php */
-
-
 /*******************/
 
 body {
@@ -205,13 +193,6 @@ ul#plan-name-star li {
     text-align: center;
 }
 
-/* .course-trash-button,
-.course-config-button {
-    padding: 0px !important;
-    margin: 0px !important;
-    text-decoration: none !important;
-} */
-
 .course-trash-button {
     color: #292b2c;
     font-size: 20px;
@@ -227,13 +208,13 @@ ul#plan-name-star li {
     margin-top: 20px;
 }
 
+.card {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
 
 /*************/
-
-
 /* MAIN PLAN */
-
-
 /*************/
 
 .content .container .col-sm {
@@ -331,11 +312,7 @@ button:hover {
 
 
 /***************/
-
-
 /* CREATE PLAN */
-
-
 /***************/
 
 .submit-button {
@@ -351,11 +328,7 @@ button:hover {
 
 
 /*****************/
-
-
 /**** home.php ***/
-
-
 /*****************/
 
 .all-plans-title {
@@ -377,13 +350,8 @@ button:hover {
     width: 60%;
 }
 
-
 /**********************/
-
-
 /* .../admin/home.php */
-
-
 /**********************/
 
 .student-column {
@@ -496,38 +464,4 @@ button:hover {
     border: none;
     color: #212529;
     text-align: center;
-}
-/* ================= */
-
-
-
-
-/*******************/
-
-
-/* create_plan.php */
-
-
-/*******************/
-
-.connectedSortable {
-    min-height: 30px;
-}
-/* #sortable1 {
-    min-height: 30px;
-}
-
-#sortable2 {
-    min-height: 30px;
-    margin-bottom: 15px;
-    margin: 10px;
-}
-
-#sortable2 div {
-    padding: 12px;
-} */
-
-.card {
-    margin-top: 8px !important;
-    margin-bottom: 8px !important;
 }

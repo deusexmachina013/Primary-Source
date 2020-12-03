@@ -189,69 +189,43 @@
                           ITWS Core Requirements</a> <br>
                         </h5>
                       </div>
-                      <!-- Show Config drag and drop -->
+                      <!-- SHOW CONFIG -->
                       <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                        <!-- sortable2 -->
-                        <div id="sortable2" class="connectedSortable semester">
-                          <!-- <div class="ui-state-highlight semester-course">Introduction to ITWS</div>
-                          <div class="ui-state-highlight semester-course">Web Systems Development</div>
-                          <div class="ui-state-highlight semester-course">Web Science Systems Development</div>
-                          <div class="ui-state-highlight semester-course">Managing IT Resources</div>
-                          <div class="ui-state-highlight semester-course">Capstone/Senior Thesis</div> -->
-                          <div class="row semester-course"> 
-                            <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Introduction to ITWS</div>
-                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-1200</div>
-                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
-                          </div>
-                          <div class="row semester-course"> 
-                            <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Web Systems Development</div>
-                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-2110</div>
-                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
-                          </div>
-                          <div class="row semester-course"> 
-                            <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Web Science Systems Development</div>
-                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-4500</div>
-                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
-                          </div>
-                          <div class="row semester-course"> 
-                            <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Managing IT Resources</div>
-                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-4310</div>
-                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
-                          </div>
-                          <div class="row semester-course"> 
-                            <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>ITWS Capstone (Professional Track)</div>
-                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-4100</div>
-                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
-                          </div>
-                          <div class="row semester-course"> 
-                            <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Senior Thesis</div>
-                            <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-4500</div>
-                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
-                          </div>
+                        <div class="row semester-course"> 
+                          <div class="col-md-1 course-status"><span class="dot"></span></div>
+                          <div class="col-md-5 course-editable course-title" contenteditable=true>Introduction to ITWS</div>
+                          <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-1200</div>
+                          <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                        </div>
+                        <div class="row semester-course"> 
+                          <div class="col-md-1 course-status"><span class="dot"></span></div>
+                          <div class="col-md-5 course-editable course-title" contenteditable=true>Web Systems Development</div>
+                          <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-2110</div>
+                          <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                        </div>
+                        <div class="row semester-course"> 
+                          <div class="col-md-1 course-status"><span class="dot"></span></div>
+                          <div class="col-md-5 course-editable course-title" contenteditable=true>Web Science Systems Development</div>
+                          <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-4500</div>
+                          <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                        </div>
+                        <div class="row semester-course"> 
+                          <div class="col-md-1 course-status"><span class="dot"></span></div>
+                          <div class="col-md-5 course-editable course-title" contenteditable=true>Managing IT Resources</div>
+                          <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-4310</div>
+                          <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                        </div>
+                        <div class="row semester-course"> 
+                          <div class="col-md-1 course-status"><span class="dot"></span></div>
+                          <div class="col-md-5 course-editable course-title" contenteditable=true>ITWS Capstone (Professional Track)</div>
+                          <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-4100</div>
+                          <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                        </div>
+                        <div class="row semester-course"> 
+                          <div class="col-md-1 course-status"><span class="dot"></span></div>
+                          <div class="col-md-5 course-editable course-title" contenteditable=true>Senior Thesis</div>
+                          <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-4500</div>
+                          <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
                         </div>
                       </div> 
 
@@ -268,39 +242,27 @@
                         <div class="card-body">
                         <div class="row semester-course"> 
                             <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Calculus I</div>
+                            <div class="col-md-5 course-editable course-title" contenteditable=true>Calculus I</div>
                             <div class="col-md-3 course-editable course-code" contenteditable=true>MATH-1010</div>
                             <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                           </div>
                           <div class="row semester-course"> 
                             <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Math Elective</div>
+                            <div class="col-md-5 course-editable course-title" contenteditable=true>Math Elective</div>
                             <div class="col-md-3 course-editable course-code" contenteditable=true>MATH-XXXX</div>
                             <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                           </div>
                           <div class="row semester-course"> 
                             <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Physical Science Elective</div>
+                            <div class="col-md-5 course-editable course-title" contenteditable=true>Physical Science Elective</div>
                             <div class="col-md-3 course-editable course-code" contenteditable=true>PHYS-XXXX</div>
                             <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                           </div>
                           <div class="row semester-course"> 
                             <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Life Science Elective</div>
+                            <div class="col-md-5 course-editable course-title" contenteditable=true>Life Science Elective</div>
                             <div class="col-md-3 course-editable course-code" contenteditable=true>BIOL-XXXX</div>
                             <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                           </div>
                         </div>
                       </div>
@@ -318,21 +280,15 @@
                         <div class="card-body">
                         <div class="row semester-course"> 
                             <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>IT and Society</div>
+                            <div class="col-md-5 course-editable course-title" contenteditable=true>IT and Society</div>
                             <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-1220</div>
                             <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                           </div>
                           <div class="row semester-course"> 
                             <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Intro to Human Computer Interaction</div>
+                            <div class="col-md-5 course-editable course-title" contenteditable=true>Intro to Human Computer Interaction</div>
                             <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-2210</div>
                             <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                           </div>
                         </div>
                       </div>
@@ -351,12 +307,9 @@
                         <div class="card-body">
                         <div class="row semester-course"> 
                             <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title  " contenteditable=true>Concentration Course</div>
+                            <div class="col-md-5 course-editable course-title" contenteditable=true>Concentration Course</div>
                             <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-XXXX</div>
                             <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                            <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
-                            <!-- <div class="col-md-2 course-trash"><button class="btn btn-link course-trash-button">&#x1f5d1;</button></div> -->
-                            <!-- <div class="col-md-1 course-config"><button class="btn btn-link course-config-button">&#9881;</button></div> -->
                           </div>
                         </div>
                       </div>
@@ -387,7 +340,7 @@
               <!-- Notes -->
               <div id="plan-config-notes">
                 <textarea class="form-control" id="text-area-notes"><?php echo $plan_details["notes"] ?>
-                </textarea>                  
+                </textarea>
               </div>
             </div>
           </div>
