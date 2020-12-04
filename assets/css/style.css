@@ -69,7 +69,7 @@ ul#plan-name-star li {
     text-align: center;
 }
 
-#toggle-config-button {
+#toggle-config-button, #save-button, #advisor-button {
     float: right;
     /* position: absolute;
     right: 25px; */
@@ -157,7 +157,7 @@ ul#plan-name-star li {
     max-height: 70%;
 }
 
-#plan-config-courses {
+#plan-config-catalog {
     display: block;
 }
 
@@ -276,7 +276,7 @@ ul#plan-name-star li {
     max-height: 70%;
 }
 
-#plan-config-courses {
+#plan-config-catalog {
     display: block;
 }
 

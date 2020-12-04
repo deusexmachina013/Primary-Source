@@ -6,28 +6,25 @@
   if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $selected_plan=$id;
-  } else {
-    header("Location: /student/home.php");
-    die();
   }
   
-  $plan_details_stmt = $dbconn->prepare("SELECT * FROM plans WHERE id = ?;");
+  $plan_details_stmt = $dbconn->prepare("SELECT * FROM templates WHERE id = ?;");
   $plan_details_stmt->execute(array($selected_plan));
   
   $plan_details = $plan_details_stmt->fetch(); // Plan Notes: ""This is my 4-year plan..."
 
-  $plan_semesters_stmt = $dbconn->prepare("SELECT * FROM plan_semesters WHERE plan_id = ?;");
+  $plan_semesters_stmt = $dbconn->prepare("SELECT * FROM template_data WHERE template_id = ?;");
   $plan_semesters_stmt->execute(array($selected_plan));
   
   $plan_semesters = $plan_semesters_stmt->fetchAll(); // all semesters - year and id 
 
   $semester_list = array();
   foreach($plan_semesters as $semester) {
-    $semester_list[] = $semester['id']; // tells you the position of each semester
+    $semester_list[] = $semester['position']; // tells you the position of each semester
   }
 
   // $in  = str_repeat('?,', count($arr) - 1) . '?'; // alternative option if you want to do prepared statement
-  $plan_courses_stmt = $dbconn->prepare("SELECT plan_courses.semester_id, plan_courses.course_id, plan_courses.position, courses.name, course_single_catalog.prefix, course_single_catalog.number FROM plan_courses INNER JOIN courses ON plan_courses.course_id = courses.id INNER JOIN course_single_catalog ON plan_courses.course_id = course_single_catalog.course_single_id WHERE plan_courses.semester_id IN (" . implode(", ", $semester_list) . ") ORDER BY plan_courses.semester_id, plan_courses.position;");
+  $plan_courses_stmt = $dbconn->prepare("SELECT template_data.semester_num, template_data.course_id, template_data.position, courses.name, course_single_catalog.prefix, course_single_catalog.number FROM template_data INNER JOIN courses ON template_data.course_id = courses.id INNER JOIN course_single_catalog ON template_data.course_id = course_single_catalog.course_single_id WHERE template_data.semester_num IN (" . implode(", ", $semester_list) . ") ORDER BY template_data.semester_num, template_data.position;");
   $plan_courses_stmt->execute();
   $plan_courses = $plan_courses_stmt->fetchAll();
   
@@ -61,13 +58,13 @@
 
     <section class="plan-header">
       <!-- <input type="text" class="plan-name" placeholder="&starf;PLAN NAME"> -->
-      <?php $favorited = $plan_details["favorited"];
-        if ($favorited == 0) {
+      <?php // $favorited = $plan_details["favorited"];
+        // if ($favorited == 0) {
           $string_star = "<span id='star' style='cursor: pointer'><i class='ri-star-s-line'></i></span>";
-        }
-        else {
-          $string_star = "<span id='star' style='cursor: pointer'><i class='ri-star-s-fill'></i></span>";
-        }
+        // }
+        // else {
+        //   $string_star = "<span id='star' style='cursor: pointer'><i class='ri-star-s-fill'></i></span>";
+        // }
       ?>
      
       <script>
@@ -82,10 +79,8 @@
         <li class="plan-name-editable center" contenteditable=true><?php echo $plan_details["name"] ?></li>
         <li><?php echo $string_star ?></li>
       <ul>
-        
+      
       <button id="toggle-config-button" class="btn btn-secondary">More Details</button>
-      <button id="save-button" class="btn btn-secondary">Save Changes</button>
-      <button id="advisor-button" class="btn btn-secondary">Send to Advisor</button>
     </section>
     <!-- TODO: discuss how to make fields editable nicely -->
     <section class="schedule">
@@ -98,11 +93,11 @@
                 ?>
                 <div class="semester-whole col-md-6">
                   <div class="semester">
-                    <div class="row semester-title">
-                      <?php echo $plan_semesters[$i]["name"] ?>
+                    <div class="row semester-title semester-name-editable" contenteditable=true>
+                      Semester #
                     </div> 
                     <?php for($index; $index < count($plan_courses); $index++) {
-                            if($plan_courses[$index]["semester_id"] != $i + 1) {
+                            if($plan_courses[$index]["semester_num"] != $i + 1) {
                               break;
                             }
                             ?>
@@ -120,7 +115,7 @@
                       <!-- <button class="btn btn-info add-course-button">Add Course</button> -->
                       <!-- <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button> -->
                     
-                      <button type="button" class="btn btn-info" id="add-course-button-<?php echo $i ?>" data-toggle="modal" data-target="#addCourseModal">
+                      <button type="button" class="btn btn-info add-course-button" data-toggle="modal" data-target="#addCourseModal">
                         Add Course
                       </button>
                     </div>
@@ -151,7 +146,6 @@
                       
                     </nav>
                     
-                    <!-- STRIPED TABLE -->
                     <table class="table table-striped search-results-table">
                       <tbody class="search-results-body">
              
@@ -184,8 +178,8 @@
                   </li>
                 </ul>
 
-                <!-- Catalog -->
-                <div id="plan-config-catalog">
+                <!-- Courses -->
+                <div id="plan-config-courses">
                   <div id="accordion">
                     <div class="card">
                       <div class="card-header" id="headingOne">
@@ -293,6 +287,27 @@
                             <div class="col-md-1 course-status"><span class="dot"></span></div>
                             <div class="col-md-5 course-editable course-title" contenteditable=true>Intro to Human Computer Interaction</div>
                             <div class="col-md-3 course-editable course-code" contenteditable=true>ITWS-2210</div>
+                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Concentration Requirements
+                          </button>
+                        </h5>
+                      </div>
+
+                      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                        <div class="row semester-course"> 
+                            <div class="col-md-1 course-status"><span class="dot"></span></div>
+                            <div class="col-md-5 course-editable course-title" contenteditable=true>Concentration Course</div>
+                            <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-XXXX</div>
                             <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
                           </div>
                         </div>

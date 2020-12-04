@@ -2,7 +2,8 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
 $dbconn = Database::getDatabase();
 
-$conc = $dbconn->query("SELECT * from `template`");
+$conc = $dbconn->query("SELECT templates.name from `templates`");
+
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +21,9 @@ $conc = $dbconn->query("SELECT * from `template`");
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <script src="/assets/js/student_new_plan.js"></script>
   </head>
 
   <body>
@@ -95,11 +99,11 @@ $conc = $dbconn->query("SELECT * from `template`");
               <!-- <input type="text" class="form-control" id="inputConcentration" placeholder="Enter Concentration"> -->
               <label for="concentration">Choose a concentration from the list:</label> <br>
               
-              <input class="formDropdown" list="concentrations" name="concentration" id="concentration">
+              <input class="formDropdown" list="concentrations" name="concentration" id="form-template-plan-concentration">
               <datalist id="concentrations">
                 <?php 
                   foreach ($conc as $row) { 
-                    echo "<option value=" . $row['name'] . ">";
+                    echo '<option value="' . $row['name'] . '">';
                   }
                 ?> 
                 <!-- <option value="Arts">
@@ -129,7 +133,7 @@ $conc = $dbconn->query("SELECT * from `template`");
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <a type="submit" class="btn btn-primary" href="/student/create_plan.php">Create Plan</a>
+          <button type="button" id="new-plan-button" class="btn btn-primary" >Create Plan</button>
         </div>
       </div>
     </div>
