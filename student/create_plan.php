@@ -81,6 +81,7 @@
         <li><?php echo $string_star ?></li>
       <ul>
       
+      <button id="save-button" class="btn btn-secondary">Save Changes</button>
       <button id="toggle-config-button" class="btn btn-secondary">More Details</button>
     </section>
     <!-- TODO: discuss how to make fields editable nicely -->

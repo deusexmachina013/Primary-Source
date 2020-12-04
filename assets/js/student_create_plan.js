@@ -8,6 +8,46 @@ $(document).ready(function () {
         }
     });
 
+    $("body").on("click", '#save-button', function(e) {
+        var searchParams = new URLSearchParams(window.location.search);
+        if(!searchParams.has("id")) {
+            return;
+        }
+        var id = searchParams.get("id");
+        var plans = {}
+        plans["name"] = $("#plan-name-star").find(".plan-name-editable").first().text().trim();
+        plans["favorited"] = $("#star").children().first().hasClass("ri-star-s-fill");
+        plans["id"] = id;
+        plans["semesters"] = []
+        plans["notes"] = $('#text-area-notes').text();
+        $("#semester-row").children().each(function() {
+            var individual_plan = {};
+            individual_plan["name"] = $(this).find(".semester-title").first().text().trim();
+            individual_plan["courses"] = []
+            $(this).find(".semester-course").each(function () {
+                individual_plan["courses"].push({"prefix": $(this).find(".course-prefix").first().text().trim(), 
+                                      "number": $(this).find(".course-number").first().text().trim(),
+                                      "credit": $(this).find(".course-credits").first().text().trim()});
+            });
+            plans["semesters"].push(individual_plan);
+        });
+        console.log(plans)
+        $.ajax({
+            type: "POST",
+            url: 'api.php',
+            data: {"operation": "save", "data": plans},
+            dataType: "json",
+            success: function (jsonObject) {
+                // work with the results of the SQL query (JSON)
+                console.log(jsonObject);
+            },
+            error: function (code, message) {
+                console.log(code);
+                console.log(message);
+            }
+        });
+    });
+
     $("#semester-row").on('focusout', '.course-editable', function (e) {
         var code = $(this).parent();
         var course = code.parent();
@@ -44,7 +84,7 @@ $(document).ready(function () {
         }
     });
 
-    console.log($('#schedule-config-nav').find("button").each(function () {
+    $('#schedule-config-nav').find("button").each(function () {
         $(this).click(function () {
             var target = $("#plan-config-" + $(this).text().toLowerCase());
             if (target) {
@@ -58,7 +98,7 @@ $(document).ready(function () {
                 $(this).addClass("active");
             }
         });
-    }));
+    });
 
     $("#toggle-config-button").click(function () {
         var scheduleConfig = $("#schedule-config");
