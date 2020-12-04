@@ -39,7 +39,7 @@
     if(!array_key_exists($course_group_single["course_group_id"], $course_group_singles)) {
       $course_group_singles[$course_group_single["course_group_id"]] = array();
     }
-    $course_group_singles[$course_group_single["course_group_id"]][] = $course_group_single["name"];
+    $course_group_singles[$course_group_single["course_group_id"]][] = $course_group_single["id"];
   }
 ?>
 <!-- Integrate with HTML -->
@@ -168,26 +168,32 @@
                   <div class="card-body">
                   <?php
                     for ($i=0; $i<sizeof($this_arr); $i++) {
-                      // $my_course_id = $this_arr[$i];
-                      // $course_single_name = $dbconn->query("SELECT courses.name FROM `courses` WHERE courses.id=$my_course_id");
-                      // $course_single_prefix = $dbconn->query("SELECT course_single_catalog.prefix FROM `course_single_catalog` WHERE course_single_catalog.course_single_id=$my_course_id");
+                      $my_course_id = $this_arr[$i];
+
+                      $course_single_name = $dbconn->query("SELECT courses.name FROM `courses` WHERE courses.id=$my_course_id");
+
+                      foreach ($course_single_name as $row) {
+                        $name = $row["name"];
+                      }
+
+                      $course_single_prefix = $dbconn->query("SELECT course_single_catalog.prefix FROM `course_single_catalog` WHERE course_single_catalog.course_single_id=$my_course_id");
                       
-                      // foreach ($course_single_prefix as $row) {
-                      //   $prefix = $row["prefix"];
-                      // }
+                      foreach ($course_single_prefix as $row) {
+                        $prefix = $row["prefix"];
+                      }
                       
-                      // $course_single_number = $dbconn->query("SELECT course_single_catalog.number FROM `course_single_catalog` WHERE course_single_catalog.course_single_id=$my_course_id");
+                      $course_single_number = $dbconn->query("SELECT course_single_catalog.number FROM `course_single_catalog` WHERE course_single_catalog.course_single_id=$my_course_id");
                              
-                      // foreach ($course_single_number as $row) {
-                      //   $number = $row["number"];
-                      // }
+                      foreach ($course_single_number as $row) {
+                        $number = $row["number"];
+                      }
                       
                     ?>
                     <div class="card">
                       <div class="card-header border-0" style="padding-left:33px;">
 
                         
-                        <?php echo $prefix . "-" . $number . " " .$this_arr[$i] ?>
+                        <?php echo $prefix . "-" . $number . " " . $name ?>
                       </div>
                     </div>   
                     
