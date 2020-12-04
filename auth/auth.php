@@ -55,7 +55,9 @@ class Auth {
 Auth::authenticate(); #redirect to login page if fails, should redirect to current page after, returning user id.
 
 if(!isset($_SESSION["id"])) {
-    session_start();
+    if(session_status() != PHP_SESSION_ACTIVE) {
+        session_start();
+    }
     $user_data = Auth::getAuthInfo();
     $_SESSION["id"] = $user_data["id"];
     $_SESSION["rank"] = $user_data["rank"];
