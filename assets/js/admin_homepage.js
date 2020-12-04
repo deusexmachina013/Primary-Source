@@ -69,9 +69,7 @@ $(document).ready(function() {
 
                     // Prune results by what's truly submitted.
                     // Note: Not done in Query for testing purposes.
-                    if (entry.advisor_status == 2 ||
-                        (entry.advisor_status == 1 && entry.favorited == 1) ||
-                        entry.favorited == 1) {
+                    if (entry.advisor_status > 0) {
                         var printout = "<tr data-href='student_plan_admin.php?id=" + entry.id + "' scope='row'>";
 
                         // Get basic data.
@@ -98,7 +96,7 @@ $(document).ready(function() {
                         }
                         printout += "</td></tr></a>";
 
-                        console.log(printout); // DEBUG
+                        // console.log(printout); // DEBUG
 
                         table.append(printout);
                     }
