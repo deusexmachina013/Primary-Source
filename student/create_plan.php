@@ -120,7 +120,7 @@
                       <!-- <button class="btn btn-info add-course-button">Add Course</button> -->
                       <!-- <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button> -->
                     
-                      <button type="button" class="btn btn-info add-course-button" data-toggle="modal" data-target="#addCourseModal">
+                      <button type="button" class="btn btn-info" id="add-course-button-<?php echo $i ?>" data-toggle="modal" data-target="#addCourseModal">
                         Add Course
                       </button>
                     </div>
@@ -151,6 +151,7 @@
                       
                     </nav>
                     
+                    <!-- STRIPED TABLE -->
                     <table class="table table-striped search-results-table">
                       <tbody class="search-results-body">
              
@@ -183,8 +184,8 @@
                   </li>
                 </ul>
 
-                <!-- Courses -->
-                <div id="plan-config-courses">
+                <!-- Catalog -->
+                <div id="plan-config-catalog">
                   <div id="accordion">
                     <div class="card">
                       <div class="card-header" id="headingOne">

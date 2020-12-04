@@ -95,12 +95,12 @@
   </head>
   <body>
     <!--NAVIGATION BAR (implemented with Bootstrap) -->
-    <?php include('student_navbar.php'); ?>
-
     <section class="content">
       <!-- Catalog -->
-      <h1>Catalog</h1>
-          <?php foreach($concentration_ids as $con_query) { ?>
+   
+      
+      
+      <?php foreach($concentration_ids as $con_query) { ?>
       
       <div class="container">
         <h2><?php echo $con_query["name"]?></h2>
