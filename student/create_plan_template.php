@@ -8,23 +8,23 @@
     $selected_plan=$id;
   }
   
-  $plan_details_stmt = $dbconn->prepare("SELECT * FROM plans WHERE id = ?;");
+  $plan_details_stmt = $dbconn->prepare("SELECT * FROM templates WHERE id = ?;");
   $plan_details_stmt->execute(array($selected_plan));
   
   $plan_details = $plan_details_stmt->fetch(); // Plan Notes: ""This is my 4-year plan..."
 
-  $plan_semesters_stmt = $dbconn->prepare("SELECT * FROM plan_semesters WHERE plan_id = ?;");
+  $plan_semesters_stmt = $dbconn->prepare("SELECT * FROM template_data WHERE template_id = ?;");
   $plan_semesters_stmt->execute(array($selected_plan));
   
   $plan_semesters = $plan_semesters_stmt->fetchAll(); // all semesters - year and id 
 
   $semester_list = array();
   foreach($plan_semesters as $semester) {
-    $semester_list[] = $semester['id']; // tells you the position of each semester
+    $semester_list[] = $semester['position']; // tells you the position of each semester
   }
 
   // $in  = str_repeat('?,', count($arr) - 1) . '?'; // alternative option if you want to do prepared statement
-  $plan_courses_stmt = $dbconn->prepare("SELECT plan_courses.semester_id, plan_courses.course_id, plan_courses.position, courses.name, course_single_catalog.prefix, course_single_catalog.number FROM plan_courses INNER JOIN courses ON plan_courses.course_id = courses.id INNER JOIN course_single_catalog ON plan_courses.course_id = course_single_catalog.course_single_id WHERE plan_courses.semester_id IN (" . implode(", ", $semester_list) . ") ORDER BY plan_courses.semester_id, plan_courses.position;");
+  $plan_courses_stmt = $dbconn->prepare("SELECT template_data.semester_num, template_data.course_id, template_data.position, courses.name, course_single_catalog.prefix, course_single_catalog.number FROM template_data INNER JOIN courses ON template_data.course_id = courses.id INNER JOIN course_single_catalog ON template_data.course_id = course_single_catalog.course_single_id WHERE template_data.semester_num IN (" . implode(", ", $semester_list) . ") ORDER BY template_data.semester_num, template_data.position;");
   $plan_courses_stmt->execute();
   $plan_courses = $plan_courses_stmt->fetchAll();
   
@@ -58,13 +58,13 @@
 
     <section class="plan-header">
       <!-- <input type="text" class="plan-name" placeholder="&starf;PLAN NAME"> -->
-      <?php $favorited = $plan_details["favorited"];
-        if ($favorited == 0) {
+      <?php // $favorited = $plan_details["favorited"];
+        // if ($favorited == 0) {
           $string_star = "<span id='star' style='cursor: pointer'><i class='ri-star-s-line'></i></span>";
-        }
-        else {
-          $string_star = "<span id='star' style='cursor: pointer'><i class='ri-star-s-fill'></i></span>";
-        }
+        // }
+        // else {
+        //   $string_star = "<span id='star' style='cursor: pointer'><i class='ri-star-s-fill'></i></span>";
+        // }
       ?>
      
       <script>
@@ -80,7 +80,6 @@
         <li><?php echo $string_star ?></li>
       <ul>
       
-      <button id="save-button" class="btn btn-secondary">Save Changes</button>
       <button id="toggle-config-button" class="btn btn-secondary">More Details</button>
     </section>
     <!-- TODO: discuss how to make fields editable nicely -->
@@ -94,11 +93,11 @@
                 ?>
                 <div class="semester-whole col-md-6">
                   <div class="semester">
-                    <div class="row semester-title">
-                      <?php echo $plan_semesters[$i]["name"] ?>
+                    <div class="row semester-title semester-name-editable" contenteditable=true>
+                      Semester #
                     </div> 
                     <?php for($index; $index < count($plan_courses); $index++) {
-                            if($plan_courses[$index]["semester_id"] != $i + 1) {
+                            if($plan_courses[$index]["semester_num"] != $i + 1) {
                               break;
                             }
                             ?>

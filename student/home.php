@@ -2,7 +2,8 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
 $dbconn = Database::getDatabase();
 
-$conc = $dbconn->query("SELECT * from `templates`");
+$conc = $dbconn->query("SELECT templates.name from `templates`");
+
 ?>
 
 <!DOCTYPE html>
