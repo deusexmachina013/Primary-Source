@@ -2,7 +2,7 @@
 function exitOnFail($res, $error="Call to server failed") {
   if(!$res) {
     http_response_code(500);
-    echo json_encode(array("error"=>$error));
+    echo json_encode(array("status"=>"error", "error"=>$error));
     die();
   }
 }
@@ -32,7 +32,6 @@ function exitOnFail($res, $error="Call to server failed") {
       $plan_semesters = $pstmt->fetchAll();
       $save_semesters = $save_data["semesters"];
       $i = 1;
-      
       while($i <= count($save_semesters)) {
         $save_semester = $save_semesters[$i - 1];
         $semester_id = -1;
@@ -76,8 +75,8 @@ function exitOnFail($res, $error="Call to server failed") {
             $stmt_success = $pstmt->execute(array($semester_id, $course_id, $x));
             exitOnFail($stmt_success);
           } else {
-            $pstmt = $dbconn->prepare("INSERT INTO plan_courses (semester_id, course_id, position) VALUES (?, ?, ?)");
-            $stmt_success = $pstmt->execute(array($semester_id, $course_id, $x));
+            $pstmt = $dbconn->prepare("UPDATE plan_courses SET course_id = ? WHERE semester_id = ? AND position = ?");
+            $stmt_success = $pstmt->execute(array($course_id, $semester_id, $x));
             exitOnFail($stmt_success);
           }
           $x++;
@@ -93,29 +92,28 @@ function exitOnFail($res, $error="Call to server failed") {
       for($i; $i <= count($plan_semesters); $i++) {
         $pstmt = $dbconn->prepare("DELETE FROM plan_semesters WHERE plan_id = ? AND position = ?");
         $stmt_success = $pstmt->execute(array($save_data["id"], $i));
-        //delete extra semesters, courses link to thoes emesters
       }
-      // $dbconn->commit();
-      echo("success");
+      $dbconn->commit();
+      echo json_encode(array("status"=>"success"));
     }
-
+    // if(isset($_POST["get_course"])) {
+    //   if(isset($_POST["prefix"]) && isset($_POST["number"])) {
+    //     $get_course_stmt = $dbconn->prepare("SELECT courses.name FROM courses INNER JOIN course_single ON courses.id = course_single.course_id WHERE course_single.prefix = ? AND course_single.number = ?;");
+    //     $get_course_stmt->execute(array($_POST["prefix"], intval($_POST["number"])));
+    //     if($get_course_stmt->rowCount() != 0) {
+    //       $res = $get_course_stmt->fetch();
+    //       echo '{"name": "' . $res["name"] . '" }';
+    //     } else {
+    //       echo '{}';
+    //     }
+    //   } else {
+    //     echo "{}";
+    //   }
+    // } else {
+    //   echo "{}";
+    // }
   }
   
-  if(isset($_POST["get_course"])) {
-    if(isset($_POST["prefix"]) && isset($_POST["number"])) {
-      $get_course_stmt = $dbconn->prepare("SELECT courses.name FROM courses INNER JOIN course_single ON courses.id = course_single.course_id WHERE course_single.prefix = ? AND course_single.number = ?;");
-      $get_course_stmt->execute(array($_POST["prefix"], intval($_POST["number"])));
-      if($get_course_stmt->rowCount() != 0) {
-        $res = $get_course_stmt->fetch();
-        echo '{"name": "' . $res["name"] . '" }';
-      } else {
-        echo '{}';
-      }
-    } else {
-      echo "{}";
-    }
-  } else {
-    echo "{}";
-  }
+  
 
 ?>
