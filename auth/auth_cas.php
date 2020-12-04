@@ -33,6 +33,7 @@ class AuthModule extends AuthenticationABC {
 
     public function logout() {
       phpCAS::logout();
+      // phpCAS::logoutWithRedirectService();
       //Note: logout redirection is disabled with RPI's CAS system :(
     }
   
