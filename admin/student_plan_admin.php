@@ -41,7 +41,7 @@
     $administer_query = $dbconn->prepare("UPDATE plans SET advisor_status = ? WHERE id = ?;");
     switch($_POST['action']) {
       case "approve": array_push($args, 2); break; // 2 -- Status code: APPROVED
-      case "deny": array_push($args, 3); break; // 3 -- Status code: REJECTED
+      case "reject": array_push($args, 3); break; // 3 -- Status code: REJECTED
     }
     array_push($args, $_POST['id']);
 
@@ -225,7 +225,7 @@
                       }
                     ?>
                     <button type="submit" name="action" value="approve" class="approve">Approve</button>
-                    <button type="submit" name="action" value="reject" class="deny">Deny</button>
+                    <button type="submit" name="action" value="reject" class="deny">Reject</button>
                   </form>
                   <?php
                     // DISPLAY RESULTS DEPENDING ON WHAT WAS RUN.
@@ -234,7 +234,7 @@
                         case "approve":
                           echo "<p>Plan Approved!</p>";
                           break;
-                        case "deny":
+                        case "reject":
                           echo "<p>Plan Rejected!</p>";
                           break;
                       }
