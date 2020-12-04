@@ -104,7 +104,7 @@
                 ?>
                 <div class="semester-whole col-md-6">
                   <div class="semester">
-                    <div class="row semester-title">
+                  <div class="row semester-title" <?php if(!$read_only) {?>contenteditable=true<?php } ?>>
                       <?php echo $plan_semesters[$i]["name"] ?>
                     </div> 
                     <?php
