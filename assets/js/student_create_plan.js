@@ -132,13 +132,13 @@ $(document).ready(function () {
                 for (var index in jsonObject) {
                     var entry = jsonObject[index];
 
-                    var printout = "<tr scope='row'>";
+                    var printout = "<tr scope='row' class='add-course-button' data-dismiss='modal'>";
 
                     // Get basic data.
                     printout += "<td class='col-5 search-results'>"
                         + entry.prefix + "-" + entry.number + " " + entry.name
                         + "</td><td class='col-5 search-results'><i id='" + entry.id + "' class='ri-add-circle-line'></i></td>";
-
+                    console.log(entry.id);
                     printout += "</tr>";
 
                     table.append(printout);
@@ -151,15 +151,58 @@ $(document).ready(function () {
         });
     });
 
-     $(document).on("click", ".add-course-button", function() {
-        $(this).parent().before('<div class="row semester-course">\
+    $(document).on("click", "#add-course-button-1", function() {
+        $("#addCourseModal").data("add-course-button", "#add-course-button-1");
+    });
+    $(document).on("click", "#add-course-button-2", function() {
+        $("#addCourseModal").data("add-course-button", "#add-course-button-2");
+    });
+    $(document).on("click", "#add-course-button-3", function() {
+        $("#addCourseModal").data("add-course-button", "#add-course-button-3");
+    });
+    $(document).on("click", "#add-course-button-4", function() {
+        $("#addCourseModal").data("add-course-button", "#add-course-button-4");
+    });
+    $(document).on("click", "#add-course-button-5", function() {
+        $("#addCourseModal").data("add-course-button", "#add-course-button-5");
+    });
+    $(document).on("click", "#add-course-button-6", function() {
+        $("#addCourseModal").data("add-course-button", "#add-course-button-6");
+    });
+    $(document).on("click", "#add-course-button-7", function() {
+        $("#addCourseModal").data("add-course-button", "#add-course-button-7");
+    });
+    $(document).on("click", "#add-course-button-8", function() {
+        $("#addCourseModal").data("add-course-button", "#add-course-button-8");
+    });
+    
+    $(document).on("click", ".add-course-button", function() {
+        // when they click on a row in the table
+
+        // figure out what course they selected
+        // get the name, prefix, and number
+        var name = "TESTING";
+        var prefix = "TEST"
+        var number = "1234"
+        
+        $($("#addCourseModal").data("add-course-button")).parent().before('<div class="row semester-course">\
         <div class="col-md-1 course-status"><span class="dot dot-red"></span></div>\
-        <div class="col-md-5 course-title"></div>\
-        <div class="col-md-3 course-code"><span class="course-editable course-prefix" contenteditable=true>AAAA</span>-<span class="course-editable course-number" contenteditable=true>0000</span></div>\
+        <div class="col-md-5 course-title">' + name + '</div>\
+        <div class="col-md-3 course-code"><span class="course-editable course-prefix" contenteditable=true>' + prefix + '</span>-<span class="course-editable course-number" contenteditable=true>' + number +'</span></div>\
         <div class="col-md-1 course-credits">4</div>\
         <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>\
         </div>');
     });
+
+    //  $(document).on("click", ".add-course-button", function() {
+    //     $(this).parent().before('<div class="row semester-course">\
+    //     <div class="col-md-1 course-status"><span class="dot dot-red"></span></div>\
+    //     <div class="col-md-5 course-title"></div>\
+    //     <div class="col-md-3 course-code"><span class="course-editable course-prefix" contenteditable=true>AAAA</span>-<span class="course-editable course-number" contenteditable=true>0000</span></div>\
+    //     <div class="col-md-1 course-credits">4</div>\
+    //     <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>\
+    //     </div>');
+    // });
 
     $(document).on("click", ".course-trash-button",function() {
         $(this).parent().parent().remove();
