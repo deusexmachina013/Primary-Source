@@ -14,8 +14,10 @@
   
   $plan_details_stmt = $dbconn->prepare("SELECT * FROM plans WHERE id = ?;");
   $plan_details_stmt->execute(array($selected_plan));
-  
+
   $plan_details = $plan_details_stmt->fetch(); // Plan Notes: ""This is my 4-year plan..."
+
+  $read_only = $plan_details["advisor_status"] > 0;
 
   $plan_semesters_stmt = $dbconn->prepare("SELECT * FROM plan_semesters WHERE plan_id = ?;");
   $plan_semesters_stmt->execute(array($selected_plan));
@@ -80,12 +82,15 @@
       </script>
       
       <ul id="plan-name-star">        
-        <li class="plan-name-editable center" contenteditable=true><?php echo $plan_details["name"] ?></li>
+        <?php if($read_only) { ?><li><span class="locked-icon"><i class="ri-lock-fill"></i></span></li><?php } ?>
+      <li class="plan-name-editable center" <?php if(!$read_only) { ?>contenteditable=true<?php } ?>><?php echo $plan_details["name"] ?></li>
         <li><?php echo $string_star ?></li>
       <ul>
       <div id="create-plan-page-buttons">
+      <?php if(!$read_only) { ?>
         <button id="save-button" class="btn btn-secondary">Save Changes</button>
         <button id="advisor-button" class="btn btn-secondary">Send to Advisor</button>
+      <?php } ?>
         <button id="toggle-config-button" class="btn btn-secondary">More Details</button>
       </div>
   </section>
@@ -112,12 +117,13 @@
                       <div class="col-md-1 course-status"><span class="dot dot-green"></span></div>
                       <div class="col-md-5 course-title"><?php echo $plan_courses[$index]["name"] ?></div>
                       <div class="col-md-3 course-code">
-                        <span class="course-editable course-prefix" contenteditable=true><?php echo $plan_courses[$index]["prefix"]?></span>-<span class="course-editable course-number" contenteditable=true><?php echo $plan_courses[$index]["number"] ?></span>
+                        <span class="course-editable course-prefix"><?php echo $plan_courses[$index]["prefix"]?></span>-<span class="course-editable course-number"><?php echo $plan_courses[$index]["number"] ?></span>
                       </div>
                       <div class="col-md-1 course-credits">4</div>
-                      <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
+                          <div class="col-md-2 course-trash"><?php if(!$read_only) { ?><i class="ri-delete-bin-line btn btn-link course-trash-button"></i><?php } ?></div>
                     </div>
                           <?php } ?>
+                    <?php if(!$read_only) { ?>
                     <div class="row course-add">
                       <!-- <button class="btn btn-info add-course-button">Add Course</button> -->
                       <!-- <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button> -->
@@ -126,12 +132,13 @@
                         Add Course
                       </button>
                     </div>
+                    <?php } ?>
                   </div>
                 </div>
                       <?php }?>
               </div>
             </div>
-
+            <?php if(!$read_only) { ?>
             <!-- Add Course Modal -->
             <div class="modal fade" id="addCourseModal" tabindex="-1" role="dialog" aria-labelledby="addCourseModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
@@ -170,6 +177,7 @@
                 </div>
               </div>
             </div>
+            <?php } ?>
 
               
             <div id="schedule-config" class="col-md-6">

@@ -11,7 +11,7 @@
 
     $argumentArray = Array("%" . $_POST['search-input-course'] . "%"); // replaces the ?
 
-    $request = $request . "ORDER BY courses.name;";
+    $request = $request . "ORDER BY courses.name LIMIT 50;";
 
     // Execute the query.
     $query = $dbconn->prepare($request);

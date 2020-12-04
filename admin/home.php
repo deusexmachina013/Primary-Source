@@ -1,6 +1,10 @@
 <?php
   require_once $_SERVER['DOCUMENT_ROOT'] . "/auth/auth.php";
+  require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
+  $dbconn = Database::getDatabase();
 
+  $res = $dbconn->query("SELECT users.first_name, users.last_name, users.class_year, plans.id, plans.advisor_status FROM users LEFT JOIN plans ON users.id = plans.user_id WHERE plans.advisor_status > 0");
+  
 ?>
 <!DOCTYPE html>
 
@@ -55,6 +59,22 @@
         </div>
         <!-- Table Body -->
         <tbody>
+          <?php foreach($res as $row) ?>
+          <tr data-href="student_plan_admin.php?id=<?php echo $row["id"] ?>" scope="row">
+            <td class="col-5"><?php echo $row["first_name"] . " " . $row["last_name"] ?></td>
+            <td class="col-3"><?php echo $row["class_year"] ?></td>
+            <td class="col-4"><?php if($row["advisor_status"] == 0) {
+              echo "Unsubmitted";
+            } else if($row["advisor_status"] == 1) {
+              echo "Reviewable";
+            } else if($row["advisor_status"] == 2) {
+              echo "Accepted";
+            } else if($row["advisor_status"] == 3) {
+              echo "Rejected";
+            } ?></td>
+          </tr>
+
+          
           <!-- <tr scope="row">
             <td class="col-5">Jacob Dyer</td>
             <td class="col-3">2023</td>

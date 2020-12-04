@@ -10,7 +10,7 @@
     switch($_POST['student-search-dropdown']) {
       // Case: Searched by student name.
       case 'student_name':
-        $request = $request . "CONCAT(users.first_name, ' ', users.last_name) = ? OR users.first_name = ? OR users.last_name = ?";
+        $request = $request . "(CONCAT(users.first_name, ' ', users.last_name) = ? OR users.first_name = ? OR users.last_name = ?)";
         $argumentArray = Array($_POST['search-bar'],
                                $_POST['search-bar'],
                                $_POST['search-bar']);
@@ -34,7 +34,7 @@
       break;
     }
     $request = $request . " AND plans.advisor_status <> 3 AND users.id = plans.user_id ORDER BY users.identity;";
-
+    error_log($request);
     // Execute the query.
     $query = $dbconn->prepare($request);
     $query->execute($argumentArray);

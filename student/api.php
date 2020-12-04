@@ -153,6 +153,7 @@ function exitOnFail($res, $error="Call to server failed") {
       $stmt_success = $pstmt->execute(array($_POST["data"]["id"]));
       exitOnFail($stmt_success);
       $dbconn->commit();
+      echo json_encode(array("status"=>"success"));
     }
     // if(isset($_POST["get_course"])) {
     //   if(isset($_POST["prefix"]) && isset($_POST["number"])) {

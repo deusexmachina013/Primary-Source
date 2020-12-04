@@ -40,6 +40,9 @@ $(document).ready(function () {
             success: function (jsonObject) {
                 // work with the results of the SQL query (JSON)
                 // console.log(jsonObject);
+                if(jsonObject["status"] == "success") {
+                    location.reload();   
+                }
             },
             error: function (code, message) {
                 console.log(code);
@@ -60,6 +63,10 @@ $(document).ready(function () {
             data: {"operation": "advisor", "data": {"id": id}},
             dataType: "json",
             success: function (jsonObject) {
+                // console.log(jsonObject);
+                if(jsonObject["status"] == "success") {
+                    location.reload();
+                }
                 // work with the results of the SQL query (JSON)
                 // console.log(jsonObject);
             },

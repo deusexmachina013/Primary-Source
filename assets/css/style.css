@@ -188,6 +188,10 @@ ul#plan-name-star li {
     margin-top: 20px;
 }
 
+.locked-icon {
+    font-size: 2em;
+}
+
 .plan-name-editable {
     height: 70px;
     width: 600px;
