@@ -135,10 +135,9 @@ $(document).ready(function () {
                     var printout = "<tr scope='row' class='add-course-button' data-dismiss='modal'>";
 
                     // Get basic data.
-                    printout += "<td class='col-5 search-results'>"
-                        + entry.prefix + "-" + entry.number + " " + entry.name
-                        + "</td><td class='col-5 search-results'><i id='" + entry.id + "' class='ri-add-circle-line'></i></td>";
-                    console.log(entry.id);
+                    printout += "<td class='col-5 search-results'><span class='search-results-prefix'>"
+                        + entry.prefix + "</span>-<span class='search-results-number'>" + entry.number + "</span> <span class='search-results-name'>" + entry.name
+                        + "</span></td><td class='col-5 search-results'><i id='" + entry.id + "' class='ri-add-circle-line'></i></td>";
                     printout += "</tr>";
 
                     table.append(printout);
@@ -151,6 +150,9 @@ $(document).ready(function () {
         });
     });
 
+    $(document).on("click", "#add-course-button-0", function() {
+        $("#addCourseModal").data("add-course-button", "#add-course-button-0");
+    });
     $(document).on("click", "#add-course-button-1", function() {
         $("#addCourseModal").data("add-course-button", "#add-course-button-1");
     });
@@ -172,21 +174,17 @@ $(document).ready(function () {
     $(document).on("click", "#add-course-button-7", function() {
         $("#addCourseModal").data("add-course-button", "#add-course-button-7");
     });
-    $(document).on("click", "#add-course-button-8", function() {
-        $("#addCourseModal").data("add-course-button", "#add-course-button-8");
-    });
     
     $(document).on("click", ".add-course-button", function() {
         // when they click on a row in the table
-
         // figure out what course they selected
         // get the name, prefix, and number
-        var name = "TESTING";
-        var prefix = "TEST"
-        var number = "1234"
+        var name = $(this).find('.search-results-name').first().text().trim();
+        var prefix = $(this).find('.search-results-prefix').first().text().trim();
+        var number = $(this).find('.search-results-number').first().text().trim();
         
         $($("#addCourseModal").data("add-course-button")).parent().before('<div class="row semester-course">\
-        <div class="col-md-1 course-status"><span class="dot dot-red"></span></div>\
+        <div class="col-md-1 course-status"><span class="dot dot-green"></span></div>\
         <div class="col-md-5 course-title">' + name + '</div>\
         <div class="col-md-3 course-code"><span class="course-editable course-prefix" contenteditable=true>' + prefix + '</span>-<span class="course-editable course-number" contenteditable=true>' + number +'</span></div>\
         <div class="col-md-1 course-credits">4</div>\
