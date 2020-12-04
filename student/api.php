@@ -97,8 +97,9 @@ function exitOnFail($res, $error="Call to server failed") {
       echo json_encode(array("status"=>"success"));
     } else if($_POST["operation"] == "newTemplatePlan") {
       $dbconn->beginTransaction();
-      exitOnFail(isset($_POST["data"]) && array_key_exists("templateName", $_POST["data"]));
+      exitOnFail(isset($_POST["data"]) && array_key_exists("templateName", $_POST["data"]) && array_key_exists("planName", $_POST["data"]));
       $template_name = $_POST["data"]["templateName"];
+      $plan_name = $_POST["data"]["planName"];
       $pstmt = $dbconn->prepare("SELECT id FROM templates WHERE name = ?");
       $stmt_success = $pstmt->execute(array($template_name));
       exitOnFail($stmt_success && $pstmt->rowCount() == 1);
@@ -109,7 +110,7 @@ function exitOnFail($res, $error="Call to server failed") {
       $template_data = $pstmt->fetchAll();
 
       $pstmt = $dbconn->prepare("INSERT INTO plans (user_id, name, favorited, advisor_status, notes) VALUES (?, ?, ?, ?, ?)");
-      $stmt_success = $pstmt->execute(array($TEMP_ID, "Template - " . $template_name, false, false, ""));
+      $stmt_success = $pstmt->execute(array($TEMP_ID, $plan_name, false, false, ""));
       exitOnFail($stmt_success);
       $res = $dbconn->query("SELECT LAST_INSERT_ID()");
       exitOnFail($res);

@@ -48,41 +48,41 @@ $(document).ready(function () {
         });
     });
 
-    $("#semester-row").on('focusout', '.course-editable', function (e) {
-        var code = $(this).parent();
-        var course = code.parent();
-        var prefix = code.find(".course-prefix").first().text();
-        var number = code.find(".course-number").first().text();
-        if (prefix.length == 4 && number.length == 4 && /^\d+$/.test(number)) {
-            $.ajax({
-                type: "POST",
-                url: "api.php",
-                data: {
-                    "get_course": true,
-                    "prefix": prefix,
-                    "number": number
-                },
-                success: function (data) {
-                    console.log(data);
-                    data = JSON.parse(data);
-                    console.log(data);
-                    if ("name" in data) {
-                        course.find(".course-status").first().children().first().removeClass("dot-red");
-                        course.find(".course-status").first().children().first().addClass("dot-green");
-                        course.find(".course-title").first().text(data["name"]);
-                    } else {
-                        course.find(".course-status").first().children().first().removeClass("dot-green");
-                        course.find(".course-status").first().children().first().addClass("dot-red");
-                        course.find(".course-title").first().text("");
-                    }
-                }
-            });
-        } else {
-            course.find(".course-status").first().children().first().removeClass("dot-green");
-            course.find(".course-status").first().children().first().addClass("dot-red");
-            course.find(".course-title").first().text("");
-        }
-    });
+    // $("#semester-row").on('focusout', '.course-editable', function (e) {
+    //     var code = $(this).parent();
+    //     var course = code.parent();
+    //     var prefix = code.find(".course-prefix").first().text();
+    //     var number = code.find(".course-number").first().text();
+    //     if (prefix.length == 4 && number.length == 4 && /^\d+$/.test(number)) {
+    //         $.ajax({
+    //             type: "POST",
+    //             url: "api.php",
+    //             data: {
+    //                 "get_course": true,
+    //                 "prefix": prefix,
+    //                 "number": number
+    //             },
+    //             success: function (data) {
+    //                 console.log(data);
+    //                 data = JSON.parse(data);
+    //                 console.log(data);
+    //                 if ("name" in data) {
+    //                     course.find(".course-status").first().children().first().removeClass("dot-red");
+    //                     course.find(".course-status").first().children().first().addClass("dot-green");
+    //                     course.find(".course-title").first().text(data["name"]);
+    //                 } else {
+    //                     course.find(".course-status").first().children().first().removeClass("dot-green");
+    //                     course.find(".course-status").first().children().first().addClass("dot-red");
+    //                     course.find(".course-title").first().text("");
+    //                 }
+    //             }
+    //         });
+    //     } else {
+    //         course.find(".course-status").first().children().first().removeClass("dot-green");
+    //         course.find(".course-status").first().children().first().addClass("dot-red");
+    //         course.find(".course-title").first().text("");
+    //     }
+    // });
 
     $('#schedule-config-nav').find("button").each(function () {
         $(this).click(function () {
