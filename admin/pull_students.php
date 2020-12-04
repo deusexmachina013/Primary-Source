@@ -1,9 +1,9 @@
 <?php
+  require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
+  // Connect to the database.
+  $dbconn = Database::getDatabase();
   // Query the student table and get relevant students.
   if(isset($_POST['student-search-dropdown']) && isset($_POST['search-bar'])) {
-    // Connect to the database.
-    $dbconn = new PDO('mysql:host=localhost;dbname=website', 'root', 'root');
-
     // Prepare the request.
     $argumentArray = NULL;
     $request = "SELECT users.first_name, users.last_name, users.class_year, plans.id, plans.advisor_status, plans.favorited FROM `users`, `plans` WHERE ";
