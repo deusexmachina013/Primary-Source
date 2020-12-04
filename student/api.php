@@ -39,7 +39,7 @@ function exitOnFail($res, $error="Call to server failed") {
         if($i > count($plan_semesters)) {
           //new semester
           $pstmt = $dbconn->prepare("INSERT INTO plan_semesters (plan_id, name, position, completed) VALUES (?, ?, ?, ?)");
-          $stmt_success = $pstmt->execute(array($save_data["id"], $save_semester["name"], $i, false));
+          $stmt_success = $pstmt->execute(array($save_data["id"], $save_semester["name"], $i, 0));
           exitOnFail($stmt_success);
           $pstmt = $dbconn->prepare("SELECT LAST_INSERT_ID() AS id");
           $stmt_success = $pstmt->execute();
@@ -53,7 +53,7 @@ function exitOnFail($res, $error="Call to server failed") {
           
           $semester_id = $pstmt->fetch()["id"];
           $pstmt = $dbconn->prepare("UPDATE plan_semesters SET name = ?, position = ?, completed = ? WHERE id = ?");
-          $stmt_success = $pstmt->execute(array($save_semester["name"], $i, false, $semester_id));
+          $stmt_success = $pstmt->execute(array($save_semester["name"], $i, 0, $semester_id));
           exitOnFail($stmt_success);
         }
         exitOnFail($semester_id != -1);
@@ -110,7 +110,7 @@ function exitOnFail($res, $error="Call to server failed") {
       $template_data = $pstmt->fetchAll();
 
       $pstmt = $dbconn->prepare("INSERT INTO plans (user_id, name, favorited, advisor_status, notes) VALUES (?, ?, ?, ?, ?)");
-      $stmt_success = $pstmt->execute(array($TEMP_ID, $plan_name, false, false, ""));
+      $stmt_success = $pstmt->execute(array($TEMP_ID, $plan_name, 0, 0, ""));
       exitOnFail($stmt_success);
       $res = $dbconn->query("SELECT LAST_INSERT_ID()");
       exitOnFail($res);
@@ -123,7 +123,7 @@ function exitOnFail($res, $error="Call to server failed") {
           $semester_num += 1;
           exitOnFail($semester_num == $template["semester_num"]);
           $pstmt = $dbconn->prepare("INSERT INTO plan_semesters (plan_id, name, position, completed) VALUES (?, ?, ?, ?)");
-          $stmt_success = $pstmt->execute(array($plan_id, "Semester " . $semester_num, $semester_num, false));
+          $stmt_success = $pstmt->execute(array($plan_id, "Semester " . $semester_num, $semester_num, 0));
           exitOnFail($stmt_success);
           $res = $dbconn->query("SELECT LAST_INSERT_ID()");
           exitOnFail($res);
