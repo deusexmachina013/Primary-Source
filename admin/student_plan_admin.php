@@ -117,7 +117,7 @@
                       <?php echo $plan_semesters[$i]["name"] ?>
                     </div> 
                     <?php for($index; $index < count($plan_courses); $index++) {
-                            if($plan_courses[$index]["semester_id"] != $i + 1) {
+                            if($plan_courses[$index]["semester_id"] != $plan_semesters[$i]["id"]) {
                               break;
                             }
                             ?>
