@@ -151,7 +151,17 @@ $(document).ready(function () {
         });
     });
 
-    $(document).on("click", ".course-trash-button", function () {
-        $(this).parent().parent().remove();
+     $(document).on("click", ".add-course-button", function() {
+        $(this).parent().before('<div class="row semester-course">\
+        <div class="col-md-1 course-status"><span class="dot dot-red"></span></div>\
+        <div class="col-md-5 course-title"></div>\
+        <div class="col-md-3 course-code"><span class="course-editable course-prefix" contenteditable=true>AAAA</span>-<span class="course-editable course-number" contenteditable=true>0000</span></div>\
+        <div class="col-md-1 course-credits">4</div>\
+        <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>\
+        </div>');
     });
+
+    $(document).on("click", ".course-trash-button",function() {
+        $(this).parent().parent().remove();
+    });  
 });
