@@ -34,7 +34,6 @@
   $plan_courses_stmt->execute();
   $plan_courses = $plan_courses_stmt->fetchAll();
   
-  
 ?>
 <!DOCTYPE html>
 
@@ -108,8 +107,9 @@
                     <div class="row semester-title">
                       <?php echo $plan_semesters[$i]["name"] ?>
                     </div> 
-                    <?php for($index; $index < count($plan_courses); $index++) {
-                            if($plan_courses[$index]["semester_id"] != $i + 1) {
+                    <?php
+                    for($index; $index < count($plan_courses); $index++) {
+                            if($plan_courses[$index]["semester_id"] != $plan_semesters[$i]["id"]) {
                               break;
                             }
                             ?>
