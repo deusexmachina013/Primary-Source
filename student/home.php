@@ -2,7 +2,8 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
 $dbconn = Database::getDatabase();
 
-$conc = $dbconn->query("SELECT * from `template`");
+$conc = $dbconn->query("SELECT templates.name from `templates`");
+
 ?>
 
 <!DOCTYPE html>
@@ -95,11 +96,12 @@ $conc = $dbconn->query("SELECT * from `template`");
               <!-- <input type="text" class="form-control" id="inputConcentration" placeholder="Enter Concentration"> -->
               <label for="concentration">Choose a concentration from the list:</label> <br>
               
-              <input class="formDropdown" list="concentrations" name="concentration" id="concentration">
+              <input class="formDropdown" list="concentrations" name="concentration" id="concentration" value="">
               <datalist id="concentrations">
                 <?php 
                   foreach ($conc as $row) { 
-                    echo "<option value=" . $row['name'] . ">";
+                    
+                    echo "<option id='" . $row['id'] . "'" . "value='" . $row['name'] . "'>";
                   }
                 ?> 
                 <!-- <option value="Arts">
@@ -129,7 +131,11 @@ $conc = $dbconn->query("SELECT * from `template`");
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <a type="submit" class="btn btn-primary" href="/student/create_plan.php">Create Plan</a>
+          <?php
+          
+           echo "<a type='submit' class='btn btn-primary' href='create_plan_template.php?id=1'>Create Plan</a>";
+          
+          ?>
         </div>
       </div>
     </div>
