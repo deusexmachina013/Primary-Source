@@ -65,7 +65,7 @@ $(document).ready(function() {
                 for (var index in jsonObject) {
                     var entry = jsonObject[index];
 
-                    console.log(entry); // DEBUG
+                    // console.log(entry); // DEBUG
 
                     // Prune results by what's truly submitted.
                     // Note: Not done in Query for testing purposes.
@@ -102,15 +102,14 @@ $(document).ready(function() {
                     }
                 }
 
-                // Handle the clicking of dynamically generated links.
-                $("tr[data-href]").click(function() {
-                    window.location = $(this).data("href");
-                });
             },
             error: function(code, message) {
                 console.log(code);
                 console.log(message);
             }
         });
+    });
+    $(document).on("click", "tr[data-href]", function() {
+      window.location = $(this).data("href");
     });
 });
