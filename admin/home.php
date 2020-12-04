@@ -3,8 +3,7 @@
   require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
   $dbconn = Database::getDatabase();
 
-  $res = $dbconn->query("SELECT users.first_name, users.last_name, users.class_year, plans.id, plans.advisor_status FROM users LEFT JOIN plans ON users.id = plans.user_id WHERE plans.advisor_status > 0");
-  
+  $res = $dbconn->query("SELECT users.first_name, users.last_name, users.class_year, plans.id, plans.advisor_status FROM users LEFT JOIN plans ON users.id = plans.user_id WHERE plans.advisor_status > 0")->fetchAll();
 ?>
 <!DOCTYPE html>
 
@@ -59,7 +58,7 @@
         </div>
         <!-- Table Body -->
         <tbody>
-          <?php foreach($res as $row) ?>
+          <?php foreach($res as $row) { ?>
           <tr data-href="student_plan_admin.php?id=<?php echo $row["id"] ?>" scope="row">
             <td class="col-5"><?php echo $row["first_name"] . " " . $row["last_name"] ?></td>
             <td class="col-3"><?php echo $row["class_year"] ?></td>
@@ -73,6 +72,7 @@
               echo "Rejected";
             } ?></td>
           </tr>
+          <?php } ?>
 
           
           <!-- <tr scope="row">
