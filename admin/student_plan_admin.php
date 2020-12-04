@@ -6,6 +6,9 @@
   if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $selected_plan=$id;
+  } else if(isset($_POST['id'])) {
+    $id = $_POST['id'];
+    $selected_plan = $id;
   }
   
   // $selected_plan = ; //hardcoded lol
@@ -27,10 +30,25 @@
   // $in  = str_repeat('?,', count($arr) - 1) . '?'; // alternative option if you want to do prepared statement
   $plan_courses_stmt = $dbconn->prepare("SELECT plan_courses.semester_id, plan_courses.course_id, plan_courses.position, courses.name, course_single_catalog.prefix, course_single_catalog.number FROM plan_courses INNER JOIN courses ON plan_courses.course_id = courses.id INNER JOIN course_single_catalog ON plan_courses.course_id = course_single_catalog.course_single_id WHERE plan_courses.semester_id IN (" . implode(", ", $semester_list) . ") ORDER BY plan_courses.semester_id, plan_courses.position;");
   $plan_courses_stmt->execute();
-  $plan_courses = $plan_courses_stmt->fetchAll();
-  
-  
+  $plan_courses = $plan_courses_stmt->fetchAll();  
+
+
+  // ADMINISTRATOR APPROVAL AND REJECTION OF PLANS:
+  if(isset($_POST['action']) && isset($_POST['id'])) {
+    // Prepare
+    $args = array();
+    $administer_query = $dbconn->prepare("UPDATE plans SET advisor_status = ? WHERE id = ?;");
+    switch($_POST['action']) {
+      case "approve": array_push($args, 2); break; // 2 -- Status code: APPROVED
+      case "deny": array_push($args, 3); break; // 3 -- Status code: REJECTED
+    }
+    array_push($args, $_POST['id']);
+
+    // Execute
+    $administer_query->execute($args);
+  }
 ?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -191,9 +209,36 @@
                   <input type="checkbox" class="validation-form-input" id="concentration-requirements">
                   <label class="form-check-label" for="concentration-requirements">Concentration Requirements</label>
                 </div>
+
+                <!-- ADMINISTRATOR ABILITY TO APPROVE AND REJECT PLANS -->
                 <div>
-                  <button class="approve">Approve</button>
-                  <button class="deny">Deny</button>
+                  <!-- Reference: https://www.w3schools.com/php/php_form_validation.asp -->
+                  <form method="POST" name="process-plan" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
+                    <?php
+                      // Note:  There's a better way to do this, more secure.  I haven't figured it out yet.
+                      if (isset($_GET['id'])) {
+                        echo "<input type='hidden' name='id' value='" . $_GET['id'] . "'>";
+                      } else if(isset($_POST['id'])) {
+                        echo "<input type='hidden' name='id' value='" . $_POST['id'] . "'>";
+                      }
+                    ?>
+                    <button type="submit" name="action" value="approve" class="approve">Approve</button>
+                    <button type="submit" name="action" value="reject" class="deny">Deny</button>
+                  </form>
+                  <?php
+                    // DISPLAY RESULTS DEPENDING ON WHAT WAS RUN.
+                    if(isset($_POST['action'])) {
+                      switch($_POST['action']) {
+                        case "approve":
+                          echo "<p>Plan Approved!</p>";
+                          break;
+                        case "deny":
+                          echo "<p>Plan Rejected!</p>";
+                          break;
+                      }
+                    }
+                  ?>
                 </div>
               </div>
 
