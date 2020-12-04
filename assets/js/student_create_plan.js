@@ -48,6 +48,28 @@ $(document).ready(function () {
         });
     });
 
+    $("body").on("click", '#advisor-button', function(e) {
+        var searchParams = new URLSearchParams(window.location.search);
+        if(!searchParams.has("id")) {
+            return;
+        }
+        var id = searchParams.get("id");
+        $.ajax({
+            type: "POST",
+            url: 'api.php',
+            data: {"operation": "advisor", "data": {"id": id}},
+            dataType: "json",
+            success: function (jsonObject) {
+                // work with the results of the SQL query (JSON)
+                // console.log(jsonObject);
+            },
+            error: function (code, message) {
+                console.log(code);
+                console.log(message);
+            }
+        });
+    });
+
     // $("#semester-row").on('focusout', '.course-editable', function (e) {
     //     var code = $(this).parent();
     //     var course = code.parent();

@@ -54,7 +54,7 @@ ul#plan-name-star li {
     text-align: center;
 }
 
-#toggle-config-button {
+#toggle-config-button, #save-button, #advisor-button {
     float: right;
     /* position: absolute;
     right: 25px; */

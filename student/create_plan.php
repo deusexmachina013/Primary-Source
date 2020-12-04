@@ -6,6 +6,9 @@
   if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $selected_plan=$id;
+  } else {
+    header("Location: /student/home.php");
+    die();
   }
   
   $plan_details_stmt = $dbconn->prepare("SELECT * FROM plans WHERE id = ?;");
@@ -79,9 +82,10 @@
         <li class="plan-name-editable center" contenteditable=true><?php echo $plan_details["name"] ?></li>
         <li><?php echo $string_star ?></li>
       <ul>
-      
-      <button id="save-button" class="btn btn-secondary">Save Changes</button>
+        
       <button id="toggle-config-button" class="btn btn-secondary">More Details</button>
+      <button id="save-button" class="btn btn-secondary">Save Changes</button>
+      <button id="advisor-button" class="btn btn-secondary">Send to Advisor</button>
     </section>
     <!-- TODO: discuss how to make fields editable nicely -->
     <section class="schedule">

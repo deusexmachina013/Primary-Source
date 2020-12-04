@@ -141,6 +141,18 @@ function exitOnFail($res, $error="Call to server failed") {
       
 
       
+    } else if($_POST["operation"] == "advisor") {
+      $dbconn->beginTransaction();
+      exitOnFail(isset($_POST["data"]) && array_key_exists("id", $_POST["data"]));
+      $pstmt = $dbconn->prepare("SELECT advisor_status FROM plans WHERE id = ?");
+      $stmt_success = $pstmt->execute(array($_POST["data"]["id"]));
+      exitOnFail($stmt_success && $pstmt->rowCount() == 1);
+      $res = $pstmt->fetch()["advisor_status"];
+      exitOnFail($res == 0);
+      $pstmt = $dbconn->prepare("UPDATE plans SET advisor_status = 1 WHERE id = ?");
+      $stmt_success = $pstmt->execute(array($_POST["data"]["id"]));
+      exitOnFail($stmt_success);
+      $dbconn->commit();
     }
     // if(isset($_POST["get_course"])) {
     //   if(isset($_POST["prefix"]) && isset($_POST["number"])) {
