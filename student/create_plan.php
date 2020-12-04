@@ -82,11 +82,12 @@
         <li class="plan-name-editable center" contenteditable=true><?php echo $plan_details["name"] ?></li>
         <li><?php echo $string_star ?></li>
       <ul>
-        
-      <button id="toggle-config-button" class="btn btn-secondary">More Details</button>
-      <button id="save-button" class="btn btn-secondary">Save Changes</button>
-      <button id="advisor-button" class="btn btn-secondary">Send to Advisor</button>
-    </section>
+      <div id="create-plan-page-buttons">
+        <button id="save-button" class="btn btn-secondary">Save Changes</button>
+        <button id="advisor-button" class="btn btn-secondary">Send to Advisor</button>
+        <button id="toggle-config-button" class="btn btn-secondary">More Details</button>
+      </div>
+  </section>
     <!-- TODO: discuss how to make fields editable nicely -->
     <section class="schedule">
       <div class="container">

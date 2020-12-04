@@ -69,10 +69,21 @@ ul#plan-name-star li {
     text-align: center;
 }
 
-#toggle-config-button, #save-button, #advisor-button {
-    float: right;
+#toggle-config-button, 
+#save-button, 
+#advisor-button {
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     /* position: absolute;
-    right: 25px; */
+    right: 20px; */
+    /* float: right; */
+}
+
+#create-plan-page-buttons{
+    position: absolute;
+    right: 25px;
 }
 
 #toggle-create-plan-button {
@@ -218,7 +229,6 @@ ul#plan-name-star li {
 .course-config {
     text-align: center;
 }
-
 
 /* .course-trash-button,
 .course-config-button {
