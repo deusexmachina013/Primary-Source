@@ -21,6 +21,9 @@ $conc = $dbconn->query("SELECT templates.name from `templates`");
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <script src="/assets/js/student_new_plan.js"></script>
   </head>
 
   <body>
@@ -96,12 +99,11 @@ $conc = $dbconn->query("SELECT templates.name from `templates`");
               <!-- <input type="text" class="form-control" id="inputConcentration" placeholder="Enter Concentration"> -->
               <label for="concentration">Choose a concentration from the list:</label> <br>
               
-              <input class="formDropdown" list="concentrations" name="concentration" id="concentration" value="">
+              <input class="formDropdown" list="concentrations" name="concentration" id="form-template-plan-concentration">
               <datalist id="concentrations">
                 <?php 
                   foreach ($conc as $row) { 
-                    
-                    echo "<option id='" . $row['id'] . "'" . "value='" . $row['name'] . "'>";
+                    echo '<option value="' . $row['name'] . '">';
                   }
                 ?> 
                 <!-- <option value="Arts">
@@ -131,11 +133,7 @@ $conc = $dbconn->query("SELECT templates.name from `templates`");
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <?php
-          
-           echo "<a type='submit' class='btn btn-primary' href='create_plan_template.php?id=1'>Create Plan</a>";
-          
-          ?>
+          <button type="button" id="new-plan-button" class="btn btn-primary" >Create Plan</button>
         </div>
       </div>
     </div>

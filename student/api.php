@@ -95,6 +95,51 @@ function exitOnFail($res, $error="Call to server failed") {
       }
       $dbconn->commit();
       echo json_encode(array("status"=>"success"));
+    } else if($_POST["operation"] == "newTemplatePlan") {
+      $dbconn->beginTransaction();
+      exitOnFail(isset($_POST["data"]) && array_key_exists("templateName", $_POST["data"]));
+      $template_name = $_POST["data"]["templateName"];
+      $pstmt = $dbconn->prepare("SELECT id FROM templates WHERE name = ?");
+      $stmt_success = $pstmt->execute(array($template_name));
+      exitOnFail($stmt_success && $pstmt->rowCount() == 1);
+      $template_id = $pstmt->fetch()["id"];
+      $pstmt = $dbconn->prepare("SELECT * FROM template_data WHERE template_id = ? ORDER BY semester_num, position");
+      $stmt_success = $pstmt->execute(array($template_id));
+      exitOnFail($stmt_success);
+      $template_data = $pstmt->fetchAll();
+
+      $pstmt = $dbconn->prepare("INSERT INTO plans (user_id, name, favorited, advisor_status, notes) VALUES (?, ?, ?, ?, ?)");
+      $stmt_success = $pstmt->execute(array($TEMP_ID, "Template - " . $template_name, false, false, ""));
+      exitOnFail($stmt_success);
+      $res = $dbconn->query("SELECT LAST_INSERT_ID()");
+      exitOnFail($res);
+      $plan_id = $res->fetch()[0];
+
+      $semester_num = 0;
+      $semester_id = -1;
+      foreach($template_data as $template) {
+        if($semester_num != $template["semester_num"]) {
+          $semester_num += 1;
+          exitOnFail($semester_num == $template["semester_num"]);
+          $pstmt = $dbconn->prepare("INSERT INTO plan_semesters (plan_id, name, position, completed) VALUES (?, ?, ?, ?)");
+          $stmt_success = $pstmt->execute(array($plan_id, "Semester " . $semester_num, $semester_num, false));
+          exitOnFail($stmt_success);
+          $res = $dbconn->query("SELECT LAST_INSERT_ID()");
+          exitOnFail($res);
+          $semester_id = $res->fetch()[0];
+        }
+        exitOnFail($semester_id != -1);
+        $pstmt = $dbconn->prepare("INSERT INTO plan_courses (semester_id, course_id, position) VALUES (?, ?, ?)");
+        $stmt_success = $pstmt->execute(array($semester_id, $template["course_id"], $template["position"]));
+        exitOnFail($stmt_success);
+      }
+      // $dbconn->rollBack();
+      $dbconn->commit();
+      echo json_encode(array("status"=>"success","id"=>$plan_id));
+      
+      
+
+      
     }
     // if(isset($_POST["get_course"])) {
     //   if(isset($_POST["prefix"]) && isset($_POST["number"])) {
