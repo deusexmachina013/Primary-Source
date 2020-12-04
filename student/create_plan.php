@@ -298,27 +298,6 @@
                         </div>
                       </div>
                     </div>
-
-                    <div class="card">
-                      <div class="card-header" id="headingFour">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Concentration Requirements
-                          </button>
-                        </h5>
-                      </div>
-
-                      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                        <div class="card-body">
-                        <div class="row semester-course"> 
-                            <div class="col-md-1 course-status"><span class="dot"></span></div>
-                            <div class="col-md-5 course-editable course-title" contenteditable=true>Concentration Course</div>
-                            <div class="col-md-3 course-editable course-code" contenteditable=true>EXPL-XXXX</div>
-                            <div class="col-md-1 course-editable course-credits" contenteditable=true>4</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
