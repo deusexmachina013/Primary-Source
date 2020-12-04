@@ -39,7 +39,7 @@ $(document).ready(function () {
             dataType: "json",
             success: function (jsonObject) {
                 // work with the results of the SQL query (JSON)
-                console.log(jsonObject);
+                // console.log(jsonObject);
             },
             error: function (code, message) {
                 console.log(code);
