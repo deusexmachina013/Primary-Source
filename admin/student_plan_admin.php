@@ -195,7 +195,7 @@
                 </ul>
 
               <!-- Validation -->
-              <div id="plan-config-validation-admin">
+              <div id="plan-config-validation">
                 <h5 class="validation-message">It looks like you have not used all of your required courses.</h5>
                 <div class="validation-form">
                   <input type="checkbox" class="validation-form-input" id="itws-requirements">

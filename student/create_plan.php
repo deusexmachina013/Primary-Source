@@ -187,7 +187,7 @@
                     <button class="nav-link active" href="#">Catalog</button>
                   </li>
                   <li class="nav-item">
-                    <button class="nav-link" href="#">Validation</button>
+                    <button class="nav-link" href="#">Validator</button>
                   </li>
                   <li class="nav-item">
                     <button class="nav-link" href="#">Notes</button>
@@ -312,7 +312,7 @@
                 </div>
 
               <!-- Validation -->
-              <div id="plan-config-validation">
+              <div id="plan-config-validator">
 
 
                 <h5 class="validation-message">It looks like you have not used all of your required courses.</h5>

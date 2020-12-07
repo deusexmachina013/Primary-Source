@@ -1,35 +1,21 @@
 /******************/
-
-
 /* NAVIGATION BAR */
-
-
 /******************/
 
 .navbar-custom {
     background-color: #ececec;
 }
 
-
 /*************************/
-
-
 /* /student/old_home.php */
-
-
 /*************************/
 
 .formDropdown {
     width: 350px;
 }
 
-
 /*******************/
-
-
 /* create_plan.php */
-
-
 /*******************/
 
 body {
@@ -48,7 +34,6 @@ body {
 .ri-star-s-line,
 .ri-star-s-fill {
     font-size: 40px;
-    /* margin-right: 500px; */
 }
 
 ul#plan-name-star li {
@@ -76,19 +61,15 @@ ul#plan-name-star li {
     margin-left: 2px;
     margin-bottom: 5px;
     margin-top: 5px;
-    /* position: absolute;
-    right: 20px; */
     float: right;
 }
 
-#create-plan-page-buttons{
+#create-plan-page-buttons {
     position: absolute;
     right: 25px;
 }
 
 #toggle-create-plan-button {
-    /* float: right; */
-    /* position: absoluteF-primary;*/
     margin-right: 80px;
 }
 
@@ -135,138 +116,27 @@ ul#plan-name-star li {
 }
 
 .semester-course {
-    /* position: relative; */
     padding: 10px;
-    /* margin-top: 6px;
-    margin-bottom: 6px; */
     margin: 6px;
     background-color: #CEF0F1;
     border-radius: 4px;
-    /* width: 400px; */
-    /* z-index: 10000; */
-}
-
-.semester-course>* {
-    align-self: center;
-}
-
-.course-title {
-    word-break: break-word;
-}
-
-#schedule-config {
-    display: none;
-}
-
-#schedule-config>div {
-    margin-top: 25px;
-    /* position: fixed; */
-    /* overflow: scroll; */
-    /* overflow-x: hidden; */
-    /* overflow-y: scroll; */
-    /* width: 50%; */
-    /* max-height: 70%; */
-}
-
-#plan-config-catalog {
-    display: block;
 }
 
 #plan-config-validation {
-    display: none;
-}
-
-#plan-config-validation-admin {
     display: block;
 }
 
-#plan-config-status-admin {
-    display: none;
-}
-
-.validation-message {
-    margin-top: 20px;
+#plan-config-validator {
+    display: none; 
 }
 
 .locked-icon {
     font-size: 2em;
 }
 
-.plan-name-editable {
-    height: 70px;
-    width: 600px;
-    padding: 10px;
-    margin: auto
-}
-
-#plan-config-groups {
-    display: none;
-}
-
-#plan-config-notes {
-    display: none;
-    /* width: 500px; */
-}
-
-#text-area-notes {
-    margin-top: 20px;
-}
-
-#plan-config-settings {
-    display: none;
-}
-
-.course-add {
-    justify-content: center;
-    background-color: #CEF0F1;
-    padding: 8px;
-    margin-bottom: 24px;
-    margin: 6px;
-}
-
-.add-course,
-.add-course-group {
-    margin: 10px;
-}
-
-.course-trash,
-.course-config {
-    text-align: center;
-}
-
-/* .course-trash-button,
-.course-config-button {
-    padding: 0px !important;
-    margin: 0px !important;
-    text-decoration: none !important;
-} */
-
-.course-trash-button {
-    color: #292b2c;
-    font-size: 20px;
-}
-
-.course-trash-button:hover {
-    color: blue;
-    text-decoration: none;
-}
-
-#accordion {
-    width: 600px;
-    margin-top: 20px;
-}
-
-
-/*************/
-
-
-/* MAIN PLAN */
-
-.content .container .col-sm {
-    background-color: #CEF0F1;
-    /* width: 400px; */
-    /* z-index: 10000; */
-}
+/*******************/
+/* create_plan.php */
+/*******************/
 
 .semester-course>* {
     align-self: center;
@@ -282,20 +152,10 @@ ul#plan-name-star li {
 
 #schedule-config>div {
     margin-top: 25px;
-    /* position: fixed; */
-    /* overflow: scroll; */
-    /* overflow-x: hidden; */
-    /* overflow-y: scroll; */
-    /* width: 50%; */
-    /* max-height: 70%; */
 }
 
 #plan-config-catalog {
     display: block;
-}
-
-#plan-config-validation {
-    display: none;
 }
 
 .validation-message {
@@ -315,7 +175,6 @@ ul#plan-name-star li {
 
 #plan-config-notes {
     display: none;
-    /* width: 500px; */
 }
 
 #text-area-notes {
@@ -365,19 +224,10 @@ ul#plan-name-star li {
     margin-bottom: 8px !important;
 }
 
-
-/*************/
-
-
-/* MAIN PLAN */
-
-
-/*************/
-
 .content .container .col-sm {
+    background-color: #CEF0F1;
     margin-right: 5px;
     margin-left: 5px;
-    /* margin-bottom: 5px; */
     padding: 0px;
     height: 100%;
 }
@@ -467,15 +317,6 @@ button:hover {
     width: 20%;
 }
 
-
-/***************/
-
-
-/* CREATE PLAN */
-
-
-/***************/
-
 .submit-button {
     float: right;
     border: 2px solid;
@@ -488,13 +329,9 @@ button:hover {
 }
 
 
-/*****************/
-
-
-/**** home.php ***/
-
-
-/*****************/
+/***********************/
+/** /student/home.php **/
+/***********************/
 
 .all-plans-title {
     margin-bottom: 20px;
@@ -517,11 +354,7 @@ button:hover {
 
 
 /**********************/
-
-
 /* .../admin/home.php */
-
-
 /**********************/
 
 .student-column {
@@ -718,46 +551,3 @@ button:hover {
 [data-href] {
     cursor: pointer;
 }
-
-
-/* Home plan?  Where did this come from, and where should it go? */
-
-.home-plan p {
-    background-color: #CEF0F1;
-    padding: 10px;
-    margin: 0px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 100%;
-}
-
-
-/* ================= */
-
-
-/*******************/
-
-
-/* create_plan.php */
-
-
-/*******************/
-
-.connectedSortable {
-    min-height: 30px;
-}
-
-
-/* #sortable1 {
-    min-height: 30px;
-}
-
-#sortable2 {
-    min-height: 30px;
-    margin-bottom: 15px;
-    margin: 10px;
-}
-
-#sortable2 div {
-    padding: 12px;
-} */
