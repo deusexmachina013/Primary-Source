@@ -65,11 +65,11 @@
             <td class="col-4"><?php if($row["advisor_status"] == 0) {
               echo "Unsubmitted";
             } else if($row["advisor_status"] == 1) {
-              echo "Reviewable";
+              echo "Submitted";
             } else if($row["advisor_status"] == 2) {
-              echo "Accepted";
+              echo "Approved";
             } else if($row["advisor_status"] == 3) {
-              echo "Rejected";
+              echo "Unapproved";
             } ?></td>
           </tr>
           <?php } ?>
