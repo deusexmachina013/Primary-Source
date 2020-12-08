@@ -86,8 +86,6 @@ $conc = $dbconn->query("SELECT templates.name from `templates`");
               <input type="text" class="form-control" id="inputPlanName" placeholder="Enter Plan Name">
             </div>
             <div class="form-group">
-              <!-- <label for="inputMajor">Major</label>
-              <input type="text" class="form-control" id="inputMajor" placeholder="Enter Major"> -->
               <label for="major">Choose a major from the list:</label> <br>
               
               <input class="formDropdown" list="majors" name="major" id="major">
@@ -97,8 +95,6 @@ $conc = $dbconn->query("SELECT templates.name from `templates`");
 
             </div>
             <div class="form-group">
-              <!-- <label for="inputConcentration">Concentration</label> -->
-              <!-- <input type="text" class="form-control" id="inputConcentration" placeholder="Enter Concentration"> -->
               <label for="concentration">Choose a concentration from the list:</label> <br>
               
               <input class="formDropdown" list="concentrations" name="concentration" id="form-template-plan-concentration">
@@ -108,27 +104,6 @@ $conc = $dbconn->query("SELECT templates.name from `templates`");
                     echo '<option value="' . $row['name'] . '">';
                   }
                 ?> 
-                <!-- <option value="Arts">
-                <option value="Civil/Structural Engineer">
-                <option value="Cognitive Science">
-                <option value="Communication">
-                <option value="Computer Hardware">
-                <option value="Computer Networking">
-                <option value="Data Science">
-                <option value="Economcs">
-                <option value="Entrepreneurship">
-                <option value="Finance">
-                <option value="Information Security">
-                <option value="Machine & Computational Learning">
-                <option value="Management Information Systems">
-                <option value="Mechanical/Aeronautical Engineering">
-                <option value="Medicine">
-                <option value="Pre-Law">
-                <option value="Psychology">
-                <option value="Science & Technology Studies">
-                <option value="Science Informatics">
-                <option value="Special Interest">
-                <option value="Web Technology"> -->
               </datalist>
             </div>
           </form>

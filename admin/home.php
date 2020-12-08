@@ -73,68 +73,6 @@
             } ?></td>
           </tr>
           <?php } ?>
-
-          
-          <!-- <tr scope="row">
-            <td class="col-5">Jacob Dyer</td>
-            <td class="col-3">2023</td>
-            <td class="col-4">Reviewable</td>
-          </tr>
-          <tr scope="row">
-            <td class="col-5">Joyce Fang</td>
-            <td class="col-3">2023</td>
-            <td class="col-4">Approved</td>
-          </tr>
-          <tr scope="row">
-            <td class="col-5">Bobby Tables</td>
-            <td class="col-3">2024</td>
-            <td class="col-4">None</td>
-          </tr>
-          <tr scope="row">
-            <td class="col-5">Jacob Dyer</td>
-            <td class="col-3">2023</td>
-            <td class="col-4">Reviewable</td>
-          </tr>
-          <tr scope="row">
-            <td class="col-5">Joyce Fang</td>
-            <td class="col-3">2023</td>
-            <td class="col-4">Approved</td>
-          </tr>
-          <tr scope="row">
-            <td class="col-5">Bobby Tables</td>
-            <td class="col-3">2024</td>
-            <td class="col-4">None</td>
-          </tr>
-          <tr scope="row">
-            <td class="col-5">Jacob Dyer</td>
-            <td class="col-3">2023</td>
-            <td class="col-4">Reviewable</td>
-          </tr>
-          <tr scope="row">
-            <td class="col-5">Joyce Fang</td>
-            <td class="col-3">2023</td>
-            <td class="col-4">Approved</td>
-          </tr>
-          <tr scope="row">
-            <td class="col-5">Bobby Tables</td>
-            <td class="col-3">2024</td>
-            <td class="col-4">None</td>
-          </tr>
-          <tr scope="row">
-            <td class="col-5">Jacob Dyer</td>
-            <td class="col-3">2023</td>
-            <td class="col-4">Reviewable</td>
-          </tr>
-          <tr scope="row">
-            <td class="col-5">Joyce Fang</td>
-            <td class="col-3">2023</td>
-            <td class="col-4">Approved</td>
-          </tr>
-          <tr scope="row">
-            <td class="col-5">Bobby Tables</td>
-            <td class="col-3">2024</td>
-            <td class="col-4">None</td>
-          </tr> -->
         </tbody>
       </table>
     </main>
