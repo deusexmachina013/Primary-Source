@@ -130,56 +130,10 @@
                       <div class="col-md-1 course-credits">4</div>
                       <div class="col-md-2 course-trash"><i class="ri-delete-bin-line btn btn-link course-trash-button"></i></div>
                     </div>
-                          <?php } ?>
-                    <div class="row course-add">
-                      <!-- <button class="btn btn-info add-course-button">Add Course</button> -->
-                      <!-- <button class="btn btn-primary add-course-group-button" href="#" role="button" disabled=true>Add Course Group</button> -->
-                    
-                      <button type="button" class="btn btn-info add-course-button" data-toggle="modal" data-target="#addCourseModal">
-                        Add Course
-                      </button>
-                    </div>
+                    <?php } ?>
                   </div>
                 </div>
-                      <?php }?>
-              </div>
-            </div>
-
-            <!-- Add Course Modal -->
-            <div class="modal fade" id="addCourseModal" tabindex="-1" role="dialog" aria-labelledby="addCourseModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="addCourseModalLabel">Add Course</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <!-- two options -->
-                    <!-- add catalog course -->
-                    <nav class="navbar navbar-light bg-light">
-                      <form id="add-course-form" class="form-inline">
-                        <input name="search-input-course" class="form-control mr-sm-2 search-input-course" type="search" placeholder="Search for Courses" aria-label="Search" style=" width:340px">
-                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-                      </form>
-                      
-                    </nav>
-                    
-                    <table class="table table-striped search-results-table">
-                      <tbody class="search-results-body">
-             
-                      </tbody>
-                    </table>
-
-                    <!-- add custom course -->
-                    
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                  </div>
-                </div>
+                <?php }?>
               </div>
             </div>
 
