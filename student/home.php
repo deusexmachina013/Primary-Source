@@ -1,6 +1,5 @@
 <?php 
 require_once $_SERVER['DOCUMENT_ROOT'] . "/auth/auth.php";
-// Auth::requireRank(0);
 require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
 $dbconn = Database::getDatabase();
 

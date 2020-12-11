@@ -12,8 +12,13 @@
     die();
   }
   
-  $plan_details_stmt = $dbconn->prepare("SELECT * FROM plans WHERE id = ?;");
-  $plan_details_stmt->execute(array($selected_plan));
+  $plan_details_stmt = $dbconn->prepare("SELECT * FROM plans WHERE id = ? AND user_id = ?;");
+  $plan_details_stmt->execute(array($selected_plan, $id));
+  
+  if($plan_details_stmt->rowCount() == 0) {
+    header("Location: /student/home.php");
+    die();
+  }
 
   $plan_details = $plan_details_stmt->fetch(); // Plan Notes: ""This is my 4-year plan..."
 

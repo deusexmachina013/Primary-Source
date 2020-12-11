@@ -59,7 +59,11 @@ if(!isset($_SESSION["id"])) {
         session_start();
     }
     $user_data = Auth::getAuthInfo();
-    $_SESSION["id"] = $user_data["id"];
-    $_SESSION["rank"] = $user_data["rank"];
+    if($user_data !== NULL) {
+        $_SESSION["id"] = $user_data["id"];
+        $_SESSION["rank"] = $user_data["rank"];
+    } else {
+        //REDIRECT NOT IN APPLICATION
+    }
 }
 ?>

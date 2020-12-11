@@ -24,7 +24,7 @@ class AuthModule extends AuthenticationABC {
         $pstmt = $dbconn->prepare("SELECT users.id, users.rank FROM users INNER JOIN auth_rcs ON users.id = auth_rcs.user_id WHERE rcsid = ?");
         $pstmt->execute(array($user_identity));
         if ($pstmt->rowCount() == 0) { //not registered
-          
+          return NULL;
         }
         return $pstmt->fetch();
       }

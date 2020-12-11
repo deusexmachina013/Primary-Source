@@ -1,5 +1,6 @@
 <?php
   require_once $_SERVER['DOCUMENT_ROOT'] . "/auth/auth.php";
+  // Auth::requireRank(1);
   require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
   $dbconn = Database::getDatabase();
   // need to determine which plan the user clicked on
@@ -12,11 +13,15 @@
     $selected_plan = $id;
   }
   
-  // $selected_plan = ; //hardcoded lol
   $plan_details_stmt = $dbconn->prepare("SELECT * FROM plans WHERE id = ?;");
   $plan_details_stmt->execute(array($selected_plan));
   
   $plan_details = $plan_details_stmt->fetch(); // Plan Notes: ""This is my 4-year plan..."
+
+  if($plan_details["advisor_status"] === 0) {
+    header("Location: /admin/home.php");
+    die();
+  }
 
   $plan_semesters_stmt = $dbconn->prepare("SELECT * FROM plan_semesters WHERE plan_id = ?;");
   $plan_semesters_stmt->execute(array($selected_plan));

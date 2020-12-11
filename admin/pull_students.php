@@ -1,4 +1,6 @@
 <?php
+  require_once $_SERVER['DOCUMENT_ROOT'] . "/auth/auth.php";
+  // Auth::requireRank(1);
   require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
   // Connect to the database.
   $dbconn = Database::getDatabase();

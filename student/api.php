@@ -1,4 +1,5 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "/auth/auth.php";
 function exitOnFail($res, $error="Call to server failed") {
   if(!$res) {
     http_response_code(500);

@@ -1,4 +1,5 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "/auth/auth.php";
   // Query the student table and get relevant students.
   if(isset($_POST['search-input-course'])) {
     // Connect to the database.
