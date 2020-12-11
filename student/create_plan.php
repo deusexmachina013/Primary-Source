@@ -189,7 +189,7 @@
               <div id="schedule-config-container">
                 <ul id="schedule-config-nav" class="nav nav-tabs">
                   <li class="nav-item">
-                    <button class="nav-link" href="#">Notes</button>
+                    <button class="nav-link active" href="#">Notes</button>
                   </li>
                 </ul>
 
