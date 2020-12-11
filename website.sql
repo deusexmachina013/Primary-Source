@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 11, 2020 at 09:01 PM
+-- Generation Time: Dec 11, 2020 at 10:43 PM
 -- Server version: 10.1.47-MariaDB-0ubuntu0.18.04.1
 -- PHP Version: 7.2.24-0ubuntu0.18.04.7
 
@@ -26954,8 +26954,8 @@ CREATE TABLE `plans` (
 --
 
 INSERT INTO `plans` (`id`, `user_id`, `name`, `favorited`, `advisor_status`, `notes`) VALUES
-(2, 2, 'My 4-Year Plan', 1, 0, 'This is my 4-year plan for my ITWS degree with a concentration in InfoSec.'),
-(3, 2, 'My Backup Plan', 0, 0, 'This is my academic plan for a degree in ITWS with a concentration in Arts.');
+(2, 7, 'My 4-Year Plan', 1, 0, 'This is my 4-year plan for my ITWS degree with a concentration in InfoSec.'),
+(3, 7, 'My Backup Plan', 0, 0, 'This is my academic plan for a degree in ITWS with a concentration in Arts.');
 
 -- --------------------------------------------------------
 
