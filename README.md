@@ -39,4 +39,4 @@ Note: DocumentRoot may vary across machines.
 
 6) Add another entry in the hosts file like so:
 	127.0.0.1 coursemap
-7) In your browser, go to [http://coursemap:8080](http://coursemap:8080) (MacOS) OR [coursemap/](coursemap/) (Windows)
+7) In your browser, go to [http://coursemap:8080](http://coursemap:8080) (MacOS) OR [http://coursemap/](http://coursemap/) (Windows)
