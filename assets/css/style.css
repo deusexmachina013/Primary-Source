@@ -162,6 +162,10 @@ ul#plan-name-star li {
     margin-top: 20px;
 }
 
+#validation-header{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .plan-name-editable {
     height: 70px;
     width: 30%;
@@ -174,6 +178,10 @@ ul#plan-name-star li {
 }
 
 #plan-config-notes {
+    display: block;
+}
+
+#plan-config-comments {
     display: none;
 }
 

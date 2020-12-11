@@ -149,27 +149,13 @@
                     <button class="nav-link active" href="#">Validation</button>
                   </li>
                   <li class="nav-item">
-                    <button class="nav-link" href="#">Notes</button>
+                    <button class="nav-link" href="#">Comments</button>
                   </li>
                 </ul>
 
               <!-- Validation -->
               <div id="plan-config-validation">
-                <h5 class="validation-message">It looks like you have not used all of your required courses.</h5>
-                <div class="validation-form">
-                  <input type="checkbox" class="validation-form-input" id="itws-requirements">
-                  <label class="form-check-label" for="itws-requirements">ITWS Core Requirements</label>
-                  <br>
-                  <input type="checkbox" class="validation-form-input" id="math-science-requirements" checked>
-                  <label class="form-check-label" for="math-science-requirements">Math/Science Requirements</label>
-                  <br>
-                  <input type="checkbox" class="validation-form-input" id="hass-requirements" checked>
-                  <label class="form-check-label" for="hass-requirements">HASS Requirements</label>
-                  <br>
-                  <input type="checkbox" class="validation-form-input" id="concentration-requirements">
-                  <label class="form-check-label" for="concentration-requirements">Concentration Requirements</label>
-                </div>
-
+                <h5 id="validation-header">Approve or Reject Plan: </h5>
                 <!-- ADMINISTRATOR ABILITY TO APPROVE AND REJECT PLANS -->
                 <div>
                   <!-- Reference: https://www.w3schools.com/php/php_form_validation.asp -->
@@ -203,7 +189,7 @@
               </div>
 
               <!-- Notes -->
-              <div id="plan-config-notes">
+              <div id="plan-config-comments">
                 <textarea class="form-control" id="text-area-notes"><?php echo $plan_details["notes"] ?>
                 </textarea>
               </div>
