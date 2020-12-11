@@ -16,10 +16,23 @@
   <body>
     <div>
       <img class="img" src="assets/img/logoWhyWait.png" alt="CourseMap Logo">
+      <?php
+      if(session_status() == PHP_SESSION_ACTIVE && array_key_exists("invalid_login", $_SESSION) && $_SESSION["invalid_login"] === true) {
+      ?>
+      <p>The account you logged in with is not approved for this application.</p>
+      <div class="button-center">
+        <button class="button" onclick="window.location.href = 'logout.php'"> Logout </button>
+      <div>
+      <?php
+      } else {
+      ?>
       <div class="button-center">
         <button class="button" onclick="window.location.href = 'student/home.php'"> Student Login </button>
         <button class="button" onclick="window.location.href = 'admin/home.php'"> Admin Login </button>
       <div>
+      <?php
+      }
+      ?>
       <img class="img2" src="assets/img/rpi.png" alt="RPI Logo">
     </div>
   </body>
