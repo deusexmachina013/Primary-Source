@@ -30,18 +30,15 @@ CourseMap is a course planner designed primarily for undergraduate college stude
 
     <VirtualHost *:80>
     
-    DocumentRoot "/opt/lampp/htdocs/coursemap/Primary-Source"
+        DocumentRoot "/opt/lampp/htdocs/coursemap/Primary-Source"
     
-    ServerName coursemap
+        ServerName coursemap
     
     </VirtualHost>
 
 
-**Note: DocumentRoot may vary across machines.
+Note: DocumentRoot may vary across machines.
 
 6) Add another entry in the hosts file like so:
 	127.0.0.1 coursemap
-7) In your browser, go to [coursemap:8080](coursemap:8080) (MacOS) OR [coursemap/](coursemap/) (Windows)
-
-
-
+7) In your browser, go to [http://coursemap:8080](coursemap:8080) (MacOS) OR [http://coursemap/](coursemap/) (Windows)
