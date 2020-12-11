@@ -54,10 +54,8 @@ class Auth {
 }
 Auth::authenticate(); #redirect to login page if fails, should redirect to current page after, returning user id.
 
-if(!isset($_SESSION["id"])) {
-    if(session_status() != PHP_SESSION_ACTIVE) {
-        session_start();
-    }
+if(session_status() != PHP_SESSION_ACTIVE) {
+    session_start();
     $user_data = Auth::getAuthInfo();
     if($user_data !== NULL) {
         $_SESSION["id"] = $user_data["id"];
@@ -67,5 +65,9 @@ if(!isset($_SESSION["id"])) {
         header("Location: /index.php");
         die();
     }
+} else if(!array_key_exists("id", $_SESSION)) {
+    $_SESSION["invalid_login"] = true;
+    header("Location: /index.php");
+    die();
 }
 ?>
