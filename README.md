@@ -12,7 +12,7 @@ CourseMap is a course planner designed primarily for undergraduate college stude
 
 ## Scraping
 * All of the methods used for scraping data are available in the .course_data folder, along with the final dataset that we used in the system (primary_course_final_semesters.json).
-* catalog_main was unused since we found out that the data in the RPI catalog (http://catalog.rpi.edu/) had manual edits and was unusable (since it’s hard to get data when the tags themselves inside of the data are misspelled).
+* catalog_main was unused since we found out that the data in the [RPI catalog](http://catalog.rpi.edu/) had manual edits and was unusable (since it’s hard to get data when the tags themselves inside of the data are misspelled).
 * main.py has all of the code that we used for the dataset inside of CourseMap, although it should be noted that it won’t run out of the box as we figured out how to do parts of the application in separate chunks.
 
 ## Notes
@@ -27,21 +27,16 @@ CourseMap is a course planner designed primarily for undergraduate college stude
 4) Click on the “website” database and import the “website.sql” file
 5) Create a virtual host by going to the file httpd-vhosts.conf and inserting:
     
-
     <VirtualHost *:80>
-    
+
     DocumentRoot "/opt/lampp/htdocs/coursemap/Primary-Source"
-    
+
     ServerName coursemap
-    
-    </VirtualHost>
 
+    \</VirtualHost>
 
-**Note: DocumentRoot may vary across machines.
+Note: DocumentRoot may vary across machines.
 
 6) Add another entry in the hosts file like so:
 	127.0.0.1 coursemap
-7) In your browser, go to [coursemap:8080](coursemap:8080) (MacOS) OR [coursemap/](coursemap/) (Windows)
-
-
-
+7) In your browser, go to [http://coursemap:8080](http://coursemap:8080) (MacOS) OR [coursemap/](coursemap/) (Windows)
