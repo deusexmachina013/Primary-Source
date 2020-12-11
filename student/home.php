@@ -47,7 +47,7 @@ $conc = $dbconn->query("SELECT templates.name from `templates`");
             // find the user first
             $current_user_id = 2;
             // loop through plans table
-            $plans = $dbconn->query("SELECT * from `plans` WHERE `plans`.user_id = $current_user_id")->fetchAll();
+            $plans = $dbconn->query("SELECT * from `plans` WHERE `plans`.user_id = $current_user_id ORDER BY favorited DESC")->fetchAll();
             // var_dump($plans);
             
             foreach($plans as $row){

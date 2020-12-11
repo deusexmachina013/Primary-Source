@@ -30,7 +30,7 @@
   }
 
   // $in  = str_repeat('?,', count($arr) - 1) . '?'; // alternative option if you want to do prepared statement
-  $plan_courses_stmt = $dbconn->prepare("SELECT plan_courses.semester_id, plan_courses.course_id, plan_courses.position, courses.name, course_single_catalog.prefix, course_single_catalog.number FROM plan_courses INNER JOIN courses ON plan_courses.course_id = courses.id INNER JOIN course_single_catalog ON plan_courses.course_id = course_single_catalog.course_single_id WHERE plan_courses.semester_id IN (" . implode(", ", $semester_list) . ") ORDER BY plan_courses.semester_id, plan_courses.position;");
+  $plan_courses_stmt = $dbconn->prepare("SELECT plan_courses.semester_id, plan_courses.course_id, plan_courses.position, courses.name, course_single_catalog.prefix, course_single_catalog.number, course_single_catalog.credit_low, course_single_catalog.credit_high FROM plan_courses INNER JOIN courses ON plan_courses.course_id = courses.id INNER JOIN course_single_catalog ON plan_courses.course_id = course_single_catalog.course_single_id WHERE plan_courses.semester_id IN (" . implode(", ", $semester_list) . ") ORDER BY plan_courses.semester_id, plan_courses.position;");
   $plan_courses_stmt->execute();
   $plan_courses = $plan_courses_stmt->fetchAll();
   
@@ -119,7 +119,7 @@
                       <div class="col-md-3 course-code">
                         <span class="course-editable course-prefix"><?php echo $plan_courses[$index]["prefix"]?></span>-<span class="course-editable course-number"><?php echo $plan_courses[$index]["number"] ?></span>
                       </div>
-                      <div class="col-md-1 course-credits">4</div>
+                      <div class="col-md-1 course-credits"><?php echo $plan_courses[$index]["credit_low"] === $plan_courses[$index]["credit_high"] ? $plan_courses[$index]["credit_low"] : $plan_courses[$index]["credit_low"] . "-" . $plan_courses[$index]["credit_high"] ?></div>
                           <div class="col-md-2 course-trash"><?php if(!$read_only) { ?><i class="ri-delete-bin-line btn btn-link course-trash-button"></i><?php } ?></div>
                     </div>
                           <?php } ?>
