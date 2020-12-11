@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -17,9 +20,9 @@
     <div>
       <img class="img" src="assets/img/logoWhyWait.png" alt="CourseMap Logo">
       <?php
-      if(session_status() == PHP_SESSION_ACTIVE && array_key_exists("invalid_login", $_SESSION) && $_SESSION["invalid_login"] === true) {
+      if(session_status() == PHP_SESSION_ACTIVE && isset($_SESSION["invalid_login"]) && $_SESSION["invalid_login"]) {
       ?>
-      <p>The account you logged in with is not approved for this application.</p>
+      <h1>The account you logged in with is not approved for this application.</h1>
       <div class="button-center">
         <button class="button" onclick="window.location.href = 'logout.php'"> Logout </button>
       <div>

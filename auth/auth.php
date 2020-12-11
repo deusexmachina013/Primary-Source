@@ -54,10 +54,10 @@ class Auth {
 }
 Auth::authenticate(); #redirect to login page if fails, should redirect to current page after, returning user id.
 
-// if(session_status() != PHP_SESSION_ACTIVE) { //Needed if not using phpCAS
-//     session_start();
-// }
-if(!array_key_exists("id", $_SESSION)) {
+if(session_status() != PHP_SESSION_ACTIVE) {
+    session_start();
+}
+if(!isset($_SESSION["id"])) {
     $user_data = Auth::getAuthInfo();
     if($user_data !== NULL) {
         $_SESSION["id"] = $user_data["id"];
@@ -65,7 +65,7 @@ if(!array_key_exists("id", $_SESSION)) {
     } else {
         $_SESSION["invalid_login"] = true; //workaround since we can't redirect with RPI logout
         header("Location: /index.php");
-        die();
+        // die();
     }
 }
 ?>
