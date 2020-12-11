@@ -46,3 +46,4 @@ Note: DocumentRoot may vary across machines.
         127.0.0.1 coursemap
 	
 7) In your browser, go to [http://coursemap:8080](http://coursemap:8080) (MacOS) OR [http://coursemap/](http://coursemap/) (Windows)
+8) Now you can login to CourseMap!
