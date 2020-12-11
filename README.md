@@ -33,7 +33,7 @@ CourseMap is a course planner designed primarily for undergraduate college stude
 
           ServerName coursemap
 
-       \</VirtualHost>
+       </VirtualHost>
 
 Note: DocumentRoot may vary across machines.
 
