@@ -11,8 +11,12 @@ CourseMap is a course planner designed primarily for undergraduate college stude
 * JavaScript
 
 ## Scraping
+* All of the methods used for scraping data are available in the .course_data folder, along with the final dataset that we used in the system (primary_course_final_semesters.json).
+* catalog_main was unused since we found out that the data in the RPI catalog (http://catalog.rpi.edu/) had manual edits and was unusable (since it’s hard to get data when the tags themselves inside of the data are misspelled).
+* main.py has all of the code that we used for the dataset inside of CourseMap, although it should be noted that it won’t run out of the box as we figured out how to do parts of the application in separate chunks.
 
 ## Notes
+* If your database username and password are not root root, go to db.php and edit it there
 * The files in the “resources_linda” folder are word documents provided by Linda, the academic advisor for ITWS. It contains helpful information for concentration templates and course groups.
 * The files in the “course_data” folder are excel spreadsheets not used in the actual site. We did this to organize concentration requirements and other requirements like ITWS core requirements. 
 
@@ -34,7 +38,10 @@ CourseMap is a course planner designed primarily for undergraduate college stude
 
 
 **Note: DocumentRoot may vary across machines.
+
 6) Add another entry in the hosts file like so:
 	127.0.0.1 coursemap
 7) In your browser, go to [coursemap:8080](coursemap:8080) (MacOS) OR [coursemap/](coursemap/) (Windows)
+
+
 
