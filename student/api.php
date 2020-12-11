@@ -10,10 +10,10 @@ function exitOnFail($res, $error="Call to server failed") {
   require_once $_SERVER['DOCUMENT_ROOT'] . "/db.php";
   $dbconn = Database::getDatabase();
   $dbconn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  // if (session_status() != PHP_SESSION_ACTIVE || $_SESSION["id"] == NULL) {
-  //   die();
-  // }
-  $TEMP_ID = 2;
+  if (session_status() != PHP_SESSION_ACTIVE || $_SESSION["id"] == NULL) {
+    die();
+  }
+
   if(isset($_POST["operation"])) {
     
     if($_POST["operation"] == "save") {
@@ -21,11 +21,11 @@ function exitOnFail($res, $error="Call to server failed") {
       $save_data = $_POST["data"];
       
       $pstmt = $dbconn->prepare("SELECT advisor_status FROM plans WHERE id=? AND user_id=?");
-      $stmt_success = $pstmt->execute(array($save_data["id"], $TEMP_ID));
+      $stmt_success = $pstmt->execute(array($save_data["id"], $_SESSION["id"]));
       exitOnFail($stmt_success);
       $advisor_status = $pstmt->fetch()["advisor_status"];
       $pstmt = $dbconn->prepare("UPDATE plans SET name = ?, favorited = ?, notes = ? WHERE id = ? AND user_id = ?");
-      $stmt_success = $pstmt->execute(array($save_data["name"], $save_data["favorited"], $save_data["notes"], $save_data["id"], $TEMP_ID));
+      $stmt_success = $pstmt->execute(array($save_data["name"], $save_data["favorited"], $save_data["notes"], $save_data["id"], $_SESSION["id"]));
       exitOnFail($stmt_success);
       $pstmt = $dbconn->prepare("SELECT id FROM plan_semesters WHERE plan_id=? ORDER BY position");
       $stmt_success = $pstmt->execute(array($save_data["id"]));
@@ -111,7 +111,7 @@ function exitOnFail($res, $error="Call to server failed") {
       $template_data = $pstmt->fetchAll();
 
       $pstmt = $dbconn->prepare("INSERT INTO plans (user_id, name, favorited, advisor_status, notes) VALUES (?, ?, ?, ?, ?)");
-      $stmt_success = $pstmt->execute(array($TEMP_ID, $plan_name, 0, 0, ""));
+      $stmt_success = $pstmt->execute(array($_SESSION["id"], $plan_name, 0, 0, ""));
       exitOnFail($stmt_success);
       $res = $dbconn->query("SELECT LAST_INSERT_ID()");
       exitOnFail($res);
