@@ -16,7 +16,7 @@ $(document).ready(function () {
         var id = searchParams.get("id");
         var plans = {}
         plans["name"] = $("#plan-name-star").find(".plan-name-editable").first().text().trim();
-        plans["favorited"] = $("#star").children().first().hasClass("ri-star-s-fill");
+        plans["favorited"] = $("#star").children().first().hasClass("ri-star-s-fill") ? 1 : 0;
         plans["id"] = id;
         plans["semesters"] = []
         plans["notes"] = $('#text-area-notes').text();
@@ -31,7 +31,7 @@ $(document).ready(function () {
             });
             plans["semesters"].push(individual_plan);
         });
-        console.log(plans)
+        // console.log(plans)
         $.ajax({
             type: "POST",
             url: 'api.php',
