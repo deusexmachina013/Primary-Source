@@ -29,11 +29,8 @@ CourseMap is a course planner designed primarily for undergraduate college stude
     
 
     <VirtualHost *:80>
-
         DocumentRoot "/opt/lampp/htdocs/coursemap/Primary-Source"
-
         ServerName coursemap
-
     </VirtualHost>
 
 
