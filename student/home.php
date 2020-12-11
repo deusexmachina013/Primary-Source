@@ -44,7 +44,7 @@ $conc = $dbconn->query("SELECT templates.name from `templates`");
       <div class="col-sm plan-name-container">
         <?php
             // find the user first
-            $current_user_id = 2;
+            $current_user_id = $_SESSION["id"];
             // loop through plans table
             $plans = $dbconn->query("SELECT * from `plans` WHERE `plans`.user_id = $current_user_id ORDER BY favorited DESC")->fetchAll();
             // var_dump($plans);
