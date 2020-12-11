@@ -19,7 +19,7 @@ $(document).ready(function () {
         plans["favorited"] = $("#star").children().first().hasClass("ri-star-s-fill") ? 1 : 0;
         plans["id"] = id;
         plans["semesters"] = []
-        plans["notes"] = $('#text-area-notes').text();
+        plans["notes"] = $('#text-area-notes').val();
         $("#semester-row").children().each(function() {
             var individual_plan = {};
             individual_plan["name"] = $(this).find(".semester-title").first().text().trim();
