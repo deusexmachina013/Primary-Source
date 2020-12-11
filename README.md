@@ -27,13 +27,13 @@ CourseMap is a course planner designed primarily for undergraduate college stude
 4) Click on the “website” database and import the “website.sql” file
 5) Create a virtual host by going to the file httpd-vhosts.conf and inserting:
     
-    <VirtualHost *:80>
+       <VirtualHost *:80>
 
-    DocumentRoot "/opt/lampp/htdocs/coursemap/Primary-Source"
+          DocumentRoot "/opt/lampp/htdocs/coursemap/Primary-Source"
 
-    ServerName coursemap
+          ServerName coursemap
 
-    \</VirtualHost>
+       \</VirtualHost>
 
 Note: DocumentRoot may vary across machines.
 
